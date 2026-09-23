@@ -7,8 +7,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 NODES = ROOT / "candidate-spatial-dna-kg" / "graph" / "nodes.jsonl"
 EDGES = ROOT / "candidate-spatial-dna-kg" / "graph" / "edges.jsonl"
-PROJECTION = ROOT / "spatial-dna-tests" / "job_002_projection_source.json"
-LAYOUT = ROOT / "spatial-dna-tests" / "job_002_layout_source.json"
+PROJECTION = ROOT / "spatial-dna-tests" / "job_002_projection_current.json"
+LAYOUT = ROOT / "spatial-dna-tests" / "job_002_layout_current.json"
 FIXTURE = ROOT / "contracts" / "TEST_FIXTURE_METHOD_HOSPITALITY.json"
 AUTHORITY = ROOT / "contracts" / "AUTHORITY_MAP.json"
 BINDING_MATRIX = ROOT / "contracts" / "JOB_002_BINDING_MATRIX.json"
@@ -50,8 +50,10 @@ def emit_error(errors, facts):
 def main():
     nodes = read_jsonl(NODES)
     edges = read_jsonl(EDGES)
-    projection = json.loads(PROJECTION.read_text(encoding="utf-8"))
-    layout = json.loads(LAYOUT.read_text(encoding="utf-8"))
+    projection_doc = json.loads(PROJECTION.read_text(encoding="utf-8"))
+    projection = projection_doc["rows"]
+    layout_doc = json.loads(LAYOUT.read_text(encoding="utf-8"))
+    layout = layout_doc["rows"]
     fixture = json.loads(FIXTURE.read_text(encoding="utf-8"))
     authority = json.loads(AUTHORITY.read_text(encoding="utf-8"))
 
@@ -81,10 +83,12 @@ def main():
     orphan_projection_ids = sorted(set(projection_ids) - id_set)
     if orphan_projection_ids:
         errors.append(
-            "Historical JOB-002 projection references IDs absent from current 44-atom substrate: "
+            "Current repaired JOB-002 projection still references IDs absent from the 44-atom substrate: "
             + ", ".join(orphan_projection_ids)
-            + ". Historical evidence cannot silently mutate the substrate."
         )
+    quarantined_legacy_ids = sorted(
+        {r.get("Atom_ID") for r in projection_doc.get("quarantined_legacy_rows", []) if r.get("Atom_ID")}
+    )
 
     for row in projection:
         atom_id = row.get("Atom_ID")
@@ -146,6 +150,7 @@ def main():
         "job_002_projection_rows": len(projection),
         "job_002_layout_rows": len(layout),
         "orphan_projection_ids": orphan_projection_ids,
+        "quarantined_legacy_ids": quarantined_legacy_ids,
         "binding_matrix_present": not missing_binding_matrix,
         "binding_counts": binding_counts,
         "acceptance": acceptance,
