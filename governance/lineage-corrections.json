@@ -1,0 +1,32 @@
+{
+  "contract_version": "SPATIAL_DNA_LINEAGE_CORRECTIONS_v1",
+  "date": "2026-09-23",
+  "branch": "fix/spatial-dna-lineage-20260923",
+  "established_facts": [
+    {
+      "issue": "Populated graph missing from repository preservation snapshot",
+      "correction": "Recovered authoritative 44-atom node ledger from Google Drive document candidate_spatial_dna_nodes.jsonl and restored it under candidate-spatial-dna-kg/graph/nodes.jsonl."
+    },
+    {
+      "issue": "Repository contained only 7-edge seed",
+      "correction": "Recovered authoritative v2 11-edge ledger from Google Drive and restored it under candidate-spatial-dna-kg/graph/edges.jsonl."
+    },
+    {
+      "issue": "Bootstrap names WH-MTR-001 as the Metro Concepts conflict",
+      "correction": "Recovered node ledger uses WH-MCMG-001. Validator treats WH-MCMG-001 as the canonical graph ID and records the bootstrap spelling as a documentation mismatch."
+    },
+    {
+      "issue": "JOB-002 projection references RF-REF-001 and PS-PRFL-001",
+      "correction": "No matching atoms were found in the recovered 44-atom ledger. They remain blocked as orphan projection IDs; no silent remap is authorized."
+    },
+    {
+      "issue": "JOB-002 Bobcat Bonnie's role header collapses disputed end date to 2023",
+      "correction": "Validator rejects role headers bound to conflicted atoms when unresolved chronology is collapsed to a single date."
+    }
+  ],
+  "non_repairs": [
+    "No orphan projection atom was silently substituted with a semantically similar atom.",
+    "No disputed chronology was normalized to a convenient single date.",
+    "No missing executable renderer was claimed as present."
+  ]
+}
