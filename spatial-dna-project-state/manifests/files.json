@@ -1,0 +1,1230 @@
+{
+  "manifest_schema": "spatial-dna-preservation-v1",
+  "branch_base": "origin/main@a5822a1694d642ba5148832786fc0b12975d40b2",
+  "files": [
+    {
+      "path": "README.md",
+      "category": "DOCUMENTATION",
+      "source": "Preservation pass",
+      "note": "",
+      "sha256": "48d167c505829c0474c50e8aa05e609f96e1d3141bc8e6292f1b390d8c98700c",
+      "bytes": 842
+    },
+    {
+      "path": "spatial dna training (1).xlsx",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Preservation pass",
+      "note": "",
+      "sha256": "8e5da89a76b8024e35064e077f822189b8a44a4dbd262f0a2fc8adcf9f6b1365",
+      "bytes": 27090
+    },
+    {
+      "path": "spatial-dna-project-state/01-job-inception-normalization-demand/README.md",
+      "category": "DOCUMENTATION",
+      "source": "Preservation pass",
+      "note": "",
+      "sha256": "59f630ce3a1f070767fae5ccc6901dd05044c47c9d43c1f8ee771bbca59c3a32",
+      "bytes": 542
+    },
+    {
+      "path": "spatial-dna-project-state/02-candidate-evidence-spatial-dna-binding/README.md",
+      "category": "DOCUMENTATION",
+      "source": "Preservation pass",
+      "note": "",
+      "sha256": "d7858854ed4f9d9036d06dab14d8aa16a81261eb193fd157693c44f1dca110c4",
+      "bytes": 501
+    },
+    {
+      "path": "spatial-dna-project-state/03-spatial-projection-coordinates/EXACT_SPATIAL_COORDINATES_25.json",
+      "sha256": "78ea8537d18f94de14f823155b64d425c147af4974aa1a79dcad5cca00404994",
+      "bytes": 7711,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "EXACT_SPATIAL_COORDINATES_25.json.docx",
+      "note": "Parsed directly from DOCX paragraphs; no coordinate correction"
+    },
+    {
+      "path": "spatial-dna-project-state/04-spatial-and-layout-payload/MARA_LAYOUT_PAYLOAD_v1.source-example.json",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Unmodified JSON text excerpt from DOCX; a documented example, not pipeline output",
+      "sha256": "953f800d1f81d64deb3053fd1930dae0da49b01d28e4643d6f342929ad73b917",
+      "bytes": 6498
+    },
+    {
+      "path": "spatial-dna-project-state/04-spatial-and-layout-payload/README.md",
+      "category": "DOCUMENTATION",
+      "source": "Preservation pass",
+      "note": "",
+      "sha256": "2a4f4a89b84ab7401a1a5a330856e3ca0c411454bfc70e6d7b0fac839464ebc4",
+      "bytes": 558
+    },
+    {
+      "path": "spatial-dna-project-state/05-test-canvas-validation-observability/README.md",
+      "category": "DOCUMENTATION",
+      "source": "Preservation pass",
+      "note": "",
+      "sha256": "b08c804f1c11e699dcdc76d4e5291154392b6e7fc3992429ac86134738bf82ba",
+      "bytes": 405
+    },
+    {
+      "path": "spatial-dna-project-state/README.md",
+      "category": "DOCUMENTATION",
+      "source": "Preservation pass",
+      "note": "",
+      "sha256": "58888c9d376cb92189eb1cd9fc29f3c5badae8117a4d51f181c6b0c7595957c4",
+      "bytes": 2903
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/EXACT_SPATIAL_COORDINATES_25.json/document-order.txt",
+      "sha256": "962b2b8ad4f1fcf779ac9e01b5a58666b8b23a7afbf89bd6116e33e065c6aa19",
+      "bytes": 6061,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "EXACT_SPATIAL_COORDINATES_25.json.docx",
+      "note": "Paragraphs and tables in document order; original DOCX retains styling"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/MARA_JOB_002_PROJECTION_PAYLOAD.json/document-order.txt",
+      "sha256": "766142f604ab3d682ce7726867db6741670d875f6f6fb0053d6d79c4b1644cd2",
+      "bytes": 103770,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Paragraphs and tables in document order; original DOCX retains styling"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/MARA_JOB_002_PROJECTION_PAYLOAD.json/embedded/media/image1.png",
+      "sha256": "18d840af2c50eff9a5241d4b50833a596e6b71af0cee87cf2b3435345f2f7aba",
+      "bytes": 70,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Embedded OOXML part word/media/image1.png"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/MARA_JOB_002_PROJECTION_PAYLOAD.json/embedded/media/image12.png",
+      "sha256": "6c3819e01b63454cab64fbfa1025c7e596d9d0a4c3fd98cc8057e6177e7fa057",
+      "bytes": 8229,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Embedded OOXML part word/media/image12.png"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/MARA_JOB_002_PROJECTION_PAYLOAD.json/embedded/media/image16.png",
+      "sha256": "3544779ba1a03e393486f6a67ea91153023a40dffbbe66e496791e65b87dc2ea",
+      "bytes": 5950,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Embedded OOXML part word/media/image16.png"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/MARA_JOB_002_PROJECTION_PAYLOAD.json/embedded/media/image19.png",
+      "sha256": "67d8e8de149c0017391f284c47877ee2d694c9ae69929d400ca604db57b1728b",
+      "bytes": 11185,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Embedded OOXML part word/media/image19.png"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/MARA_JOB_002_PROJECTION_PAYLOAD.json/embedded/media/image22.png",
+      "sha256": "43a8113d4a104599e8c6f1151f274ee4d680f171e06a1207f2fb99c2b04aed0d",
+      "bytes": 6610,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Embedded OOXML part word/media/image22.png"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/MARA_JOB_002_PROJECTION_PAYLOAD.json/table-0016.csv",
+      "sha256": "c9832863d05d386aa8374440be4682189a8fd9b43f0e3dbfad9e6bab9c6db924",
+      "bytes": 1098,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Table cell values in original row order"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/MARA_JOB_002_PROJECTION_PAYLOAD.json/table-0171.csv",
+      "sha256": "55f1fda597204d881b8d94e85de97fb5b67b57c7ae18f700a01122747917f6ca",
+      "bytes": 1267,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Table cell values in original row order"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/MARA_JOB_002_PROJECTION_PAYLOAD.json/table-0230.csv",
+      "sha256": "808b7ae4cbd2f327bdb21e2bb9f117a6e3f97198f6398c3b6f1a2bd197f1200b",
+      "bytes": 986,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Table cell values in original row order"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/MARA_JOB_002_PROJECTION_PAYLOAD.json/table-0381.csv",
+      "sha256": "13b988b37bfbe94cd7411b0313ad4e454db96f0e83fd43076d565a70a3200f7e",
+      "bytes": 699,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Table cell values in original row order"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/MARA_JOB_002_PROJECTION_PAYLOAD.json/table-0515.csv",
+      "sha256": "f7a8bb0178fcab0a8f5de7aefc9dea1c6ddf2261bc53f2b9a6ba1d339903fd0f",
+      "bytes": 568,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Table cell values in original row order"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/MARA_JOB_002_PROJECTION_PAYLOAD.json/table-0572.csv",
+      "sha256": "1e4ea76240ab9f14213913ef4e865577cced4319d0283d82b6fc9085f33e90d4",
+      "bytes": 500,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Table cell values in original row order"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/MARA_JOB_002_PROJECTION_PAYLOAD.json/table-0850.csv",
+      "sha256": "dc6ce7a4f7f6d664d9662afd95e5c40159f2b8b7b6890d8cae050a62979f81b4",
+      "bytes": 1290,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Table cell values in original row order"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/MARA_JOB_002_PROJECTION_PAYLOAD.json/table-0941.csv",
+      "sha256": "e7007d4300dde46c8b989abbc05c4aed97394d6cadd9d528d518db6c52313b80",
+      "bytes": 649,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Table cell values in original row order"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/MARA_JOB_002_PROJECTION_PAYLOAD.json/table-0976.csv",
+      "sha256": "02ce216e551ca06f7ca32e37152370fcc078295d944ef5e35a37b97783d8056c",
+      "bytes": 1079,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Table cell values in original row order"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/SPATIAL DNA/document-order.txt",
+      "sha256": "5fd37982c655e18da9757f25a6367150b1486b97c2245bbd94411fee16688e39",
+      "bytes": 40872,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "SPATIAL DNA.docx",
+      "note": "Paragraphs and tables in document order; original DOCX retains styling"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/SPATIAL DNA/table-0208.csv",
+      "sha256": "8a3041799984aebdd29b8df70972f758f1e46f8999d5f0a8dbbd9cc2e91bfcac",
+      "bytes": 911,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "SPATIAL DNA.docx",
+      "note": "Table cell values in original row order"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/SPATIAL DNA/table-0571.csv",
+      "sha256": "f3168a93ffd6769b28c75431cc050a54ad9056a63cf60d453f5be134b921f220",
+      "bytes": 644,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "SPATIAL DNA.docx",
+      "note": "Table cell values in original row order"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/documents/SPATIAL DNA_ EXPERIMENTAL EXHAUST ORGANIZATION AND POSTMORTEM/document-order.txt",
+      "sha256": "3e5903530dbfdcce4013cf48dba61f1fa135db78f1d6f0611b19a763699cc9f7",
+      "bytes": 12557,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "SPATIAL DNA_ EXPERIMENTAL EXHAUST ORGANIZATION AND POSTMORTEM.docx",
+      "note": "Paragraphs and tables in document order; original DOCX retains styling"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/markdown/Forensic Interface Analysis_ Spatial DNA Wiring Requirements.md",
+      "sha256": "eee9101c242981328e865d1b21b758fdd4f0652355fda363513e79e992a65e23",
+      "bytes": 10720,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Forensic Interface Analysis_ Spatial DNA Wiring Requirements.md",
+      "note": "UTF-8 copy for text search; source remains in originals"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/markdown/Pasted markdown(20260923-003339).md",
+      "sha256": "d51917487e35ac40439ecba5977b44f87f70fa5376437c1951d4f01011f2e51a",
+      "bytes": 19209,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Pasted markdown(20260923-003339).md",
+      "note": "UTF-8 copy for text search; source remains in originals"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/markdown/Pasted markdown(20260923-003515).md",
+      "sha256": "47349fbdd7b538042b6fe7b82e3606a29f80076ae31f003d70194a464468dbe5",
+      "bytes": 23837,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Pasted markdown(20260923-003515).md",
+      "note": "UTF-8 copy for text search; source remains in originals"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/MARA_UI_Blueprint/page-01.txt",
+      "sha256": "4dd217797f9f437f661a41924aafe179a9112b75c7aacecc89b147d39f5343e9",
+      "bytes": 299,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_UI_Blueprint.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/MARA_UI_Blueprint/page-02.txt",
+      "sha256": "e315d3e3adcc4d89903467698073b98cb9ae3381b67ab79e40834d5fd3ee0218",
+      "bytes": 1305,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_UI_Blueprint.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/MARA_UI_Blueprint/page-03.txt",
+      "sha256": "b2aea3c77c0b287a13cbbb458b2ebe0e2e4903076795e8341ef157e26c17f775",
+      "bytes": 323,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_UI_Blueprint.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/MARA_UI_Blueprint/page-04.txt",
+      "sha256": "7932bc2170e1d9198866f4b5559b7b5099c1ec0f8aa3572adab0ee7412ff452b",
+      "bytes": 521,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_UI_Blueprint.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/MARA_UI_Blueprint/page-05.txt",
+      "sha256": "09a37fcdcdef9166e6526d4ce56d54097db55c1df6fbc15ff226c9fa5d305e28",
+      "bytes": 372,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_UI_Blueprint.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/MARA_UI_Blueprint/page-06.txt",
+      "sha256": "bc348ed4ebb3e34168f816e4f8b1aa1276bfc27e1b31ecf6fbd7cdb4e12074b3",
+      "bytes": 525,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_UI_Blueprint.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/MARA_UI_Blueprint/page-07.txt",
+      "sha256": "ba1670c41c6c6305eb304062b4fb469748a7610af61fdc245411ced6ebaa9ec2",
+      "bytes": 387,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_UI_Blueprint.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/MARA_UI_Blueprint/page-08.txt",
+      "sha256": "0b5174f39fead6b9a9d270e0b944695fabea1d568d31a34b09db2a606d8927da",
+      "bytes": 746,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_UI_Blueprint.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/MARA_UI_Blueprint/page-09.txt",
+      "sha256": "f9f22666eb88845dd80aeb73a8ebdbc6c3a452e4a41cb4c4e5002dc92d528872",
+      "bytes": 798,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_UI_Blueprint.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/MARA_UI_Blueprint/page-10.txt",
+      "sha256": "a137b5f43ec7b64d959b41b3623a121ab0ebad966f4e420030251b3a028a860c",
+      "bytes": 433,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_UI_Blueprint.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/MARA_UI_Blueprint/page-11.txt",
+      "sha256": "e2533a266d1adb2a1d6c9f79dcff206e146955c9abf3c15c413567a569a71a42",
+      "bytes": 306,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_UI_Blueprint.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/MARA_UI_Blueprint/page-12.txt",
+      "sha256": "e0ef1cc853056e7dd9dc308dd32bb14b066c6c8e9b0fd27490613e3dc25aa2d8",
+      "bytes": 452,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_UI_Blueprint.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/MARA_UI_Blueprint/page-13.txt",
+      "sha256": "537602ac2a70b51328036b463079574abc80f00087db4d780026171709bac976",
+      "bytes": 709,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "MARA_UI_Blueprint.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_Forensic_Handoff/page-01.txt",
+      "sha256": "edbf6c49e2b0ee94a146dcd229bdd1ccf9e51792614500f6753e3abb80d16c14",
+      "bytes": 458,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_Forensic_Handoff/page-02.txt",
+      "sha256": "ccb556d8161dfb5cb2248d086f5fa50f6376ac8b9b905e806f83ed045264b74d",
+      "bytes": 491,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_Forensic_Handoff/page-03.txt",
+      "sha256": "b2030ed0ec02c5db1a4a77037599d80100e47ee4f83c7fbd8c570ebbd4a58669",
+      "bytes": 636,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_Forensic_Handoff/page-04.txt",
+      "sha256": "afb4d2c5a51a78aec0ddefff5dcbe0a75696493e01ee208f2da38062321d74cc",
+      "bytes": 612,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_Forensic_Handoff/page-05.txt",
+      "sha256": "34083f02fe3c60889c4b20b5a6241b54019476d6c5a6db62b1a94525b98b3b89",
+      "bytes": 508,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_Forensic_Handoff/page-06.txt",
+      "sha256": "c3e472db001f91aed281826e15d60bf300f220c5b1fb60d0afa47894d0480a7e",
+      "bytes": 492,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_Forensic_Handoff/page-07.txt",
+      "sha256": "50b9dcb0c8d5c5d359976f0e9842adb6fd0dc1d60185c768bcf811fed6a1b61f",
+      "bytes": 648,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_Forensic_Handoff/page-08.txt",
+      "sha256": "72d16b9ed5da42e0b36505b0bb8dfb8f18c8c7d46f831830e1dfd6b17bf4d3fa",
+      "bytes": 399,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_Forensic_Handoff/page-09.txt",
+      "sha256": "c751e8a4fde846a652cdbee53665751aedf65e494ad4fd5b42e08bb3c337e0cc",
+      "bytes": 325,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_Forensic_Handoff/page-10.txt",
+      "sha256": "074caffc37ada7a4082b00433946556d310b39f6bffbe4c9722a4155ca6fc53e",
+      "bytes": 482,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_Forensic_Handoff/page-11.txt",
+      "sha256": "fed1c042b6da7253e78b0f05a248f7365ae590b5bda3a547539c2f8242deded1",
+      "bytes": 403,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_Forensic_Handoff/page-12.txt",
+      "sha256": "af5c586a8139976e4a3b1e338cfe54692232faea1ae1eb4d44f87462f0a06ec3",
+      "bytes": 509,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_Forensic_Handoff/page-13.txt",
+      "sha256": "799d1ac7e36b1d4487c27f6419f975a8be2467b9a10fb1d29f2c7bdb073fb23d",
+      "bytes": 728,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_Forensic_Handoff/page-14.txt",
+      "sha256": "4c3c43dac2690d6652bb487a85d4a29890b7142d94d8436a397bc826942e42a5",
+      "bytes": 517,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_Forensic_Handoff/page-15.txt",
+      "sha256": "9405e28a40e66ade63626884bf52a3ee3fde73bd851efc430f711cb57f7e4fdd",
+      "bytes": 491,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_System_Topology(1)/page-01.txt",
+      "sha256": "4d4dd5ffbc7a23cd5a26bddd2bbefb493d8c1bec525c1be952887b006527d1d7",
+      "bytes": 365,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_System_Topology(1).pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_System_Topology(1)/page-02.txt",
+      "sha256": "4d4118fa8877be1ff819714b1b5e5349cfcacce45c27412625f71dcaef098ef9",
+      "bytes": 665,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_System_Topology(1).pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_System_Topology(1)/page-03.txt",
+      "sha256": "1a87d1012d7cd1fa5c46041f04823aa4e6f6d79e28d8aae8b9b0e63271b316db",
+      "bytes": 515,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_System_Topology(1).pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_System_Topology(1)/page-04.txt",
+      "sha256": "75bfda4524af988a4e0b2762104a6ae96e66db33ff71801efef7416cb3a77ee9",
+      "bytes": 588,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_System_Topology(1).pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_System_Topology(1)/page-05.txt",
+      "sha256": "ded27e1f330694405ac2207f41c161b68f2f71c45c94d1977bd5fdf6734331f2",
+      "bytes": 562,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_System_Topology(1).pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_System_Topology(1)/page-06.txt",
+      "sha256": "84d77bd59e0ae2803af166feb91b86648aa5218e945b696bacbc105e96fdde63",
+      "bytes": 625,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_System_Topology(1).pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_System_Topology(1)/page-07.txt",
+      "sha256": "424a186b4b8075def3158474bf618c3b6ec7ca618ded2ea0f77d93f848c5b97b",
+      "bytes": 587,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_System_Topology(1).pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_System_Topology(1)/page-08.txt",
+      "sha256": "93cad323e4fe2a09c04707f142859deccfcb55ab392c5a89355203dab572ef72",
+      "bytes": 619,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_System_Topology(1).pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_System_Topology(1)/page-09.txt",
+      "sha256": "9a339f1a0511bc5ead519f20ed35aae4e8c0a20d64d8815c0ac30a12bd91ca8e",
+      "bytes": 138,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_System_Topology(1).pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_System_Topology(1)/page-10.txt",
+      "sha256": "bc0938788cc3dff7d88211459b72265a8991e04f6df26ca7e455c5acccb64587",
+      "bytes": 989,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_System_Topology(1).pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_System_Topology(1)/page-11.txt",
+      "sha256": "aa4e85ba4f05b19a8de58b162e1d3eb48cda3a927af0cd0dc9cdde684f5f17ff",
+      "bytes": 647,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_System_Topology(1).pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_System_Topology(1)/page-12.txt",
+      "sha256": "6f94a2ae5955e2b22c3461e31ec4955300f0e761e9b46b4ff9e00984fad10c26",
+      "bytes": 1478,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_System_Topology(1).pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_System_Topology(1)/page-13.txt",
+      "sha256": "22a429787fe06cf6a8d59dc26e3bae1564346379ffd7885721198826244eecad",
+      "bytes": 886,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_System_Topology(1).pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/pdf-ocr/Spatial_DNA_System_Topology(1)/page-14.txt",
+      "sha256": "1bd580937da04b8da64549287e94c81d86cb5d7a5fa27381187957e629cf42b0",
+      "bytes": 707,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Spatial_DNA_System_Topology(1).pdf",
+      "note": "OCR text; consult original image PDF for ambiguous glyphs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/source-fragments/MARA_JOB_002_PROJECTION_PAYLOAD.json/CandidateEvidenceAtom.source-example.ts",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "See companion status file",
+      "note": "Verbatim fenced/documented source snippet",
+      "sha256": "8b6dc5d9fc21792105dd8c65ec74e913c709b852696cb71f88c5c3e29b5f31f4",
+      "bytes": 735
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/source-fragments/MARA_JOB_002_PROJECTION_PAYLOAD.json/CandidateEvidenceAtom.source-example.ts.status.txt",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "See companion status file",
+      "note": "Verbatim fenced/documented source snippet",
+      "sha256": "0f5e2ed2276c6f9c4a618bf615b9f8c55ffd5d25481982e9036c6f959ddcd3ae",
+      "bytes": 174
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/source-fragments/Pasted markdown(20260923-003339)/block-01.json",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "See companion status file",
+      "note": "Verbatim fenced/documented source snippet",
+      "sha256": "9f568deedff552fbe6c0ebb7cc78622b6201c786de3549dea0d423e60774cedd",
+      "bytes": 5283
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/source-fragments/Pasted markdown(20260923-003339)/block-01.json.status.txt",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "See companion status file",
+      "note": "Verbatim fenced/documented source snippet",
+      "sha256": "755616d61ba99e84fb0cd2d0ac418d3258f475f503ba3b3000e98ed1dca7c508",
+      "bytes": 99
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/source-fragments/Pasted markdown(20260923-003515)/block-01.json",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "See companion status file",
+      "note": "Verbatim fenced/documented source snippet",
+      "sha256": "0e481db85fa294a222d3d1120ae8adcd5fb6eb6518d0fb7f805815c1362f73f5",
+      "bytes": 876
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/source-fragments/Pasted markdown(20260923-003515)/block-01.json.status.txt",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "See companion status file",
+      "note": "Verbatim fenced/documented source snippet",
+      "sha256": "bf901ef976b5fcbf020d763b910d403c25172b485aa971768664e55d2964e5e5",
+      "bytes": 99
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/source-fragments/Pasted markdown(20260923-003515)/block-02.json",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "See companion status file",
+      "note": "Verbatim fenced/documented source snippet",
+      "sha256": "b666ea8042ad288e2c4f7756b27c8c4a41863455c2dc72e7f2ed0ff4141a095f",
+      "bytes": 481
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/source-fragments/Pasted markdown(20260923-003515)/block-02.json.status.txt",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "See companion status file",
+      "note": "Verbatim fenced/documented source snippet",
+      "sha256": "264d5c44785b3d85b04bb8409f412677827c78317068823050f8450f9d25aec7",
+      "bytes": 99
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/source-fragments/Pasted markdown(20260923-003515)/block-03.json",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "See companion status file",
+      "note": "Verbatim fenced/documented source snippet",
+      "sha256": "04d59561ded47023551391f103dd690f9ace14f245513d2291bced57a4e8f733",
+      "bytes": 520
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/source-fragments/Pasted markdown(20260923-003515)/block-03.json.status.txt",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "See companion status file",
+      "note": "Verbatim fenced/documented source snippet",
+      "sha256": "0a686651f3df5d29b5e4e8b9875d9cde6216dade74421bdcf1b14c48ed9f39dd",
+      "bytes": 99
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/source-fragments/Pasted markdown(20260923-003515)/block-04.json",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "See companion status file",
+      "note": "Verbatim fenced/documented source snippet",
+      "sha256": "45d6fc12bb437bb4106ffbf2a2aa61e9e8672ae05fca4641829cd83a187d7f42",
+      "bytes": 449
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/source-fragments/Pasted markdown(20260923-003515)/block-04.json.status.txt",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "See companion status file",
+      "note": "Verbatim fenced/documented source snippet",
+      "sha256": "3233bd1d3e925e817b5fa8207e694ed1e490e116a348d2aae25c0e3aed905a2a",
+      "bytes": 99
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/source-fragments/Pasted markdown(20260923-003515)/block-05.json",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "See companion status file",
+      "note": "Verbatim fenced/documented source snippet",
+      "sha256": "77510e9964dfc643ca5c698517bfe75e415ad065a5164661001e5f8dd58bb962",
+      "bytes": 385
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/source-fragments/Pasted markdown(20260923-003515)/block-05.json.status.txt",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "See companion status file",
+      "note": "Verbatim fenced/documented source snippet",
+      "sha256": "ec2fcaa6646347a5e7125acf38b45d34fd52fc35a5d1bc493fa3d53207faf550",
+      "bytes": 99
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/workbooks/Comprehensive Spatial DNA Process and Data Inventory/sheet-01-cached-values.csv",
+      "sha256": "4e4220f9f0f52c54eae778a9e9ee8ad9ec526b23c73b59b1a5228ec88e0015d1",
+      "bytes": 17148,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Comprehensive Spatial DNA Process and Data Inventory.xlsx",
+      "note": "Cached value view; blank where workbook has no cache"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/workbooks/Comprehensive Spatial DNA Process and Data Inventory/sheet-01.csv",
+      "sha256": "4e4220f9f0f52c54eae778a9e9ee8ad9ec526b23c73b59b1a5228ec88e0015d1",
+      "bytes": 17148,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Comprehensive Spatial DNA Process and Data Inventory.xlsx",
+      "note": "Formula view"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/workbooks/Comprehensive Spatial DNA Process and Data Inventory/sheet-02-cached-values.csv",
+      "sha256": "9104013c73504345845da0ec17e9116a90e0ec217d36c03c1972893d1fedf5bc",
+      "bytes": 474,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Comprehensive Spatial DNA Process and Data Inventory.xlsx",
+      "note": "Cached value view; blank where workbook has no cache"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/workbooks/Comprehensive Spatial DNA Process and Data Inventory/sheet-02.csv",
+      "sha256": "9104013c73504345845da0ec17e9116a90e0ec217d36c03c1972893d1fedf5bc",
+      "bytes": 474,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Comprehensive Spatial DNA Process and Data Inventory.xlsx",
+      "note": "Formula view"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/workbooks/Comprehensive Spatial DNA Process and Data Inventory/sheets.json",
+      "sha256": "ba4b720b728620b6ae3e44f2ebe21881dc9dee4efcdc0532084b88d117262fdb",
+      "bytes": 301,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Comprehensive Spatial DNA Process and Data Inventory.xlsx",
+      "note": "Sheet names and corresponding CSVs"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/workbooks/spatial dna training/sheet-01-cached-values.csv",
+      "sha256": "a921675baf4f57992ce6897745dd9a3e68cba1af814ba56bb0b2c084c4fea91e",
+      "bytes": 27503,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "spatial dna training.xlsx",
+      "note": "Cached value view; blank where workbook has no cache"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/workbooks/spatial dna training/sheet-01.csv",
+      "sha256": "77626515b317801d1c3749ffc8f11e3df7493d1d20a5282fc4c1defddc5b3c10",
+      "bytes": 40683,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "spatial dna training.xlsx",
+      "note": "Formula view"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/workbooks/spatial dna training/sheet-02-cached-values.csv",
+      "sha256": "2ebc55e7ad8bf6b2a22e5ab77159f675c1fccbd91087c708b451cc56f66e80d9",
+      "bytes": 12996,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "spatial dna training.xlsx",
+      "note": "Cached value view; blank where workbook has no cache"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/workbooks/spatial dna training/sheet-02.csv",
+      "sha256": "2ebc55e7ad8bf6b2a22e5ab77159f675c1fccbd91087c708b451cc56f66e80d9",
+      "bytes": 12996,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "spatial dna training.xlsx",
+      "note": "Formula view"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/workbooks/spatial dna training/sheet-03-cached-values.csv",
+      "sha256": "f0d23dba2ac8d64e2519d05320909ec9a2239b5df00b45dc8db19359c3377150",
+      "bytes": 1318,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "spatial dna training.xlsx",
+      "note": "Cached value view; blank where workbook has no cache"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/workbooks/spatial dna training/sheet-03.csv",
+      "sha256": "f0d23dba2ac8d64e2519d05320909ec9a2239b5df00b45dc8db19359c3377150",
+      "bytes": 1318,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "spatial dna training.xlsx",
+      "note": "Formula view"
+    },
+    {
+      "path": "spatial-dna-project-state/extracted/workbooks/spatial dna training/sheets.json",
+      "sha256": "1a1105d715ab61749fe498b72ce91a03a10eedfe5129c8fb2736a183442203ec",
+      "bytes": 443,
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "spatial dna training.xlsx",
+      "note": "Sheet names and corresponding CSVs"
+    },
+    {
+      "path": "spatial-dna-project-state/handoff/recovery.md",
+      "category": "DOCUMENTATION",
+      "source": "Preservation pass",
+      "note": "",
+      "sha256": "232faad422ccc42cd99d54173e255ecb99c0ef511ee5b4cf36d516483d29554f",
+      "bytes": 1307
+    },
+    {
+      "path": "spatial-dna-project-state/handoff/state-audit.md",
+      "category": "DOCUMENTATION",
+      "source": "Preservation pass",
+      "note": "",
+      "sha256": "9c05f47e5911e3107aed8816522e4767cdb3d65a4503837792ce7ea6a4a36da3",
+      "bytes": 4666
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/candidate/demographics.yaml",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/candidate/demographics.yaml",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/governance/repository_rules_and_operating_contract.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/governance/repository_rules_and_operating_contract.md",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/graph/edges.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/graph/edges.jsonl",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/graph/nodes.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/graph/nodes.jsonl",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/graph/schema.yaml",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/graph/schema.yaml",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/sources/document_01_everything_resume/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/sources/document_01_everything_resume/.gitkeep",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/sources/document_02_portfolio_projects/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/sources/document_02_portfolio_projects/.gitkeep",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/sources/document_03_education_metro_development/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/sources/document_03_education_metro_development/.gitkeep",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/sources/document_04_references_testimony_behavior/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/sources/document_04_references_testimony_behavior/.gitkeep",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/sources/document_05_psychometric_cognitive/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/sources/document_05_psychometric_cognitive/.gitkeep",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/spatial_dna/plane_01/evidence_vault/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/spatial_dna/plane_01/evidence_vault/.gitkeep",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/spatial_dna/plane_02/evidence_vault/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/spatial_dna/plane_02/evidence_vault/.gitkeep",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/spatial_dna/plane_03/evidence_vault/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/spatial_dna/plane_03/evidence_vault/.gitkeep",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/spatial_dna/plane_04/evidence_vault/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/spatial_dna/plane_04/evidence_vault/.gitkeep",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/spatial_dna/plane_05/evidence_vault/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/spatial_dna/plane_05/evidence_vault/.gitkeep",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate-spatial-dna-kg/spatial_dna/plane_06/evidence_vault/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate-spatial-dna-kg/spatial_dna/plane_06/evidence_vault/.gitkeep",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/DNA/candidate_spatial_dna_kg_structure.docx",
+      "sha256": "8ece59775154059556b85e174240140256ebdd49f536222a89fa65bd33dfdba9",
+      "bytes": 4084,
+      "category": "REPOSITORY FACT",
+      "source": "origin/DNA:candidate_spatial_dna_kg_structure.docx",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/ENGine/.branch-seed",
+      "sha256": "74b8fbb90956527c2394fd4e8d67f52968b3ed5478fdb5bc66fdb75048f50e83",
+      "bytes": 63,
+      "category": "REPOSITORY FACT",
+      "source": "origin/ENGine:.branch-seed",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/ENGine/.materialize/part01.b64",
+      "sha256": "5a1973eaf90a5635658278dbf4cc98cfb17b8c09b11c8560806e33f68e1ec666",
+      "bytes": 8000,
+      "category": "REPOSITORY FACT",
+      "source": "origin/ENGine:.materialize/part01.b64",
+      "note": "Byte-identical snapshot of branch tip; branch history remains in Git"
+    },
+    {
+      "path": "spatial-dna-project-state/history/branch-snapshots/main/spatial dna training (1).xlsx",
+      "category": "REPOSITORY FACT",
+      "source": "origin/main@a5822a1",
+      "note": "Byte-identical base branch workbook",
+      "sha256": "8e5da89a76b8024e35064e077f822189b8a44a4dbd262f0a2fc8adcf9f6b1365",
+      "bytes": 27090
+    },
+    {
+      "path": "spatial-dna-project-state/open-problems/discrepancies.md",
+      "category": "DOCUMENTATION",
+      "source": "Preservation pass",
+      "note": "",
+      "sha256": "70f63b844a72b4f23dbf75c62ea3aa9025b1258cc156ad824680531f1630cd9d",
+      "bytes": 3180
+    },
+    {
+      "path": "spatial-dna-project-state/originals/prior-working-copies/Comprehensive_Spatial_DNA_Process_and_Data_Inventory.xlsx",
+      "category": "SOURCE ARTIFACT (BYTE-IDENTICAL ALIAS)",
+      "source": "Comprehensive_Spatial_DNA_Process_and_Data_Inventory.xlsx",
+      "note": "See provenance/working-copy-aliases.json for original name",
+      "sha256": "06fc0fc2583e68fa4e851ae2d20e603860b0bf212427170d748b4cae567bb7ba",
+      "bytes": 12923
+    },
+    {
+      "path": "spatial-dna-project-state/originals/prior-working-copies/MARA_Test_Harness_UI_Blueprint.pdf",
+      "category": "SOURCE ARTIFACT (BYTE-IDENTICAL ALIAS)",
+      "source": "MARA_Test_Harness_UI_Blueprint.pdf",
+      "note": "See provenance/working-copy-aliases.json for original name",
+      "sha256": "5cc600622cc969412d94413e30ed4471704fa991e381451b12505fb7d9a02bac",
+      "bytes": 16291974
+    },
+    {
+      "path": "spatial-dna-project-state/originals/prior-working-copies/SPATIAL_DNA_Compiled_Transfer_Source.docx",
+      "category": "SOURCE ARTIFACT (BYTE-IDENTICAL ALIAS)",
+      "source": "SPATIAL_DNA_Compiled_Transfer_Source.docx",
+      "note": "See provenance/working-copy-aliases.json for original name",
+      "sha256": "d3593e9893b89c799477491502f2a2ebb215323cab2e4c0c4fdff1d768ac704b",
+      "bytes": 554378
+    },
+    {
+      "path": "spatial-dna-project-state/originals/prior-working-copies/Spatial_Candidate_DNA_System_Architecture_Copy.png",
+      "category": "SOURCE ARTIFACT (BYTE-IDENTICAL ALIAS)",
+      "source": "Spatial_Candidate_DNA_System_Architecture_Copy.png",
+      "note": "See provenance/working-copy-aliases.json for original name",
+      "sha256": "c3ee0d663d1c30a5737ae9069073869a678f0c7035685f7afdccf04f70cdc0c8",
+      "bytes": 4359382
+    },
+    {
+      "path": "spatial-dna-project-state/originals/prior-working-copies/Spatial_DNA_Exact_25_Coordinates_Source_Copy.docx",
+      "category": "SOURCE ARTIFACT (BYTE-IDENTICAL ALIAS)",
+      "source": "Spatial_DNA_Exact_25_Coordinates_Source_Copy.docx",
+      "note": "See provenance/working-copy-aliases.json for original name",
+      "sha256": "18e3697538aa24686a59847c7b394f997655a27d607b732da587799eedde4677",
+      "bytes": 8683
+    },
+    {
+      "path": "spatial-dna-project-state/originals/prior-working-copies/Spatial_DNA_Experimental_Exhaust_Postmortem_Source_Copy.docx",
+      "category": "SOURCE ARTIFACT (BYTE-IDENTICAL ALIAS)",
+      "source": "Spatial_DNA_Experimental_Exhaust_Postmortem_Source_Copy.docx",
+      "note": "See provenance/working-copy-aliases.json for original name",
+      "sha256": "b7872d5d57d1aca1f50014ef0c794f2ef275b91394ca24ae6003b6128e2e5bc6",
+      "bytes": 14864
+    },
+    {
+      "path": "spatial-dna-project-state/originals/prior-working-copies/Spatial_DNA_Forensic_Data_Reconstruction.md",
+      "category": "SOURCE ARTIFACT (BYTE-IDENTICAL ALIAS)",
+      "source": "Spatial_DNA_Forensic_Data_Reconstruction.md",
+      "note": "See provenance/working-copy-aliases.json for original name",
+      "sha256": "47349fbdd7b538042b6fe7b82e3606a29f80076ae31f003d70194a464468dbe5",
+      "bytes": 23837
+    },
+    {
+      "path": "spatial-dna-project-state/originals/prior-working-copies/Spatial_DNA_Forensic_Handoff_Copy.pdf",
+      "category": "SOURCE ARTIFACT (BYTE-IDENTICAL ALIAS)",
+      "source": "Spatial_DNA_Forensic_Handoff_Copy.pdf",
+      "note": "See provenance/working-copy-aliases.json for original name",
+      "sha256": "31d56022ec651e043a12e6ad274e47c8794be0021296d03aee1257966cbc84a0",
+      "bytes": 18417667
+    },
+    {
+      "path": "spatial-dna-project-state/originals/prior-working-copies/Spatial_DNA_Forensic_Interface_Analysis_Wiring_Requirements.md",
+      "category": "SOURCE ARTIFACT (BYTE-IDENTICAL ALIAS)",
+      "source": "Spatial_DNA_Forensic_Interface_Analysis_Wiring_Requirements.md",
+      "note": "See provenance/working-copy-aliases.json for original name",
+      "sha256": "eee9101c242981328e865d1b21b758fdd4f0652355fda363513e79e992a65e23",
+      "bytes": 10720
+    },
+    {
+      "path": "spatial-dna-project-state/originals/prior-working-copies/Spatial_DNA_JOB_002_Projection_Payload_Source_Copy.docx",
+      "category": "SOURCE ARTIFACT (BYTE-IDENTICAL ALIAS)",
+      "source": "Spatial_DNA_JOB_002_Projection_Payload_Source_Copy.docx",
+      "note": "See provenance/working-copy-aliases.json for original name",
+      "sha256": "cf0c26de7cd9484d209337d88ff0c5595cb0499ede66b98fbeca1f3b6dbb8fa2",
+      "bytes": 1066598
+    },
+    {
+      "path": "spatial-dna-project-state/originals/prior-working-copies/Spatial_DNA_NotebookLM_Mind_Map.png",
+      "category": "SOURCE ARTIFACT (BYTE-IDENTICAL ALIAS)",
+      "source": "Spatial_DNA_NotebookLM_Mind_Map.png",
+      "note": "See provenance/working-copy-aliases.json for original name",
+      "sha256": "4bd58586ac43651df2f3b0c84f426e38d0014fc74fbde7f268a34ad914e14055",
+      "bytes": 409889
+    },
+    {
+      "path": "spatial-dna-project-state/originals/prior-working-copies/Spatial_DNA_System_Topology_Reference.pdf",
+      "category": "SOURCE ARTIFACT (BYTE-IDENTICAL ALIAS)",
+      "source": "Spatial_DNA_System_Topology_Reference.pdf",
+      "note": "See provenance/working-copy-aliases.json for original name",
+      "sha256": "4a5a0ab9bd096fc7792c0e56c1086b233b94df144d88181f826ebc1afd3cd11d",
+      "bytes": 15569444
+    },
+    {
+      "path": "spatial-dna-project-state/originals/prior-working-copies/Spatial_DNA_Topographic_Survey_and_Evidence_Ledger.md",
+      "category": "SOURCE ARTIFACT (BYTE-IDENTICAL ALIAS)",
+      "source": "Spatial_DNA_Topographic_Survey_and_Evidence_Ledger.md",
+      "note": "See provenance/working-copy-aliases.json for original name",
+      "sha256": "d51917487e35ac40439ecba5977b44f87f70fa5376437c1951d4f01011f2e51a",
+      "bytes": 19209
+    },
+    {
+      "path": "spatial-dna-project-state/originals/prior-working-copies/Spatial_DNA_Training_Workbook_Source_Copy.xlsx",
+      "category": "SOURCE ARTIFACT (BYTE-IDENTICAL ALIAS)",
+      "source": "Spatial_DNA_Training_Workbook_Source_Copy.xlsx",
+      "note": "See provenance/working-copy-aliases.json for original name",
+      "sha256": "5ca3327426c18c1eb019779e76649f62572bbbf6fddcdb1c9520250639a4ddbb",
+      "bytes": 27149
+    },
+    {
+      "path": "spatial-dna-project-state/originals/transferred/Comprehensive Spatial DNA Process and Data Inventory.xlsx",
+      "sha256": "06fc0fc2583e68fa4e851ae2d20e603860b0bf212427170d748b4cae567bb7ba",
+      "bytes": 12923,
+      "category": "SOURCE ARTIFACT",
+      "source": "Comprehensive Spatial DNA Process and Data Inventory.xlsx",
+      "note": "Byte-identical supplied original"
+    },
+    {
+      "path": "spatial-dna-project-state/originals/transferred/EXACT_SPATIAL_COORDINATES_25.json.docx",
+      "sha256": "18e3697538aa24686a59847c7b394f997655a27d607b732da587799eedde4677",
+      "bytes": 8683,
+      "category": "SOURCE ARTIFACT",
+      "source": "EXACT_SPATIAL_COORDINATES_25.json.docx",
+      "note": "Byte-identical supplied original"
+    },
+    {
+      "path": "spatial-dna-project-state/originals/transferred/Forensic Interface Analysis_ Spatial DNA Wiring Requirements.md",
+      "sha256": "eee9101c242981328e865d1b21b758fdd4f0652355fda363513e79e992a65e23",
+      "bytes": 10720,
+      "category": "SOURCE ARTIFACT",
+      "source": "Forensic Interface Analysis_ Spatial DNA Wiring Requirements.md",
+      "note": "Byte-identical supplied original"
+    },
+    {
+      "path": "spatial-dna-project-state/originals/transferred/MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "sha256": "cf0c26de7cd9484d209337d88ff0c5595cb0499ede66b98fbeca1f3b6dbb8fa2",
+      "bytes": 1066598,
+      "category": "SOURCE ARTIFACT",
+      "source": "MARA_JOB_002_PROJECTION_PAYLOAD.json.docx",
+      "note": "Byte-identical supplied original"
+    },
+    {
+      "path": "spatial-dna-project-state/originals/transferred/MARA_UI_Blueprint.pdf",
+      "sha256": "5cc600622cc969412d94413e30ed4471704fa991e381451b12505fb7d9a02bac",
+      "bytes": 16291974,
+      "category": "SOURCE ARTIFACT",
+      "source": "MARA_UI_Blueprint.pdf",
+      "note": "Byte-identical supplied original"
+    },
+    {
+      "path": "spatial-dna-project-state/originals/transferred/NotebookLM Mind Map (3).png",
+      "sha256": "4bd58586ac43651df2f3b0c84f426e38d0014fc74fbde7f268a34ad914e14055",
+      "bytes": 409889,
+      "category": "SOURCE ARTIFACT",
+      "source": "NotebookLM Mind Map (3).png",
+      "note": "Byte-identical supplied original"
+    },
+    {
+      "path": "spatial-dna-project-state/originals/transferred/Pasted markdown(20260923-003339).md",
+      "sha256": "d51917487e35ac40439ecba5977b44f87f70fa5376437c1951d4f01011f2e51a",
+      "bytes": 19209,
+      "category": "SOURCE ARTIFACT",
+      "source": "Pasted markdown(20260923-003339).md",
+      "note": "Byte-identical supplied original"
+    },
+    {
+      "path": "spatial-dna-project-state/originals/transferred/Pasted markdown(20260923-003515).md",
+      "sha256": "47349fbdd7b538042b6fe7b82e3606a29f80076ae31f003d70194a464468dbe5",
+      "bytes": 23837,
+      "category": "SOURCE ARTIFACT",
+      "source": "Pasted markdown(20260923-003515).md",
+      "note": "Byte-identical supplied original"
+    },
+    {
+      "path": "spatial-dna-project-state/originals/transferred/SPATIAL DNA.docx",
+      "sha256": "d3593e9893b89c799477491502f2a2ebb215323cab2e4c0c4fdff1d768ac704b",
+      "bytes": 554378,
+      "category": "SOURCE ARTIFACT",
+      "source": "SPATIAL DNA.docx",
+      "note": "Byte-identical supplied original"
+    },
+    {
+      "path": "spatial-dna-project-state/originals/transferred/SPATIAL DNA_ EXPERIMENTAL EXHAUST ORGANIZATION AND POSTMORTEM.docx",
+      "sha256": "b7872d5d57d1aca1f50014ef0c794f2ef275b91394ca24ae6003b6128e2e5bc6",
+      "bytes": 14864,
+      "category": "SOURCE ARTIFACT",
+      "source": "SPATIAL DNA_ EXPERIMENTAL EXHAUST ORGANIZATION AND POSTMORTEM.docx",
+      "note": "Byte-identical supplied original"
+    },
+    {
+      "path": "spatial-dna-project-state/originals/transferred/Spatial_Candidate_DNA_System_Architecture.png",
+      "sha256": "c3ee0d663d1c30a5737ae9069073869a678f0c7035685f7afdccf04f70cdc0c8",
+      "bytes": 4359382,
+      "category": "SOURCE ARTIFACT",
+      "source": "Spatial_Candidate_DNA_System_Architecture.png",
+      "note": "Byte-identical supplied original"
+    },
+    {
+      "path": "spatial-dna-project-state/originals/transferred/Spatial_DNA_Forensic_Handoff.pdf",
+      "sha256": "31d56022ec651e043a12e6ad274e47c8794be0021296d03aee1257966cbc84a0",
+      "bytes": 18417667,
+      "category": "SOURCE ARTIFACT",
+      "source": "Spatial_DNA_Forensic_Handoff.pdf",
+      "note": "Byte-identical supplied original"
+    },
+    {
+      "path": "spatial-dna-project-state/originals/transferred/Spatial_DNA_System_Topology(1).pdf",
+      "sha256": "4a5a0ab9bd096fc7792c0e56c1086b233b94df144d88181f826ebc1afd3cd11d",
+      "bytes": 15569444,
+      "category": "SOURCE ARTIFACT",
+      "source": "Spatial_DNA_System_Topology(1).pdf",
+      "note": "Byte-identical supplied original"
+    },
+    {
+      "path": "spatial-dna-project-state/originals/transferred/spatial dna training.xlsx",
+      "sha256": "5ca3327426c18c1eb019779e76649f62572bbbf6fddcdb1c9520250639a4ddbb",
+      "bytes": 27149,
+      "category": "SOURCE ARTIFACT",
+      "source": "spatial dna training.xlsx",
+      "note": "Byte-identical supplied original"
+    },
+    {
+      "path": "spatial-dna-project-state/provenance/transfer-index.md",
+      "category": "DOCUMENTATION",
+      "source": "Preservation pass",
+      "note": "",
+      "sha256": "a535295bbd59494e4b4b5c795a707c98ed480df4ee9986832346d08698dead35",
+      "bytes": 2914
+    },
+    {
+      "path": "spatial-dna-project-state/provenance/working-copy-aliases.json",
+      "category": "SOURCE-DERIVED EXTRACTION",
+      "source": "Preservation pass",
+      "note": "",
+      "sha256": "21a211b30187daa8ad85e00e18cf647a899db100dcf979102c12b47df88a9ba8",
+      "bytes": 3329
+    }
+  ]
+}

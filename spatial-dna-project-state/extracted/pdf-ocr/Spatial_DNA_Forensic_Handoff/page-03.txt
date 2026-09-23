@@ -1,0 +1,50 @@
+The 5-Stage Deterministic Execution Chain
+
+[STAGE_1]
+JOB
+INCEPTION
+
+Raw text normalizes
+into
+SCOUT_TARGET_OBSERVA-
+TION_v1,
+
+outputting verbatim
+
+Demand Receptors (D_,).
+
+[STAGE_2]
+CANDIDATE
+
+44 immutable atoms
+and 11 relational
+edges evaluated via
+the Binding Gate.
+
+[STAGE_3] [STAGE_4]
+
+SPATIAL MACHINE
+ENGINE [| Wj) PAYLOAD
+
+Top 4 lateral planes Emits
+
+selected; Cartesian MARA_LAYOUT_PAYLOAD_v1
+coordinates (X, Y, Z, mapping atoms to
+
+R) calculated structured UI JSON
+relative to arrays.
+
+Target Centroid.
+
+[STAGE_5]
+TEST
+CANVAS
+
+A passive
+WebGL/Three. js
+observer boundary
+verifying strict
+physical invariants.
+
+@ Gemini Notebook
+

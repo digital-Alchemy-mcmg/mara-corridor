@@ -1,0 +1,12 @@
+{
+  "contract_version": "MARA_LAYOUT_PAYLOAD_v1",
+  "metadata": { "target_job_id": "string", "target_title": "string" },
+  "spatial_configuration": {
+    "active_lateral_planes": [ { "plane_id": "string", "domain_alignment_score": 0 } ],
+    "counts": { "total_atoms_evaluated": 44, "direct_bind_count": 0 }
+  },
+  "dynamic_layout_elements": {
+    "layout_containers": [ { "container_id": "string", "content": "string", "bound_atoms": [] } ]
+  }
+}
+

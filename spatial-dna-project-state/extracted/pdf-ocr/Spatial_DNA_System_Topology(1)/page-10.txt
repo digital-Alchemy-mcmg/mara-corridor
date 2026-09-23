@@ -1,0 +1,70 @@
+Stage 4: MARA_LAYOUT_PAYLOAD_v1
+
+STAGE 4
+
+i
+| The Traceability Concept
+
+e Binds metadata, spatial geometry, and layout
+containers.
+
+¢ Tested Profile: CLAUDE_D4_EXECUTIVE_DENSITY
+
+| (JOB-002 Method Hospitality). i
+¢ Absolute atom-level traceability preserved
+
+in every rendered container. ‘
+
+oe0 DATA
+
+BINDING #
+
+= Sl LINK |
+
+EXECUTIVE PROJECTION HEADER ¢-------- ‘
+
+es ee |
+
+——— oe
+
+PROFESSIONAL SUMMARY BLOCK | |€@--------- 7
+
+ae oe
+| id EE aw
+
+(a ee ee PAT
+
+Monospace JSON Mapping
+
+=
+{
+
+p55 -> container_id: EXECUTIVE_PROJECTION
+
+content: High-volume hospitality
+operations leader... 18% food-cost
+---+-p variance reduction. .wnaitesing the
+connent beath, controlling and rate of
+modtections as Pantoonia...
+
+bound_atoms: [WH-TWIN-001, WH-BOBC-002]
+(Trace ID Preservation)
+
+H categories:
+
+[{category: Financial Discipline,
+! items: [P&L Management,
+
+' Food Cost Variance]}]
+
+|
+
+;
+
+|
+y COMPETENCYEMATRIXGGRID Eee |@-—-------s-—u
+( TRACEABILITY
+
+EXEEUTLON IN PROGRESS
+
+

@@ -1,0 +1,24 @@
+STAGE 5: The Test Canvas (Zero Physics Observer)
+
+4
+ee
+
+Absolute Mapping:
+Atoms map exactly to
+position.set(x,y,z).
+
+Zero Physics Rule:
+Never attach collision bodies,
+force generators, or automatic
+layout solvers.
+
+Boundary Tamper Test:
+Injecting an out-of-bounds coordinate
+(e.g., X = 14.50) must halt validation
+
+and throw OUT_OF_BOUNDS_ERROR.
+Do not rescale the bounding volume.
+
+4 Gemini Notebook
+
+

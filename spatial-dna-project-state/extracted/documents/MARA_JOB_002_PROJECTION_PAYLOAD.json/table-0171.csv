@@ -1,0 +1,7 @@
+Viewport Lens,Execution Function,Intended Use Case
+ATEMPORAL_TOPOLOGY (Default),"Maps whole-person capability density, cross-domain connections, and evidence clusters without chronological sorting.",Primary inspection in Atlas Workspace & MARA base state. Eliminates recency bias.
+CHRONOLOGICAL_SCRUBBER,Interrogates the evidence graph through an interactive timeline slider from earliest to current.,"Assessing career trajectory, tenure duration, and milestone progression when requested."
+CORE_COMPETENCIES,Filters and clusters evidence by high-abstraction operational and technical competencies.,"Quick evaluation of cross-functional capability bands (e.g., P&L vs. Software Systems)."
+EVIDENCE_AUTHORITY,"Partitions atoms into authority tiers: VERIFIED, SUPPORTED, CANDIDATE-REPORTED, CONFLICTED.","Compliance auditing, pre-hire vetting, and proof verification."
+PROVENANCE_ORIGIN,"Groups multi-domain evidence by originating employer, business venture, or project branch.",Tracing all capabilities back to their physical or legal origin.
+TARGET_RECEPTOR_PROJECTION,"Computes 3D WebGL coordinates (+Y Ceiling, 0 Baseline, -Y Floor) relative to a specific job demand posting.","Dynamic job-matching and generating verified, targeted resumes without drift."

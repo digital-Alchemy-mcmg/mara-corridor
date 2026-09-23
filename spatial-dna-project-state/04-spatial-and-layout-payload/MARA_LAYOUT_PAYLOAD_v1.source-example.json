@@ -1,0 +1,119 @@
+{
+  "contract_version": "MARA_LAYOUT_PAYLOAD_v1",
+  "timestamp": "2026-09-22T03:45:00Z",
+  "metadata": {
+    "target_job_id": "JOB-002",
+    "target_title": "Restaurant Assistant General Manager",
+    "target_company": "Method Hospitality",
+    "target_location": "Detroit, MI 48226",
+    "target_compensation": {
+      "min_salary": 70000,
+      "max_salary": 75000,
+      "avg_salary": 72500,
+      "pay_type": "Salary",
+      "employment_type": "Full-time"
+    },
+    "benefits": ["401(k)", "Health insurance", "Paid time off", "Vision", "Dental", "Life insurance"],
+    "notes": "Monday to Friday +7; Easily apply"
+  },
+  "demand_envelope": {
+    "receptors": [
+      {
+        "receptor_id": "D_01",
+        "category": "Operational & Shift Leadership",
+        "verbatim_text": "Direct day-to-day high-volume dining, floor execution, front-of-house service standards, and labor shift balancing."
+      },
+      {
+        "receptor_id": "D_02",
+        "category": "Financial & P&L Discipline",
+        "verbatim_text": "Drive prime cost management, inventory reconciliation, food/beverage cost variance controls, and margin optimization."
+      },
+      {
+        "receptor_id": "D_03",
+        "category": "Workforce Training & Team Development",
+        "verbatim_text": "Recruit, onboard, train, and develop hospitality workforce across FOH/BOH, enforcing accountability and retention."
+      },
+      {
+        "receptor_id": "D_04",
+        "category": "Compliance, Health & Safety Standards",
+        "verbatim_text": "Maintain strict audit readiness, health department compliance, food safety certifications, and liquor licensing (MLCC)."
+      },
+      {
+        "receptor_id": "D_05",
+        "category": "Cross-Functional Systems & Guest Retention",
+        "verbatim_text": "Lead hospitality service culture, resolve high-stakes guest escalations, and coordinate multi-outlet/banquet crossover."
+      }
+    ]
+  },
+  "spatial_configuration": {
+    "active_lateral_planes": [
+      {"plane_id": "plane_02", "domain_name": "Work History", "azimuth": "Lateral North (+Z)", "color_hex": "#F59E0B", "domain_alignment_score": 98},
+      {"plane_id": "plane_01", "domain_name": "Identity", "azimuth": "Lateral East (+X)", "color_hex": "#3B82F6", "domain_alignment_score": 92},
+      {"plane_id": "plane_06", "domain_name": "References & Testimony", "azimuth": "Lateral South (-Z)", "color_hex": "#10B981", "domain_alignment_score": 85},
+      {"plane_id": "plane_05", "domain_name": "Psychometric & Cognitive", "azimuth": "Lateral West (-X)", "color_hex": "#8B5CF6", "domain_alignment_score": 80}
+    ],
+    "counts": {
+      "total_atoms_evaluated": 44,
+      "direct_bind_count": 12,
+      "transferable_bind_count": 16,
+      "non_bind_count": 16,
+      "ceiling_polarity_count": 11,
+      "floor_polarity_count": 1
+    }
+  },
+  "dynamic_layout_elements": {
+    "persona_surface": "HOSPITALITY_OPERATIONS_LEADERSHIP",
+    "transducer_profile": "CLAUDE_D4_EXECUTIVE_DENSITY",
+    "layout_containers": [
+      {
+        "container_id": "HEADER",
+        "order": 1,
+        "content": {
+          "name": "Christopher Flournoy",
+          "title": "Restaurant Operations & Multi-Shift General Management Leader",
+          "location": "Metro Detroit / Novi, MI"
+        },
+        "bound_atoms": ["ID-001", "ID-002", "ID-003"]
+      },
+      {
+        "container_id": "EXECUTIVE_PROJECTION",
+        "order": 2,
+        "content": "High-volume hospitality operations leader with 10+ years directing multi-shift dining, kitchen, and bar operations. Track record managing high-throughput units averaging $140K-$150K weekly gross sales, leading corporate New Store Openings (NSOs), reducing food-cost variance by 18%, and maintaining 94% workforce retention across 65+ personnel with zero critical health or liquor compliance infractions.",
+        "bound_atoms": ["WH-TWIN-001", "WH-TWIN-002", "WH-BOBC-002", "WH-BOBC-003"]
+      },
+      {
+        "container_id": "EXPERIENCE_BOBCAT_BONNIES",
+        "order": 3,
+        "role_header": "General Manager — Bobcat Bonnie's (Ypsilanti, MI) | 2020 - 2023",
+        "bullets": [
+          "Held full operational, workforce, inventory, and P&L ownership for a 65+ multi-department restaurant workforce [Bound: WH-BOBC-001].",
+          "Achieved an 18% reduction in food-cost variance within 12 months via structured inventory cycles and reduced turnover by 30% with 94% retention [Bound: WH-BOBC-002].",
+          "Maintained 100% audit readiness across MLCC liquor licensing, county health inspections, and EcoSure audits with zero critical violations [Bound: WH-BOBC-003]."
+        ],
+        "bound_atoms": ["WH-BOBC-001", "WH-BOBC-002", "WH-BOBC-003"]
+      },
+      {
+        "container_id": "EXPERIENCE_TWIN_PEAKS",
+        "order": 4,
+        "role_header": "Assistant General Manager — Twin Peaks Restaurant (Multiple Markets: MI, CO, TX, FL) | 2012 - 2020",
+        "bullets": [
+          "Directed day-to-day high-volume operations spanning front-of-house, back-of-house, and high-volume bar service with dynamic labor balancing [Bound: WH-TWIN-001].",
+          "Managed operational execution for high-volume store averaging $140,000-$150,000 weekly gross sales, achieving #1 company-wide sales rank for 22 consecutive weeks [Bound: WH-TWIN-002].",
+          "Selected to lead New Store Opening (NSO) teams across multiple markets, establishing shift operational cadences and training standards [Bound: WH-TWIN-003].",
+          "Personally onboarded and trained 120+ team members and shift leaders across bar and floor stations, building sustainable operational pipelines [Bound: WH-TWIN-004]."
+        ],
+        "bound_atoms": ["WH-TWIN-001", "WH-TWIN-002", "WH-TWIN-003", "WH-TWIN-004"]
+      },
+      {
+        "container_id": "COMPETENCY_MATRIX",
+        "order": 5,
+        "categories": [
+          {"category": "Operational Leadership", "items": ["High-Volume Floor Direction", "Labor Balancing", "New Store Openings (NSO)", "Guest Escalation"]},
+          {"category": "Financial & P&L Discipline", "items": ["P&L Management", "Food Cost Variance (-18%)", "Weekly Inventory Auditing", "$150K/wk Sales Volume"]},
+          {"category": "Workforce & Compliance", "items": ["94% Team Retention", "Leadership Pipelines (120+ Trained)", "MLCC Compliance", "EcoSure Readiness"]}
+        ],
+        "bound_atoms": ["WH-TWIN-001", "WH-TWIN-002", "WH-TWIN-003", "WH-TWIN-004", "WH-BOBC-002", "WH-BOBC-003"]
+      }
+    ]
+  }
+}

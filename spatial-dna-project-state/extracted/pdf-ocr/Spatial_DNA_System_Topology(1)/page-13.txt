@@ -1,0 +1,64 @@
+System State: Proven vs. Claimed Ledger
+
+-
+
+[PROVEN BY ARTIFACT |
+(Committed Code/JSON) J
+
+4
+ad
+
+=> _J
+= 44 Atom Extraction &
+Dual Provenance
+
+= 11 Cross-domain edges &
+5 preserved conflicts
+
+m MARA_LAYOUT_PAYLOAD_v1
+
+generation
+
+= WebGL Static Stage
+Component Code
+(ThreeSpatialStage. tsx)
+
+[L
+
+" [PROVEN BY EXECUTION ”
+(Reproducible Output) ]
+“se
+
+= Deterministic derivation
+of X, Y, Z, R
+coordinates.
+
+= At-rest Binding Gate
+Logic against JOB-002.
+
+sL>
+
+TCLAIMED / UNVERIFIED ||
+(Not Autonomous) ]
+Ch |
+
+= Automated Wiring Harness |
+(No daemon chains SCOUT
+to Binding Gate
+autonomous Ly).
+
+= Independent visual
+rendering inside native
+Gemini Canvas UI.
+
+= SCOUT autonomous
+text-to-D, extraction.
+
+75
+
+Or
+
+SYSTEM LEDGER ANALYSIS: STATUS: PARTIAL_VERIFICATION. MANUAL VALIDATION REQUIRED FOR COLUMN 3. TIMESTAMP: 2624-10-27T14:45:30Z. EXECUTION STATE: FROZEN.
+
+® Gemini Notebook
+

@@ -1,0 +1,11 @@
+{
+  "job_id": "JOB-002",
+  "receptors": [
+    { "receptor_id": "D_01", "category": "Operational & Shift Leadership", "weight": 5 },
+    { "receptor_id": "D_02", "category": "Financial & P&L Discipline", "weight": 5 },
+    { "receptor_id": "D_03", "category": "Workforce Training & Team Development", "weight": 4 },
+    { "receptor_id": "D_04", "category": "Compliance, Health & Safety Standards", "weight": 4 },
+    { "receptor_id": "D_05", "category": "Cross-Functional Systems & Guest Retention", "weight": 3 }
+  ]
+}
+

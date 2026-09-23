@@ -1,0 +1,43 @@
+fe 7
+Stage 2b: Structural Edges & Zero-Drift Quarantine Ce ee
+
+Be
+
+-WH-TWIN-001 | TWIN-001
+
+(Corroborated By)
+RF- - RE-TWIN-001 | 001
+
+11 Relational 7
+
+WH- -WH-BOBC-001 | 001
+
+(Produces Metric:
+-18% food ner
+-WH-BOBC-002 | BOBC-002
+
++
+
+Quar.
+
+A CONF-01:
+A CONF-02:
+
+A CONF-03:
+A CONF-04:
+A CONF-05:
+
+antine: Y <=
+
+A Rule: Enforce strategy lock. Do NOT smooth contradictions.
+
+Bobcat Bonnie’s end date (2023 vs 2024).
+
+Applebee’s title discrepancy (Payroll vs Summary).
+Metro Concepts onset overlap (2023 and 2024).
+
+WLT wage reconciliation notice (Oct 13, 2025).
+
+Oakland Univ degree status (Completed vs In-progress).
+
+

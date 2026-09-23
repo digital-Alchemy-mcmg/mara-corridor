@@ -1,0 +1,13 @@
+Atom ID,Domain,Binding Class,Polarity Zone,"Coord (X,Y,Z)",Radius (R),Relevance
+WH-TWIN-001,Work History,DIRECT_BIND,CEILING (+Y),"(0.00, +4.10, +4.35)",4.35,95.0%
+WH-TWIN-002,Work History,DIRECT_BIND,CEILING (+Y),"(0.00, +4.10, +4.35)",4.35,95.0%
+WH-TWIN-003,Work History,DIRECT_BIND,CEILING (+Y),"(0.00, +4.10, +4.35)",4.35,95.0%
+WH-TWIN-004,Work History,DIRECT_BIND,CEILING (+Y),"(0.00, +4.10, +4.35)",4.35,95.0%
+WH-BOBC-002,Work History,DIRECT_BIND,CEILING (+Y),"(0.00, +4.10, +4.35)",4.35,95.0%
+WH-BOBC-003,Work History,DIRECT_BIND,CEILING (+Y),"(0.00, +4.10, +4.35)",4.35,95.0%
+WH-BOBC-001,Work History,DIRECT_BIND,FLOOR (-Y),"(0.00, -2.80, +4.35)",4.35,95.0%
+ID-001,Identity,TRANSFERABLE,BASELINE (Y=0),"(+5.75, +1.00, 0.00)",5.75,75.0%
+ID-002,Identity,TRANSFERABLE,BASELINE (Y=0),"(+5.75, +1.00, 0.00)",5.75,75.0%
+ID-003,Identity,DIRECT_BIND,CEILING (+Y),"(+5.75, +4.10, 0.00)",5.75,95.0%
+PS-PRFL-001,Psychometrics,DIRECT_BIND,CEILING (+Y),"(-4.35, +4.10, 0.00)",4.35,95.0%
+RF-REF-001,References,TRANSFERABLE,BASELINE (Y=0),"(0.00, +1.00, -5.75)",5.75,75.0%

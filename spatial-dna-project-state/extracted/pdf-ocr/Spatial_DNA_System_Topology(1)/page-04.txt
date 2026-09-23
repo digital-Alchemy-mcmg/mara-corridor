@@ -1,0 +1,35 @@
+iz
+Stage 1: Structuring Target Demand (D_k)
+
+r
+
+Input: Raw posting
+(JOB-002 Method Hospitality).
+
+Rule: Deterministic string
+extraction.
+
+STRICT: No candidate scoring or
+narrative smoothing at this stage.
+
+Output:
+SCOUT_TARGET_OBSERVATION_v1
+and discrete Receptors (D_k).
+
+}
+
+"Observation": "OBS-JOB-002-METHOD-HOSP",
+
+"Receptor D_Q1 [Weight 5]": "Direct
+day-to-day high-volume dining, floor
+execution, labor shift balancing.",
+"Receptor D_@2 [Weight 5]":
+
+cost management, inventory
+reconciliation.",
+
+"Constraints": "On-premise required;
+remote non-applicable."
+
+™® Gemini Notebook
+

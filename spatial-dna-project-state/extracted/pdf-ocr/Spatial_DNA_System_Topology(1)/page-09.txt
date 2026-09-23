@@ -1,0 +1,12 @@
+Stage 3b: Blind Verification (Fixed Deterministic Sample)
+
+C is
+
+=
+EXACT_SPATIAL_COORDINATES_25.json snippet
+
+| ) |
+
+® Gemini Notebook
+
+

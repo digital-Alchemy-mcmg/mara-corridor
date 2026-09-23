@@ -1,0 +1,19 @@
+| STAGE 2: Zero-Drift Mandate and Floor Quarantine
+
+Policy Statement: To prevent protocol drift and Al hallucination, historical discrepancies are
+never smoothed over to fit job descriptions. They are preserved and quarantined.
+
+Ceiling (+Y)
+Baseline (0) —- ° A
+The 5 Preserved Conflicts:
+@ @ CONF-01: Bobcat Bonnie's GM tenure end-date dispute (2023 vs 2024).
+Floor ® a CONF-02: Applebee's title discrepancy (Sr. Assistant Mgr vs GM).
+
+(Y <=-2.0) CONF-03: Metro Concepts onset date overlap.
+
+@ & CONF-04: Walled Lake Tavern wage reconciliation notice.
+
+| @ a | CONF-05: Oakland University degree conferral claims blocked.
+
+© Gemini Notebook
+

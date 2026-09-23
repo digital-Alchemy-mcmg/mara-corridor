@@ -1,0 +1,10 @@
+{
+  "contract_type": "CANVAS_RENDERING_SPECIFICATION",
+  "version": "1.0.0",
+  "static_environment": {
+    "viewport": { "fov": 45, "initial_camera_position": {"x": 18.0, "y": 12.0, "z": 18.0} },
+    "bounding_box": { "ranges": { "x": [-10.0, 10.0], "y": [-5.0, 5.0], "z": [-10.0, 10.0] } },
+    "planes": { "ceiling": {"y": 5.0}, "baseline": {"y": 0.0}, "floor": {"y": -5.0} }
+  }
+}
+

@@ -1,0 +1,17 @@
+STRICT INVARIANTS: Non-Negotiable Contracts
+
+DO NOT REDESIGN DO NOT RECONCILE CONFLICTS
+
+The 44 atoms, plane assignments, The 5 historical conflicts MUST
+and bounding volumes ([-10..10] lS remain quarantined in the Floor
+max) are frozen by contract. la zone. No narrative smoothing.
+
+PRESERVE ZERO PHYSICS | PRESERVE JOIN KEYS
+
+Canvas must not apply forces, atom_id is the immutable primary
+gravity, or spring simulations. key linking descriptive
+blurbs to spatial coordinates.
+Do not alter IDs.
+
+® Gemini Notebook
+
