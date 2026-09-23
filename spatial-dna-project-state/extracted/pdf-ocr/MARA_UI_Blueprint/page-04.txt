@@ -1,0 +1,38 @@
+_ STAGE 1: TARGET DEMAND RECEPTORS Ir
+
+Receptor Array Readout
+
+D_01: Operational & Shift
+Leadership [Weight 5]
+
+G
+
+D_02: Financial & P&L
+Discipline
+
+G
+
+[Weight 5]
+
+@ D_03: Workforce Training &
+Team Development [Weight 4]
+
+D 04: Compliance, Health &
+\o Safety [Weight 4]
+
+D_05: Systems & Guest
+
+Retention [Weight 3]
+
+UI REQUIREMENT: Receptors and
+weights must be perpetually visible to
+
+The mathematical and
+| visual anchor of the 3D
+| stage.
+
+establish the absolute zero-point of
+the spatial canvas.
+
+© Gemini Notebook
+

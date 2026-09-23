@@ -1,0 +1,6 @@
+Evidence Tier,Criteria & Meaning
+PROVEN BY ARTIFACT,"Physical, inspectable machine code, JSON, JSONL, or workbook files committed or staged."
+PROVEN BY EXECUTION,"Operations that have been run, mathematically verified, and produced reproducible output."
+REPORTED / EXPERIMENTAL,Findings observed during interactive prototyping (e.g. AI Studio UI session) but not yet chained in CI/CD.
+CLAIMED BUT NOT VERIFIED,Features or linkages that exist in design specs but have not yet been executed autonomously.
+SOURCE-REPORTED / ARTIFACT NOT AVAILABLE,Concepts referenced in documentation whose underlying raw artifact was not directly exported.

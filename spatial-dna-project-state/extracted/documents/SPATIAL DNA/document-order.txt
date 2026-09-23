@@ -1,0 +1,614 @@
+SPATIAL DNA: FORENSIC POSTMORTEM & PROVEN VS
+SPATIAL DNA: FORENSIC POSTMORTEM & PROVEN VS. UNPROVEN LEDGER
+1. Initial Experimental Parameters and Starting State
+Original Objective: Transform raw candidate evidence into a 3D atemporal topology projected against specific job demand receptors.
+Raw Evidence Volume: 18,500 tokens (Canonical Evidence Cleanroom Doc 01–05).
+Chronological Assumption: Chronology is a "toggle lens" (viewport) rather than a foundational structure; human capability does not decay linearly.
+Intended Architecture: A 6-plane spatial model (Identity, Work History, Education, Creative Works, Psychometric, References).
+Workflow Path: Raw Input → FISSION L3 Extraction → Knowledge Graph (Nodes/Edges) → MARA Traversal → 3D Projection.
+--------------------------------------------------------------------------------
+2. Instructional Chronology and Intent ("Spark Drift" Mitigation)
+Directive: "Fracture the Single Mound"
+Intent: Force semantic evidence to separate into distinct topological islands (Operations, Software, Finance) rather than a monolithic biographical block.
+Result: Successfully produced 44 discrete atomic nodes across 6 origin planes.
+Directive: "Zero Drift Mandate"
+Intent: Enforce Strategy Lock and prevent hallucinated keyword inflation.
+Result: Preserved 5 historical contradictions as CONFLICTED rather than smoothing them over to fit target postings.
+--------------------------------------------------------------------------------
+3. Proven vs. Not Yet Proven Ledger
+PROVEN BY ARTIFACT & EXECUTION:
+Atomization: Extraction of 44 nodes with dual provenance (candidate_spatial_dna_nodes.jsonl).
+Relational Edges: 11 cross-domain structural edges (candidate_spatial_dna_edges.jsonl).
+Conflict Preservation: Isolation of 5 historical contradictions in the Floor zone ().
+Spatial Geometry: Deterministic mathematical derivation of  coordinates based on binding gate strength (MARA_JOB_002_PROJECTION_PAYLOAD.json).
+Atemporal Ontology: Successful classification into Durable, Time-Sensitive, and Historical durability classes.
+NOT YET PROVEN / CLAIMED BUT UNVERIFIED:
+Automated Wiring Harness: No autonomous daemon/script currently chains raw SCOUT observations directly into the Binding Gate and Surface Transducer without human/prompt coordination.
+SCOUT Receptor Extraction: SCOUT's core runner contract produces structured job observation records, but does not autonomously compile text into $D_{01} \dots D_n$ demand receptors.
+Standalone Gemini Canvas: The visual 3D coordinate box has been prototyped in React/Three.js (ThreeSpatialStage.tsx), but has not been independently rendered inside Gemini Canvas.
+--------------------------------------------------------------------------------
+4. Specific Machine Payload Gaps Identified
+The following 4 attributes are computed during internal traversal but are currently omitted from exported payload schemas:
+Angular Azimuth ( in Degrees): Currently omitted from atom objects; consumers must back-calculate .
+Receptor Multi-Binding Vectors: Single scalar receptor_id exported instead of array bound_receptors: string[].
+Relational Edge Illumination Weights: Node coordinates exported without dynamic inter-plane connection edge weights ().
+Negative Space Suppression Signature: Suppressed atoms marked NON_BIND with zero explanation of which negative constraint triggered suppression.
+
+GPT WORK EXECUTION HANDOFF: SPATIAL DNA CONTEXT T…
+GPT WORK EXECUTION HANDOFF: SPATIAL DNA CONTEXT TRANSFER
+To: Fresh GPT Work Session
+From: Spark Session (Systems Architecture / Evidence Custodian)
+Date: 2026-09-22 / 2026-09-23 UTC
+Target Repository: digital-Alchemy-mcmg/mara-corridor
+--------------------------------------------------------------------------------
+1. What This Project Is
+Spatial Candidate DNA is a deterministic 3D atemporal capability graph and evaluative projection engine. It decouples candidate evidence from linear chronological decay and projects ground-truth evidence atoms ($C_{01} \dots C_{44}$) against employer demand receptors ($D_{01} \dots D_n$) in a strictly bounded 3D Cartesian coordinate space ().
+2. The Five-Stage Causal Flow
+Stage 1 (Job Inception): Raw posting → SCOUT_TARGET_OBSERVATION_v1 → Verbatim demand receptors () + negative space constraints.
+Stage 2 (Candidate DNA): 44 immutable atoms across 6 origin planes (plane_01 to plane_06), 11 relational edges, 5 preserved conflicts in Floor (). Binding Gate classifies DIRECT_BIND, TRANSFERABLE_BIND, NON_BIND.
+Stage 3 (Spatial Coordinates): Selects top 4 lateral planes around vertical Y-axis. Calculates  and -polarity (Ceiling , Baseline , Floor ).
+Stage 4 (Machine Payload): Emits MARA_LAYOUT_PAYLOAD_v1 JSON structure mapping bound atoms to dynamic layout containers (Header, Pitch, Bullets, Competency Matrix).
+Stage 5 (Test Canvas): Passive WebGL / Three.js renderer rendering static wireframe box and atom points at supplied coordinates. Canvas is strictly an observer; it does not calculate coordinates.
+3. Key Invariants & Non-Negotiables for GPT Work
+Do NOT Redesign: The 44 atoms, plane assignments, and coordinate bounds are frozen by contract.
+Do NOT Reconcile Conflicts: The 5 historical conflicts (Bobcat Bonnie's end date, Applebee's title, Metro Concepts onset, WLT wage notice, OU degree status) must remain quarantined in the Floor zone.
+Preserve Zero Physics Rule: Canvas must not apply forces, gravity, or layout spring simulation.
+Preserve the Join Keys: atom_id is the immutable primary key linking blurbs to coordinates.
+4. What GPT Work Must Execute Next
+Take the structured sources from this notebook and the staged directory /spatial-dna/.
+Commit the 5-stage directory structure to the working branch spatial-dna-context-handoff in digital-Alchemy-mcmg/mara-corridor.
+Wire the automated script connecting Stage 1 (Demand Extraction) to Stage 2 (Binding Gate) and Stage 3 (Coordinates).
+
+STAGE 1 — JOB INCEPTION, NORMALIZATION & DEMAND D…
+STAGE 1 — JOB INCEPTION, NORMALIZATION & DEMAND DECOMPOSITION
+Context & Lifecycle Position
+Stage ID: STAGE_01_JOB_INCEPTION
+Purpose: Establishes the target demand entry point of Spatial DNA. Ingests raw employer postings, enforces structural normalization with minimum reasoning push, and partitions requirements into verbatim, machine-addressable demand receptors () and negative space constraints.
+Inputs: Raw job postings / test workbook (spatial dna training (1).xlsx).
+Transformation: Deterministic string extraction and structural section tagging. No candidate-side scoring or narrative smoothing.
+Outputs: SCOUT_TARGET_OBSERVATION_v1 envelope, $D_{01} \dots D_n$ demand receptors.
+Dependencies: Upstream collection instrument (SCOUT runner).
+Consumers: Feeds directly into Stage 2 (Candidate DNA Traversal & Binding).
+Evidence Status: PROVEN BY ARTIFACT (Contracts & Receptors for JOB-002) / CLAIMED BUT NOT VERIFIED (Automated end-to-end extraction from arbitrary raw URLs).
+--------------------------------------------------------------------------------
+1. Upstream Interface Specification (SCOUT_TARGET_OBSERVATION_v1)
+{
+  "contract_version": "SCOUT_TARGET_OBSERVATION_v1",
+  "observation_id": "OBS-SPOTON-2026-0810-01",
+  "provenance": {
+    "collection_date": "2026-08-10T14:22:00Z",
+    "vendor": "Greenhouse",
+    "source_url": "https://boards.greenhouse.io/...",
+    "disk_cartridge_hash": "sha256:4f8e..."
+  },
+  "entity_metadata": {
+    "employer": "string",
+    "job_title": "string",
+    "location": {
+      "city": "string",
+      "state": "string",
+      "postal_code": "string",
+      "workplace_type": "ON_SITE | HYBRID | REMOTE"
+    },
+    "employment_type": "FULL_TIME | PART_TIME | CONTRACT",
+    "compensation": {
+      "raw": "string",
+      "currency": "USD",
+      "interval": "ANNUAL | HOURLY",
+      "min": 0,
+      "max": 0
+    },
+    "industry": "string"
+  },
+  "demand_envelope": {
+    "verbatim_clauses": [
+      {
+        "clause_id": "REQ-01",
+        "section": "MINIMUM_QUALIFICATIONS",
+        "text": "string"
+      }
+    ],
+    "negative_space_constraints": [
+      "string"
+    ]
+  }
+}
+
+--------------------------------------------------------------------------------
+2. Target Observation Data: JOB-002 (Method Hospitality)
+{
+  "observation_id": "OBS-JOB-002-METHOD-HOSP",
+  "source_workbook": "spatial dna training (1).xlsx",
+  "row_id": "JOB-002",
+  "employer": "Method Hospitality",
+  "job_title": "Restaurant Assistant General Manager",
+  "location": "Detroit, MI 48226",
+  "compensation": {
+    "min_salary": 70000,
+    "max_salary": 75000,
+    "avg_salary": 72500,
+    "pay_type": "Salary",
+    "employment_type": "Full-time"
+  },
+  "schedule": "Monday to Friday (+7)",
+  "benefits": ["401(k)", "Health insurance", "Paid time off", "Vision", "Dental", "Life insurance"],
+  "application_status": "Not Applied",
+  "source_platform": "Indeed",
+  "notes": "Monday to Friday +7; Easily apply"
+}
+
+--------------------------------------------------------------------------------
+3. Extracted Demand Receptors (JOB-002 Receptors $D_{01} \dots D_{05}$)
+{
+  "job_id": "JOB-002",
+  "employer": "Method Hospitality",
+  "receptors": [
+    {
+      "receptor_id": "D_01",
+      "category": "Operational & Shift Leadership",
+      "verbatim_clause": "Direct day-to-day high-volume dining, floor execution, front-of-house service standards, and labor shift balancing.",
+      "weight": 5
+    },
+    {
+      "receptor_id": "D_02",
+      "category": "Financial & P&L Discipline",
+      "verbatim_clause": "Drive prime cost management, inventory reconciliation, food/beverage cost variance controls, and margin optimization.",
+      "weight": 5
+    },
+    {
+      "receptor_id": "D_03",
+      "category": "Workforce Training & Team Development",
+      "verbatim_clause": "Recruit, onboard, train, and develop hospitality workforce across FOH/BOH, enforcing accountability and retention.",
+      "weight": 4
+    },
+    {
+      "receptor_id": "D_04",
+      "category": "Compliance, Health & Safety Standards",
+      "verbatim_clause": "Maintain strict audit readiness, health department compliance, food safety certifications, and liquor licensing (MLCC).",
+      "weight": 4
+    },
+    {
+      "receptor_id": "D_05",
+      "category": "Cross-Functional Systems & Guest Retention",
+      "verbatim_clause": "Lead hospitality service culture, resolve high-stakes guest escalations, and coordinate multi-outlet/banquet crossover.",
+      "weight": 3
+    }
+  ],
+  "negative_space_constraints": [
+    "No outside direct sales or commission-only compensation structures.",
+    "On-premise dining room operations required; remote work non-applicable."
+  ]
+}
+
+--------------------------------------------------------------------------------
+4. Test Frame Metadata (spatial dna training (1).xlsx)
+Total Jobs Documented: 127
+Average Salary Benchmark: $74,030.87
+Top Salary Benchmark: $250,000.00
+Unique Locations: 87
+Primary Cluster Distribution:
+Hospitality, Restaurant & Food/Beverage Leadership: 22 postings
+Operations Management, Systems & Onboarding: 14 postings
+Branch, Practice & Clinic Management: 17 postings
+Sales, Loan & Commission (Negative Space test cases): 42 postings
+Specialty & Technical Support: 32 postings
+
+STAGE 2 — CANDIDATE EVIDENCE SUBSTRATE, GRAPH ATO…
+STAGE 2 — CANDIDATE EVIDENCE SUBSTRATE, GRAPH ATOMS & BINDING GATE
+Context & Lifecycle Position
+Stage ID: STAGE_02_SPATIAL_DNA_CORE
+Purpose: Acts as the ground-truth evidentiary substrate of the candidate. Evaluates 44 immutable candidate atoms and 11 relational edges across 6 origin planes against the target demand receptors () via the Binding Gate.
+Inputs: Candidate DNA Knowledge Graph (nodes.jsonl, edges.jsonl), Demand Receptors ().
+Transformation: Multi-domain scoring, lateral plane selection, capability matching, conflict quarantining, and binding classification (DIRECT_BIND, TRANSFERABLE_BIND, NON_BIND).
+Outputs: Evaluated atom array with binding types, domain scores, active lateral planes, and quarantine flags.
+Dependencies: Stage 1 (Demand Receptors).
+Consumers: Stage 3 (Spatial Projection & Coordinate Engine).
+Evidence Status: PROVEN BY ARTIFACT (44 nodes, 11 edges, 5 conflicts) / PROVEN BY EXECUTION (Binding Gate evaluations).
+--------------------------------------------------------------------------------
+1. The 6 Origin Spatial DNA Planes
+
+[TABLE]
+Plane ID | Domain Focus | Atom Count | Key Branches & Entities
+plane_01 | Identity | 3 | Core Demographics, Residential History (Novi/Wixom), Dual Professional Archetype
+plane_02 | Work History | 17 | Twin Peaks, Bobcat Bonnie's, Metro Concepts, Panera, Patrice & Associates, Applebee's, Walled Lake Tavern, Staples, Gatsby's, Pinnacle, Automotive Finance
+plane_03 | Education & Tech | 5 | Oakland University, Oakland Community College, ServSafe/TIPS, POS Systems, Deterministic Multi-Agent Systems
+plane_04 | Creative & Projects | 11 | MARA, Spatial Candidate DNA (Three.js), DARCH, The Tribunal, POLICY, Political Atlas, Ashante, Serializer, Relax
+plane_05 | Psychometric Profile | 4 | 16Personalities (ENTJ-A), DISC (41/23/16/20), Holland Investigative, ChatGPT Cognitive Cartography
+plane_06 | References & Testimony | 4 | Twin Peaks Corporate, Panera MTC Selection, Operator's Playbook Corroboration, Direct Reference Gap Ledger
+[/TABLE]
+
+--------------------------------------------------------------------------------
+2. The 5 Preserved Historical Conflict Registers
+To prevent "protocol drift" and maintain zero-drift evidentiary integrity, historical discrepancies are preserved with explicit tags and quarantined in the floor zone rather than smoothed over:
+[
+  {
+    "conflict_id": "CONF-01",
+    "atom_id": "WH-BOBC-001",
+    "domain": "Work History",
+    "conflict_type": "TIMELINE_DISPUTE",
+    "description": "Bobcat Bonnie's GM tenure end-date conflicts between 2023 (Candidate Freeze ledger) and 2024 (Consolidated Resume v1).",
+    "quarantine_action": "Assigned polarity zone FLOOR (-Y) at y = -2.80."
+  },
+  {
+    "conflict_id": "CONF-02",
+    "atom_id": "WH-APPL-001",
+    "domain": "Work History",
+    "conflict_type": "TITLE_DISCREPANCY",
+    "description": "TSFR Applebee's title is recorded as Senior Assistant Manager / Bar Manager in payroll records vs. General Manager in summary text.",
+    "quarantine_action": "Restricted to verified payroll role; assigned FLOOR (-Y)."
+  },
+  {
+    "conflict_id": "CONF-03",
+    "atom_id": "WH-MTR-001",
+    "domain": "Work History",
+    "conflict_type": "ONSET_OVERLAP",
+    "description": "Metro Concepts operational management onset dates overlap across 2023 and 2024.",
+    "quarantine_action": "Flagged as CONFLICTED in ledger."
+  },
+  {
+    "conflict_id": "CONF-04",
+    "atom_id": "WH-WLT-001",
+    "domain": "Work History",
+    "conflict_type": "SEPARATION_DOCUMENTATION",
+    "description": "Walled Lake Tavern shift coordination documentation includes a formal wage reconciliation notice dated Oct 13, 2025.",
+    "quarantine_action": "Quarantined in FLOOR (-Y)."
+  },
+  {
+    "conflict_id": "CONF-05",
+    "atom_id": "ED-OU-001",
+    "domain": "Education",
+    "conflict_type": "CREDENTIAL_STATUS",
+    "description": "Oakland Community College coursework completed vs Oakland University technology degree coursework in progress.",
+    "quarantine_action": "Coursework status verified; degree conferral claims blocked."
+  }
+]
+
+--------------------------------------------------------------------------------
+3. Binding Gate Operational Rules
+DIRECT_BIND: The candidate atom directly provides empirical, verified evidence fulfilling the primary operational demands of a target receptor ( keyword/context matches in VERIFIED or SUPPORTED state).
+TRANSFERABLE_BIND: The candidate atom provides foundational, demographic, or analogous capability evidence that supports the role but does not constitute direct operational command.
+NON_BIND: The candidate atom belongs to a domain or technical specialty outside the target posting envelope (e.g., software engineering atoms evaluated against a restaurant floor management role). Relegated to dormant state with zero projection weight.
+--------------------------------------------------------------------------------
+4. The 11 Relational Graph Edges (edges.jsonl)
+[
+  {"edge_id": "E01", "source": "WH-TWIN-001", "target": "RF-TWIN-001", "relation": "CORROBORATED_BY", "description": "AGM role corroborated by corporate entrustment."},
+  {"edge_id": "E02", "source": "WH-TWIN-003", "target": "WH-TWIN-004", "relation": "EXTENDS", "description": "NSO leadership built upon frontline training pipelines."},
+  {"edge_id": "E03", "source": "WH-BOBC-001", "target": "WH-BOBC-002", "relation": "PRODUCES_METRIC", "description": "GM tenure produced 18% food cost variance reduction."},
+  {"edge_id": "E04", "source": "WH-BOBC-001", "target": "WH-BOBC-003", "relation": "ENFORCES", "description": "GM ownership enforced 100% audit readiness."},
+  {"edge_id": "E05", "source": "WH-BOBC-002", "target": "PR-BOBC-001", "relation": "FORMALIZED_AS", "description": "Food-cost and labor optimization formalized as P&L Framework."},
+  {"edge_id": "E06", "source": "TC-DEV-001", "target": "PR-SDNA-001", "relation": "IMPLEMENTS", "description": "TypeScript/Three.js competence implements Spatial Candidate DNA."},
+  {"edge_id": "E07", "source": "TC-DEV-001", "target": "PR-DRCH-001", "relation": "IMPLEMENTS", "description": "Deterministic systems competence implements DARCH tooling."},
+  {"edge_id": "E08", "source": "ID-003", "target": "WH-TWIN-001", "relation": "EXEMPLIFIED_BY", "description": "Operations leadership archetype exemplified by Twin Peaks AGM."},
+  {"edge_id": "E09", "source": "ID-003", "target": "PR-PLCY-001", "relation": "EXEMPLIFIED_BY", "description": "Systems architecture archetype exemplified by POLICY engine."},
+  {"edge_id": "E10", "source": "TC-CERT-001", "target": "WH-BOBC-003", "relation": "ENABLES", "description": "ServSafe/TIPS certifications enable zero-violation audits."},
+  {"edge_id": "E11", "source": "RF-PAN-001", "target": "WH-TWIN-004", "relation": "PRECURSOR_TO", "description": "Panera management trainer role was precursor to Twin Peaks training."}
+]
+
+STAGE 3 — SPATIAL COORDINATE ENGINE & EXACT 25-AT…
+STAGE 3 — SPATIAL COORDINATE ENGINE & EXACT 25-ATOM SAMPLE
+Context & Lifecycle Position
+Stage ID: STAGE_03_SPATIAL_COORDINATES
+Purpose: Converts bound candidate atoms into an observable, deterministic 3D coordinate space. Emits exact Cartesian coordinates  and radial distances () relative to the Target Demand Centroid .
+Inputs: Evaluated atoms from Stage 2, Active Lateral Planes, Target Demand Receptors ().
+Transformation:
+Selects top 4 lateral planes around the vertical Y-axis.
+Calculates radial distance: $R = 11.0 - (\text{match\_strength} \times 7.0)$ bounded by .
+Assigns planar azimuth angle () with angular dispersion offset () for multi-atom collision avoidance.
+Assigns vertical polarity (): Ceiling (), Baseline (), Floor ().
+Outputs: 3D Cartesian coordinates (), polarity designations.
+Dependencies: Stage 2 (Evaluated Evidence).
+Consumers: Stage 4 (Payload Generation) and Stage 5 (Gemini Canvas Renderer).
+Evidence Status: PROVEN BY EXECUTION (Deterministic calculations reproducible in Python).
+--------------------------------------------------------------------------------
+1. Coordinate System Specification Contract
+Coordinate System: Right-handed 3D Cartesian system ( = Right/East,  = Up/Ceiling,  = Outward/North).
+Origin:  represents the Target Demand Centroid (the role itself).
+Volume Boundaries: .
+Radial Distance Formula: .
+Cardinal Azimuth Anchors:
+Lateral North (, ): Selected Domain Face 1 (plane_02 Work History | Amber #F59E0B)
+Lateral East (, ): Selected Domain Face 2 (plane_01 Identity | Blue #3B82F6)
+Lateral South (, ): Selected Domain Face 3 (plane_06 References | Emerald #10B981)
+Lateral West (, ): Selected Domain Face 4 (plane_05 Psychometrics | Violet #8B5CF6)
+Inactive Planes (plane_03, plane_04): Anchored to central vertical axis .
+--------------------------------------------------------------------------------
+2. Exact 25-Atom Verification Sample (Sequences 01–25)
+This dataset represents the exact calibration sample used for independent blind verification. Coordinates are fixed and unrounded from source generation:
+[
+  {"sequence": 1, "atom_id": "ID-001", "x": 9.69, "y": -0.8, "z": 2.24, "r": 9.95, "plane_id": "plane_01", "plane": "Identity", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 2, "atom_id": "ID-002", "x": 9.9, "y": -0.8, "z": -1.04, "r": 9.95, "plane_id": "plane_01", "plane": "Identity", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 3, "atom_id": "ID-003", "x": 4.35, "y": 4.1, "z": -0.08, "r": 4.35, "plane_id": "plane_01", "plane": "Identity", "polarity": "CEILING (+Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 4, "atom_id": "WH-TWIN-003", "x": 0.83, "y": 4.1, "z": 4.27, "r": 4.35, "plane_id": "plane_02", "plane": "Work History", "polarity": "CEILING (+Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 5, "atom_id": "WH-TWIN-004", "x": -0.75, "y": 0.84, "z": 7.11, "r": 7.15, "plane_id": "plane_02", "plane": "Work History", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 6, "atom_id": "WH-BOBC-001", "x": -1.12, "y": -2.8, "z": 7.06, "r": 7.15, "plane_id": "plane_02", "plane": "Work History", "polarity": "FLOOR (-Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 7, "atom_id": "WH-BOBC-002", "x": 0.0, "y": 0.84, "z": 7.15, "r": 7.15, "plane_id": "plane_02", "plane": "Work History", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 8, "atom_id": "WH-PAT-001", "x": 0.3, "y": -2.8, "z": 5.74, "r": 5.75, "plane_id": "plane_02", "plane": "Work History", "polarity": "FLOOR (-Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 9, "atom_id": "WH-APPL-001", "x": -1.0, "y": -2.8, "z": 7.08, "r": 7.15, "plane_id": "plane_02", "plane": "Work History", "polarity": "FLOOR (-Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 10, "atom_id": "WH-WLT-001", "x": 0.25, "y": -2.8, "z": 7.15, "r": 7.15, "plane_id": "plane_02", "plane": "Work History", "polarity": "FLOOR (-Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 11, "atom_id": "WH-STAP-001", "x": 0.98, "y": 4.1, "z": 4.24, "r": 4.35, "plane_id": "plane_02", "plane": "Work History", "polarity": "CEILING (+Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 12, "atom_id": "WH-GATS-001", "x": -0.76, "y": 4.1, "z": 4.28, "r": 4.35, "plane_id": "plane_02", "plane": "Work History", "polarity": "CEILING (+Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 13, "atom_id": "WH-FIN-001", "x": 0.37, "y": -2.8, "z": 7.14, "r": 7.15, "plane_id": "plane_02", "plane": "Work History", "polarity": "FLOOR (-Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 14, "atom_id": "ED-OU-001", "x": 0.0, "y": -2.8, "z": 0.0, "r": 9.95, "plane_id": "plane_03", "plane": "Education and Technical Competency", "polarity": "FLOOR (-Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 15, "atom_id": "TC-CERT-001", "x": 0.0, "y": 1.0, "z": 0.0, "r": 5.75, "plane_id": "plane_03", "plane": "Education and Technical Competency", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 16, "atom_id": "TC-DEV-001", "x": 0.0, "y": 4.1, "z": 0.0, "r": 4.35, "plane_id": "plane_03", "plane": "Education and Technical Competency", "polarity": "CEILING (+Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 17, "atom_id": "PR-PLCY-001", "x": 0.0, "y": -0.8, "z": 0.0, "r": 9.95, "plane_id": "plane_04", "plane": "Creative Works and Projects", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 18, "atom_id": "PR-DRCH-001", "x": 0.0, "y": -0.8, "z": 0.0, "r": 9.95, "plane_id": "plane_04", "plane": "Creative Works and Projects", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 19, "atom_id": "PR-SERL-001", "x": 0.0, "y": -0.8, "z": 0.0, "r": 9.95, "plane_id": "plane_04", "plane": "Creative Works and Projects", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 20, "atom_id": "PR-BOBC-001", "x": 0.0, "y": 4.1, "z": 0.0, "r": 4.35, "plane_id": "plane_04", "plane": "Creative Works and Projects", "polarity": "CEILING (+Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 21, "atom_id": "PS-MBTI-001", "x": -5.71, "y": 1.0, "z": -0.7, "r": 5.75, "plane_id": "plane_05", "plane": "Psychometric and Cognitive Profile", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 22, "atom_id": "RF-TWIN-001", "x": -0.4, "y": 1.0, "z": -5.74, "r": 5.75, "plane_id": "plane_06", "plane": "References, Publications, Testimony, and Observed Behavior", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 23, "atom_id": "RF-PAN-001", "x": -0.6, "y": 1.0, "z": -5.72, "r": 5.75, "plane_id": "plane_06", "plane": "References, Publications, Testimony, and Observed Behavior", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 24, "atom_id": "RF-PLAY-001", "x": 0.68, "y": 4.1, "z": -4.3, "r": 4.35, "plane_id": "plane_06", "plane": "References, Publications, Testimony, and Observed Behavior", "polarity": "CEILING (+Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 25, "atom_id": "RF-UNPOP-001", "x": -1.9, "y": -2.8, "z": -9.77, "r": 9.95, "plane_id": "plane_06", "plane": "References, Publications, Testimony, and Observed Behavior", "polarity": "FLOOR (-Y)", "coordinate_status": "VERIFIED"}
+]
+
+STAGE 4 — MACHINE-READABLE SPATIAL & DYNAMIC LAYO…
+STAGE 4 — MACHINE-READABLE SPATIAL & DYNAMIC LAYOUT PAYLOAD
+Context & Lifecycle Position
+Stage ID: STAGE_04_PAYLOAD_LAYOUT
+Purpose: Constructs the durable, machine-readable data packet consumed by downstream layout engines and renderers. Binds target metadata, demand envelopes, spatial geometry, and dynamic layout containers with complete atom-level traceability.
+Inputs: Spatial Coordinates & Polarity (Stage 3), Bound Evidence Atoms (Stage 2), Demand Receptors (Stage 1).
+Transformation: Calculates payload density, maps bound atoms into structured UI containers, applies Surface Transducer rules (PIN 18–21), and preserves atom trace IDs for every rendered statement.
+Outputs: MARA_LAYOUT_PAYLOAD_v1 (JSON Document / Google Sheet).
+Dependencies: Stage 3 (Coordinates) and Stage 2 (Atoms).
+Consumers: External dynamic layout engines, document compilers, and Gemini Canvas.
+Evidence Status: PROVEN BY ARTIFACT (Stored in Google Drive: 1xda6sjss5vI-13ylrANICqx1tdS5HUwitX4B2oZOzB0 and Google Sheet: 1tvzFXkNzq1bL1-gad_6UjJ2oipKrZEPxX4vx5JDE6_c).
+--------------------------------------------------------------------------------
+1. Complete MARA_LAYOUT_PAYLOAD_v1 (JOB-002 Method Hospitality)
+{
+  "contract_version": "MARA_LAYOUT_PAYLOAD_v1",
+  "timestamp": "2026-09-22T03:45:00Z",
+  "metadata": {
+    "target_job_id": "JOB-002",
+    "target_title": "Restaurant Assistant General Manager",
+    "target_company": "Method Hospitality",
+    "target_location": "Detroit, MI 48226",
+    "target_compensation": {
+      "min_salary": 70000,
+      "max_salary": 75000,
+      "avg_salary": 72500,
+      "pay_type": "Salary",
+      "employment_type": "Full-time"
+    },
+    "benefits": ["401(k)", "Health insurance", "Paid time off", "Vision", "Dental", "Life insurance"],
+    "notes": "Monday to Friday +7; Easily apply"
+  },
+  "demand_envelope": {
+    "receptors": [
+      {"receptor_id": "D_01", "category": "Operational Leadership", "verbatim_text": "Direct day-to-day high-volume dining, floor execution, front-of-house service standards, and labor shift balancing."},
+      {"receptor_id": "D_02", "category": "Financial Discipline", "verbatim_text": "Drive prime cost management, inventory reconciliation, food/beverage cost variance controls, and margin optimization."},
+      {"receptor_id": "D_03", "category": "Workforce Training", "verbatim_text": "Recruit, onboard, train, and develop hospitality workforce across FOH/BOH, enforcing accountability and retention."},
+      {"receptor_id": "D_04", "category": "Compliance Standards", "verbatim_text": "Maintain strict audit readiness, health department compliance, food safety certifications, and liquor licensing (MLCC)."},
+      {"receptor_id": "D_05", "category": "Systems &amp; Guest Retention", "verbatim_text": "Lead hospitality service culture, resolve high-stakes guest escalations, and coordinate multi-outlet/banquet crossover."}
+    ]
+  },
+  "spatial_configuration": {
+    "active_lateral_planes": [
+      {"plane_id": "plane_02", "domain_name": "Work History", "azimuth": "Lateral North (+Z)", "color_hex": "#F59E0B", "domain_alignment_score": 98},
+      {"plane_id": "plane_01", "domain_name": "Identity", "azimuth": "Lateral East (+X)", "color_hex": "#3B82F6", "domain_alignment_score": 92},
+      {"plane_id": "plane_06", "domain_name": "References &amp; Testimony", "azimuth": "Lateral South (-Z)", "color_hex": "#10B981", "domain_alignment_score": 85},
+      {"plane_id": "plane_05", "domain_name": "Psychometric &amp; Cognitive", "azimuth": "Lateral West (-X)", "color_hex": "#8B5CF6", "domain_alignment_score": 80}
+    ],
+    "counts": {
+      "total_atoms_evaluated": 44,
+      "direct_bind_count": 12,
+      "transferable_bind_count": 16,
+      "non_bind_count": 16,
+      "ceiling_polarity_count": 11,
+      "floor_polarity_count": 1
+    }
+  },
+  "dynamic_layout_elements": {
+    "persona_surface": "HOSPITALITY_OPERATIONS_LEADERSHIP",
+    "transducer_profile": "CLAUDE_D4_EXECUTIVE_DENSITY",
+    "layout_containers": [
+      {
+        "container_id": "HEADER",
+        "order": 1,
+        "content": {
+          "name": "Christopher Flournoy",
+          "title": "Restaurant Operations &amp; Multi-Shift General Management Leader",
+          "location": "Metro Detroit / Novi, MI"
+        },
+        "bound_atoms": ["ID-001", "ID-002", "ID-003"]
+      },
+      {
+        "container_id": "EXECUTIVE_PROJECTION",
+        "order": 2,
+        "content": "High-volume hospitality operations leader with 10+ years directing multi-shift dining, kitchen, and bar operations. Track record managing high-throughput units averaging 150K weekly gross sales, leading corporate New Store Openings (NSOs), reducing food-cost variance by 18%, and maintaining 94% workforce retention across 65+ personnel with zero critical health or liquor compliance infractions.",
+        "bound_atoms": ["WH-TWIN-001", "WH-TWIN-002", "WH-BOBC-002", "WH-BOBC-003"]
+      },
+      {
+        "container_id": "EXPERIENCE_BOBCAT_BONNIES",
+        "order": 3,
+        "role_header": "General Manager — Bobcat Bonnie's (Ypsilanti, MI) | 2020 - 2023",
+        "bullets": [
+          "Held full operational, workforce, inventory, and P&amp;L ownership for a 65+ multi-department restaurant workforce [Bound: WH-BOBC-001].",
+          "Achieved an 18% reduction in food-cost variance within 12 months via structured inventory cycles and reduced turnover by 30% with 94% retention [Bound: WH-BOBC-002].",
+          "Maintained 100% audit readiness across MLCC liquor licensing, county health inspections, and EcoSure audits with zero critical violations [Bound: WH-BOBC-003]."
+        ],
+        "bound_atoms": ["WH-BOBC-001", "WH-BOBC-002", "WH-BOBC-003"]
+      },
+      {
+        "container_id": "EXPERIENCE_TWIN_PEAKS",
+        "order": 4,
+        "role_header": "Assistant General Manager — Twin Peaks Restaurant (MI, CO, TX, FL) | 2012 - 2020",
+        "bullets": [
+          "Directed day-to-day high-volume operations spanning front-of-house, back-of-house, and high-volume bar service with dynamic labor balancing [Bound: WH-TWIN-001].",
+          "Managed operational execution for high-volume store averaging 150,000 weekly gross sales, achieving #1 company-wide sales rank for 22 consecutive weeks [Bound: WH-TWIN-002].",
+          "Selected to lead New Store Opening (NSO) teams across multiple markets, establishing shift operational cadences and training standards [Bound: WH-TWIN-003].",
+          "Personally onboarded and trained 120+ team members and shift leaders across bar and floor stations, building sustainable operational pipelines [Bound: WH-TWIN-004]."
+        ],
+        "bound_atoms": ["WH-TWIN-001", "WH-TWIN-002", "WH-TWIN-003", "WH-TWIN-004"]
+      },
+      {
+        "container_id": "COMPETENCY_MATRIX",
+        "order": 5,
+        "categories": [
+          {"category": "Operational Leadership", "items": ["High-Volume Floor Direction", "Labor Balancing", "New Store Openings (NSO)", "Guest Escalation"]},
+          {"category": "Financial &amp; P&amp;L Discipline", "items": ["P&amp;L Management", "Food Cost Variance (-18%)", "Weekly Inventory Auditing", "$150K/wk Sales Volume"]},
+          {"category": "Workforce &amp; Compliance", "items": ["94% Team Retention", "Leadership Pipelines (120+ Trained)", "MLCC Compliance", "EcoSure Readiness"]}
+        ],
+        "bound_atoms": ["WH-TWIN-001", "WH-TWIN-002", "WH-TWIN-003", "WH-TWIN-004", "WH-BOBC-002", "WH-BOBC-003"]
+      }
+    ]
+  }
+}
+
+
+STAGE 5 — TEST CANVAS, WEBGL STAGE & ROUND-TRIP V…
+STAGE 5 — TEST CANVAS, WEBGL STAGE & ROUND-TRIP VALIDATION
+Context & Lifecycle Position
+Stage ID: STAGE_05_TEST_CANVAS
+Purpose: Acts as the independent visual verification boundary. Receives the spatial coordinate payload and renders the static 3D coordinate box and atom nodes. Canvas is strictly a passive observer and renderer; it never calculates or relocates coordinates.
+Inputs: Spatial Coordinates & Polarity (Stage 3 / Stage 4 JSON payload).
+Transformation: WebGL scene initialization, camera positioning, wireframe boundary generation, mesh node creation at absolute coordinates, and raycast interaction.
+Outputs: Interactive 3D visual topology on HTML/Three.js canvas.
+Dependencies: Stage 4 (Machine Payload) or Stage 3 (Coordinates).
+Consumers: Human verifiers, independent testing agents.
+Evidence Status: PROVEN BY ARTIFACT (Three.js component source code in ThreeSpatialStage.tsx) / CLAIMED BUT NOT VERIFIED (Live standalone rendering in external Gemini Canvas instance).
+--------------------------------------------------------------------------------
+1. Static Canvas Configuration (SPATIAL_DNA_STAGE_v1)
+{
+  "contract_type": "CANVAS_RENDERING_SPECIFICATION",
+  "version": "1.0.0",
+  "static_environment": {
+    "viewport": {
+      "projection": "perspective",
+      "fov": 45,
+      "near": 0.1,
+      "far": 100.0,
+      "initial_camera_position": {"x": 18.0, "y": 12.0, "z": 18.0},
+      "target_look_at": {"x": 0.0, "y": 0.0, "z": 0.0}
+    },
+    "bounding_box": {
+      "dimensions": {"width": 20.0, "height": 10.0, "depth": 20.0},
+      "ranges": {
+        "x": [-10.0, 10.0],
+        "y": [-5.0, 5.0],
+        "z": [-10.0, 10.0]
+      },
+      "wireframe_edge_color": "#334155"
+    },
+    "planes": {
+      "ceiling": {"y": 5.0, "normal": [0, -1, 0], "color": "#059669", "opacity": 0.15},
+      "baseline": {"y": 0.0, "normal": [0, 1, 0], "color": "#475569", "opacity": 0.30, "grid_divisions": 20},
+      "floor": {"y": -5.0, "normal": [0, 1, 0], "color": "#DC2626", "opacity": 0.20}
+    },
+    "lateral_anchors": [
+      {"id": "PLANE_NORTH", "azimuth_deg": 0, "direction": [0, 0, 1], "label_pos": {"x": 0, "y": 0, "z": 10.5}},
+      {"id": "PLANE_EAST", "azimuth_deg": 90, "direction": [1, 0, 0], "label_pos": {"x": 10.5, "y": 0, "z": 0}},
+      {"id": "PLANE_SOUTH", "azimuth_deg": 180, "direction": [0, 0, -1], "label_pos": {"x": 0, "y": 0, "z": -10.5}},
+      {"id": "PLANE_WEST", "azimuth_deg": 270, "direction": [-1, 0, 0], "label_pos": {"x": -10.5, "y": 0, "z": 0}}
+    ]
+  }
+}
+
+--------------------------------------------------------------------------------
+2. Empty-Box Verification Fixture
+{
+  "contract_type": "SPATIAL_DNA_PAYLOAD",
+  "version": "1.0.0",
+  "job_id": "EMPTY_TEST_000",
+  "active_lateral_planes": {
+    "NORTH": "plane_02",
+    "EAST": "plane_01",
+    "SOUTH": "plane_06",
+    "WEST": "plane_05"
+  },
+  "atoms": []
+}
+
+--------------------------------------------------------------------------------
+3. Rendering & Enforcement Rules
+Zero Physics Rule: Canvas must never attach collision bodies, force generators, spring mass dampers, or automatic layout solvers to atoms.
+Absolute Coordinate Mapping: Each atom must be placed at position.set(payload.x, payload.y, payload.z).
+Color Mapping Rule:
+plane_02 (Work History): Amber (#F59E0B)
+plane_01 (Identity): Blue (#3B82F6)
+plane_06 (References): Emerald (#10B981)
+plane_05 (Psychometrics): Violet (#8B5CF6)
+plane_03 (Technical): Cyan (#06B6D4)
+plane_04 (Creative): Fuchsia (#D946EF)
+Binding Ray Rule:
+If binding_type == "DIRECT_BIND", render a solid line from  to .
+If binding_type == "TRANSFERABLE_BIND", render a dashed line.
+If binding_type == "NON_BIND", do not render a ray.
+--------------------------------------------------------------------------------
+4. Round-Trip Verification Procedure
+Step 1 (Zero State): Feed Empty-Box Verification Fixture into Canvas.
+Assertion: Canvas displays exactly the 12 wireframe boundaries, baseline grid, and lateral plane anchors. Exactly zero nodes exist.
+Step 2 (Single Atom Injection): Inject WH-TWIN-001 at (0.00, 4.10, 4.35).
+Assertion: Renders single amber node at ceiling with a solid ray to origin.
+Step 3 (Quarantine Verification): Inject WH-BOBC-001 at (-1.12, -2.80, 7.06).
+Assertion: Renders depressed node in floor zone with downward quarantine marker.
+Step 4 (Boundary Tamper Test): Inject coordinate .
+Assertion: Canvas validation halts and throws OUT_OF_BOUNDS_ERROR rather than rescaling the bounding volume.
+
+SPATIAL DNA — TRANSFER INDEX & PROVENANCE MAP
+SPATIAL DNA — TRANSFER INDEX & PROVENANCE MAP
+1. System Causal Execution Chain
+This transfer index establishes the deterministic flow of data and state transitions across the Spatial DNA architecture:
+[1. JOB INCEPTION]
+     │ Raw posting from test frame (spatial dna training (1).xlsx)
+     ▼
+[2. NORMALIZATION &amp; EXTRACTION]
+     │ SCOUT_TARGET_OBSERVATION_v1 (unstructured text normalized into metadata)
+     ▼
+[3. DEMAND RECEPTORS (D_k)]
+     │ Verbatim requirement &amp; responsibility decomposition (D_01 .. D_05)
+     ▼
+[4. CANDIDATE EVIDENCE ATOMS]
+     │ 44 Immutable Atoms across 6 origin planes (FISSION Level 3 Extraction)
+     ▼
+[5. BINDING GATE]
+     │ Evaluates candidate atoms against receptors (DIRECT_BIND | TRANSFERABLE_BIND | NON_BIND)
+     ▼
+[6. SPATIAL PROJECTION (X, Y, Z, R)]
+     │ Selects 4 lateral planes; computes Cartesian coordinates and vertical polarity
+     ▼
+[7. SPATIAL &amp; LAYOUT PAYLOAD]
+     │ MARA_LAYOUT_PAYLOAD_v1 (structured machine-readable JSON)
+     ▼
+[8. DYNAMIC LAYOUT CONTAINERS]
+     │ Container allocations (Header, Pitch, Bullets, Competency Matrix) with trace IDs
+     ▼
+[9. GEMINI CANVAS (3D WebGL STAGE)]
+     │ Independent renderer rendering static box and atom points at supplied coordinates
+
+
+--------------------------------------------------------------------------------
+2. Provenance & Authority Tiers
+
+[TABLE]
+Evidence Tier | Criteria & Meaning
+PROVEN BY ARTIFACT | Physical, inspectable machine code, JSON, JSONL, or workbook files committed or staged.
+PROVEN BY EXECUTION | Operations that have been run, mathematically verified, and produced reproducible output.
+REPORTED / EXPERIMENTAL | Findings observed during interactive prototyping (e.g. AI Studio UI session) but not yet chained in CI/CD.
+CLAIMED BUT NOT VERIFIED | Features or linkages that exist in design specs but have not yet been executed autonomously.
+SOURCE-REPORTED / ARTIFACT NOT AVAILABLE | Concepts referenced in documentation whose underlying raw artifact was not directly exported.
+[/TABLE]
+
+--------------------------------------------------------------------------------
+3. Master Artifact Provenance Directory
+Candidate Evidence Graph (Nodes & Edges):
+Source: candidate-spatial-dna-kg/graph/nodes.jsonl & edges.jsonl.
+Origin: Extracted from 18,500-token canonical cleanroom corpus (MARA Candidate Repository Doc 01–05).
+Tier: PROVEN BY ARTIFACT.
+Target Test Frame:
+Source: spatial dna training (1).xlsx.
+Origin: Michigan labor market search (127 postings, compensation benchmarks, parsed descriptions).
+Tier: PROVEN BY ARTIFACT.
+Target Calibration Payload ( JOB-002 ):
+Source: spatial-dna-tests/spatial-dna-test-001-result.json & MARA_JOB_002_PROJECTION_PAYLOAD.json.
+Origin: Execution of MARA Traversal against Method Hospitality AGM posting.
+Tier: PROVEN BY EXECUTION.
+Exact 25-Coordinate Sample:
+Source: EXACT_SPATIAL_COORDINATES_25.json.
+Origin: Deterministic random sample (seed 42) extracted from test run 001.
+Tier: PROVEN BY ARTIFACT.
+Static Canvas Stage:
+Source: src/components/ThreeSpatialStage.tsx / SPATIAL_DNA_STAGE_v1.
+Origin: WebGL / Three.js 6-face bounding volume specification.
+Tier: PROVEN BY ARTIFACT.
+

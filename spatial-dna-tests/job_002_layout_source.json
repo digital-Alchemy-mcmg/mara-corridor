@@ -1,0 +1,114 @@
+[
+  {
+    "Container_ID": "HEADER",
+    "Render_Order": "1",
+    "Section_Title": "Contact & Identity",
+    "Element_Type": "text",
+    "Content_Payload": "Christopher Flournoy | Operations Leadership & General Management | Metro Detroit / Novi, MI",
+    "Bound_Atom_Trace": "ID-001;ID-002;ID-003"
+  },
+  {
+    "Container_ID": "SUMMARY",
+    "Render_Order": "2",
+    "Section_Title": "Executive Summary",
+    "Element_Type": "paragraph",
+    "Content_Payload": "High-volume hospitality operations leader with 10+ years directing multi-shift dining, kitchen, and bar operations. Track record managing high-throughput units averaging $140K-$150K weekly gross sales, leading corporate New Store Openings (NSOs), reducing food-cost variance by 18%, and maintaining 94% workforce retention across 65+ personnel with zero critical health or liquor compliance infractions.",
+    "Bound_Atom_Trace": "WH-TWIN-001;WH-TWIN-002;WH-BOBC-002;WH-BOBC-003"
+  },
+  {
+    "Container_ID": "EXPERIENCE_01",
+    "Render_Order": "3",
+    "Section_Title": "Professional Experience",
+    "Element_Type": "role_header",
+    "Content_Payload": "General Manager — Bobcat Bonnie's (Ypsilanti, MI) | 2020 - 2023",
+    "Bound_Atom_Trace": "WH-BOBC-001"
+  },
+  {
+    "Container_ID": "EXPERIENCE_01",
+    "Render_Order": "3",
+    "Section_Title": "Professional Experience",
+    "Element_Type": "bullet",
+    "Content_Payload": "Held full operational, workforce, inventory, and P&L ownership for a 65+ multi-department restaurant workforce.",
+    "Bound_Atom_Trace": "WH-BOBC-001"
+  },
+  {
+    "Container_ID": "EXPERIENCE_01",
+    "Render_Order": "3",
+    "Section_Title": "Professional Experience",
+    "Element_Type": "bullet",
+    "Content_Payload": "Achieved an 18% reduction in food-cost variance within 12 months via structured inventory cycles and reduced turnover by 30% with 94% retention.",
+    "Bound_Atom_Trace": "WH-BOBC-002"
+  },
+  {
+    "Container_ID": "EXPERIENCE_01",
+    "Render_Order": "3",
+    "Section_Title": "Professional Experience",
+    "Element_Type": "bullet",
+    "Content_Payload": "Maintained 100% audit readiness across MLCC liquor licensing, county health inspections, and EcoSure audits with zero critical violations.",
+    "Bound_Atom_Trace": "WH-BOBC-003"
+  },
+  {
+    "Container_ID": "EXPERIENCE_02",
+    "Render_Order": "4",
+    "Section_Title": "Professional Experience",
+    "Element_Type": "role_header",
+    "Content_Payload": "Assistant General Manager — Twin Peaks Restaurant (Multiple Markets: MI, CO, TX, FL) | 2012 - 2020",
+    "Bound_Atom_Trace": "WH-TWIN-001"
+  },
+  {
+    "Container_ID": "EXPERIENCE_02",
+    "Render_Order": "4",
+    "Section_Title": "Professional Experience",
+    "Element_Type": "bullet",
+    "Content_Payload": "Directed day-to-day high-volume operations spanning front-of-house, back-of-house, and high-volume bar service with dynamic labor balancing.",
+    "Bound_Atom_Trace": "WH-TWIN-001"
+  },
+  {
+    "Container_ID": "EXPERIENCE_02",
+    "Render_Order": "4",
+    "Section_Title": "Professional Experience",
+    "Element_Type": "bullet",
+    "Content_Payload": "Managed operational execution for high-volume store averaging $140,000-$150,000 weekly gross sales, achieving #1 company-wide sales rank for 22 consecutive weeks.",
+    "Bound_Atom_Trace": "WH-TWIN-002"
+  },
+  {
+    "Container_ID": "EXPERIENCE_02",
+    "Render_Order": "4",
+    "Section_Title": "Professional Experience",
+    "Element_Type": "bullet",
+    "Content_Payload": "Selected to lead New Store Opening (NSO) teams across multiple markets, establishing shift operational cadences and training standards.",
+    "Bound_Atom_Trace": "WH-TWIN-003"
+  },
+  {
+    "Container_ID": "EXPERIENCE_02",
+    "Render_Order": "4",
+    "Section_Title": "Professional Experience",
+    "Element_Type": "bullet",
+    "Content_Payload": "Personally onboarded and trained 120+ team members and shift leaders across bar and floor stations, building sustainable operational pipelines.",
+    "Bound_Atom_Trace": "WH-TWIN-004"
+  },
+  {
+    "Container_ID": "COMPETENCY_01",
+    "Render_Order": "5",
+    "Section_Title": "Skills Matrix",
+    "Element_Type": "key_value",
+    "Content_Payload": "Operational Leadership: High-Volume Floor Direction, Shift Labor Balancing, New Store Openings (NSO), Guest Escalation Resolution",
+    "Bound_Atom_Trace": "WH-TWIN-001;WH-TWIN-003"
+  },
+  {
+    "Container_ID": "COMPETENCY_02",
+    "Render_Order": "5",
+    "Section_Title": "Skills Matrix",
+    "Element_Type": "key_value",
+    "Content_Payload": "Financial & P&L Discipline: Prime Cost Management, Food & Beverage Cost Variance (-18%), Weekly Inventory Auditing, High-Gross Sales Execution ($150K/wk)",
+    "Bound_Atom_Trace": "WH-BOBC-002;WH-TWIN-002"
+  },
+  {
+    "Container_ID": "COMPETENCY_03",
+    "Render_Order": "5",
+    "Section_Title": "Skills Matrix",
+    "Element_Type": "key_value",
+    "Content_Payload": "Workforce & Regulatory: 94% Team Retention, Leadership Pipeline Development (120+ Trained), MLCC Liquor Compliance, Health Department Readiness",
+    "Bound_Atom_Trace": "WH-BOBC-002;WH-BOBC-003;WH-TWIN-004"
+  }
+]

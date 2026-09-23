@@ -1,0 +1,59 @@
+Stage 2c: Binding Gate Logic
+
+DIRECT_BIND
+
+TRANSFERABLE_BIND
+
+NON_BIND
+
+"Condition
+>= 2 verified keyword/
+context matches against
+
+core operational demand.
+L
+
+(Condition
+Foundational/analogous
+capability supporting
+the role.
+
+L=
+
+"Condition
+
+Atom outside target
+posting envelope (e.g.,
+SWE atoms for a
+
+irestaurant role). ij
+
+TAction
+
+Maximum projection weight.
+
+Renders solid ray to
+centroid (@,0,0).
+
+TAction
+
+Secondary projection
+weight. Renders dashed
+ray to centroid.
+
+Faction
+
+Suppressed. Dormant state.
+
+Zero projection weight.
+No rendered ray.
+
+E
+
+=
+
+cl
+
+™® Gemini Notebook
+
+

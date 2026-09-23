@@ -1,0 +1,39 @@
+The Raw Input The Entry Terminal
+
+spatial dna training (1).xlsx \ —— SCOUT_TARGET_OBSERVATION_v1
+pales aati > READ-ONLY:
+
+a Unique Identifier
+5
+J
+
+Job Opening - Method Hospitality, Location: New York, NY "“observation_id": "QBS-JOB-0@02-METHOD-HOSP",
+littl Le“. ~— - yeiRAS> - "provenance": {
+Responsibilities: Guest experience, check-in/out Source Vendor
+
+; J "vendor": "Greenhouse",
+
+procedures, notar shifts, both anxerious teams, and READ-ONLY: Original URL
+development. inrunitating toots, students management "source_url": null, (if available)
+of auticias/bility, disescistient, and anaporation... Af ; ; nD. ae ae =
+Requirements: High school diploma, 1 year experience, anges tign—tinestanip* «@Vet—OpaelT1Og05a02
+excellent communication, eiticaeiosed accessiance p,
+
+an ‘ READ-ONLY: Data
+pe elie Hol emofficlet experience "disk_cartridge_hash": "sha256:4f8e Integrity Hash
+
+Competitive "employer": "Method Hospitality",
+Pxeeherees i - er READ-ONLY:
+Shift: Flexible hours, Full-Time, Salary: Competitive... job_details": { Employer, Name
+
+Eucount alively, Under Process. "title": "Guest Experience Specialist",
+
+© email@cezemail.com "location": "New York, NY",
+@ +10 5236 7798
+
+"employment_type": "Full-Time"
+
+UI MANDATE: Expose ingestion metadata as
+strictly read-only fields.
+
+

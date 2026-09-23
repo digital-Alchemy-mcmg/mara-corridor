@@ -1,0 +1,57 @@
+[
+  {
+    "Job_ID": "JOB-002",
+    "Company": "Method Hospitality",
+    "Job_Title": "Restaurant Assistant General Manager",
+    "Location": "Detroit MI 48226",
+    "Min_Salary": "70000",
+    "Max_Salary": "75000",
+    "Receptor_ID": "D_01",
+    "Receptor_Category": "Operational Leadership",
+    "Verbatim_Requirement": "Direct day-to-day high-volume dining, floor execution, front-of-house service standards, and labor shift balancing."
+  },
+  {
+    "Job_ID": "JOB-002",
+    "Company": "Method Hospitality",
+    "Job_Title": "Restaurant Assistant General Manager",
+    "Location": "Detroit MI 48226",
+    "Min_Salary": "70000",
+    "Max_Salary": "75000",
+    "Receptor_ID": "D_02",
+    "Receptor_Category": "Financial & P&L Discipline",
+    "Verbatim_Requirement": "Drive prime cost management, inventory reconciliation, food/beverage cost variance controls, and margin optimization."
+  },
+  {
+    "Job_ID": "JOB-002",
+    "Company": "Method Hospitality",
+    "Job_Title": "Restaurant Assistant General Manager",
+    "Location": "Detroit MI 48226",
+    "Min_Salary": "70000",
+    "Max_Salary": "75000",
+    "Receptor_ID": "D_03",
+    "Receptor_Category": "Workforce Training",
+    "Verbatim_Requirement": "Recruit, onboard, train, and develop hospitality workforce across FOH/BOH, enforcing accountability and retention."
+  },
+  {
+    "Job_ID": "JOB-002",
+    "Company": "Method Hospitality",
+    "Job_Title": "Restaurant Assistant General Manager",
+    "Location": "Detroit MI 48226",
+    "Min_Salary": "70000",
+    "Max_Salary": "75000",
+    "Receptor_ID": "D_04",
+    "Receptor_Category": "Compliance & Standards",
+    "Verbatim_Requirement": "Maintain strict audit readiness, health department compliance, food safety certifications, and liquor licensing (MLCC)."
+  },
+  {
+    "Job_ID": "JOB-002",
+    "Company": "Method Hospitality",
+    "Job_Title": "Restaurant Assistant General Manager",
+    "Location": "Detroit MI 48226",
+    "Min_Salary": "70000",
+    "Max_Salary": "75000",
+    "Receptor_ID": "D_05",
+    "Receptor_Category": "Guest & Systems",
+    "Verbatim_Requirement": "Lead hospitality service culture, resolve high-stakes guest escalations, and coordinate multi-outlet/banquet crossover."
+  }
+]

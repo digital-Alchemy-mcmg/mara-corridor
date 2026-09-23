@@ -1,0 +1,20 @@
+_ STAGE 3: COORDINATE TELEMETRY —
+
+Y ——
+TELEMETRY INSPECTOR |f
+: Sequence: 3
+North (+2, 0°) — East (+X, 90°) pe
+Z X Y=44
+
+Z = -0.08
+R = 4.35
+~ Polarity: CEILING (+Y)
+
+STRICT CONSTRAINT: The UI acts
+ONLY as a telemetry inspector. It
+must NOT attempt to recalculate
+radial distances (R = sqrt(X*2+Z*2))
+| Or resolve multi-atom collisions.
+
+South (-Z, 180°) ea West (-X, 270°)
+

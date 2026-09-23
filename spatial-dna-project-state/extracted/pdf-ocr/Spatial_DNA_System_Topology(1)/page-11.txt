@@ -1,0 +1,27 @@
+Stage 5: Passive Observer Boundary (Three.js WebGL)
+
+5
+
+=
+Rule 1: ZERO PHYSICS AWS
+
+Canvas must never calculate forces, | OUT_OF_BOUNDS ERROR
+
+gravity, or layout spring simulations. OUT_OF_BOUNDS_ERROR
+
+Nodes are placed at absolute ~
+Position. set(X, Nei Z) 2
+
+“Round-Trip Verification Fixture
+
+¢ Step 1: Empty Box (12 wireframes,
+baseline grid, exact @ nodes).
+¢ Step 2 (Injection): WH-TWIN-001 appears
+at Ceiling (amber, solid ray).
+e Step 3 (Quarantine): WH-BOBC-001 appears
+in Floor (depressed downward) . : WH-BOBC-001
+¢ Step 4 (Tamper Test): Injecting X = 14.50
+halts validation -> throws
+: OUT_OF_BOUNDS_ERROR rather than rescaling.
+
+

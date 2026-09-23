@@ -1,0 +1,6 @@
+Cluster Category,Job Count,Representative Postings,Role in Spatial DNA Calibration
+Hospitality & Multi-Unit Operations,22,"Method Hospitality (JOB-002), Main Event (JOB-037), Buddy's Pizza (JOB-059), Great Lakes Taco (JOB-042)","Direct High-Gravity Bind: Tests Twin Peaks NSO, Bobcat Bonnie's P&L, workforce training, and shift balancing."
+Operations Systems & Onboarding,14,"Multi-Site Practice Ops (JOB-001), Snout Onboarding (JOB-004), UWM Project Engineer (JOB-109), Merlin Ops (JOB-119)","Transferable Systems Bind: Tests operational workflow standardization, onboarding procedures, and technical operations."
+Branch & Practice Management,17,"MSGCU Assistant Branch Manager (JOB-028), DeHaan Orthodontics (JOB-018), Southfield Dentistry (JOB-043)","Compliance & Resource Bind: Tests MLCC/audit readiness, regulatory control, and workforce retention."
+"Sales, Commission & Lending",42,"Rapid Home Lending (JOB-024), Floor Tek (JOB-026), Power Home Remodeling (JOB-064)",Negative Space / Suppression Test: Verifies that out-of-envelope commission sales correctly trigger NON_BIND rather than forced persona drift.
+Specialty & Technical Support,32,"Estes Forwarding (JOB-040), Valicor QA (JOB-048), US Farathane (JOB-125)",Edge Case Evaluation: Tests peripheral boundary filtering.

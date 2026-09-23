@@ -1,0 +1,72 @@
+{
+  "authority_map_version": "1.0",
+  "resolved_at": "2026-09-23",
+  "rule": "Current explicit user direction and the newest explicitly-authoritative state store control. Older artifacts are evidence unless reaffirmed by current authority.",
+  "authorities": [
+    {
+      "rank": 1,
+      "name": "User execution authority",
+      "status": "ACTIVE",
+      "note": "Repair actual lineage; no bypass, redesign, silent substitution, or stopping at diagnosis."
+    },
+    {
+      "rank": 2,
+      "name": "SPATIAL_DNA_RESUME_HARNESS_BOOTSTRAP.md",
+      "drive_id": "1l7e72O21Y6csdG1nEoRnPXEfEkE-Mi5kkLeLTGsuGIU",
+      "updated_at": "2026-09-23T20:43:52.949Z",
+      "status": "CURRENT_ACCEPTANCE_AUTHORITY",
+      "claims": {
+        "nodes": 44,
+        "edges": 11,
+        "receptors": 5,
+        "direct": 12,
+        "transferable": 16,
+        "non_bind": 16,
+        "ceiling": 11,
+        "floor": 1,
+        "active_rays": 6
+      }
+    },
+    {
+      "rank": 3,
+      "name": "candidate_spatial_dna_nodes.jsonl",
+      "drive_id": "1QEwKy8Dqi_Qi1jtrgr0Bxuq6H_APl3w7XlyDa-Neuf4",
+      "status": "CURRENT_CANDIDATE_SUBSTRATE",
+      "claims": {
+        "nodes": 44
+      }
+    },
+    {
+      "rank": 4,
+      "name": "candidate_spatial_dna_edges_v2.jsonl",
+      "drive_id": "1eCtZkLEWYQBbjrZHiMMq3gW796xTixDUZx1BXFki96Y",
+      "status": "CURRENT_RELATIONAL_SUBSTRATE",
+      "claims": {
+        "edges": 11
+      }
+    },
+    {
+      "rank": 5,
+      "name": "Skill_Workflow_Canon_2026-09-14.md SW-18",
+      "status": "BINDING_GOVERNANCE",
+      "claims": [
+        "null-by-default",
+        "no semantic strengthening",
+        "preserve rejected and closed paths",
+        "Read first. Represent second. Bind third. Project fourth."
+      ]
+    },
+    {
+      "rank": 6,
+      "name": "MARA_JOB_002_PROJECTION_PAYLOAD.json + earlier batch artifacts",
+      "status": "HISTORICAL_EXECUTION_EVIDENCE",
+      "note": "Contains legacy projection-only atom IDs and older 8/21/15 counts; cannot override current acceptance authority."
+    }
+  ],
+  "unresolved": [
+    "Current acceptance authority specifies 12/16/16 counts but does not enumerate all 44 atom memberships.",
+    "Historical JOB-002 artifacts reference PS-PRFL-001 and RF-REF-001, absent from the current 44-atom substrate.",
+    "Bootstrap names WH-MTR-001; current substrate identifies the Metro Concepts conflict as WH-MCMG-001.",
+    "Historical JOB-002 layout collapses WH-BOBC-001 unresolved 2023/2024 end date to 2023."
+  ]
+}

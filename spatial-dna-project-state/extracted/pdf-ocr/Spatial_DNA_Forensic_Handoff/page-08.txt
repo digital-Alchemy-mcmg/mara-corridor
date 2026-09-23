@@ -1,0 +1,22 @@
+STAGE 3: Deterministic Spatial Geometry
+
+North (+Z, 0 deg):
+Work History
+
+10
+West (-X, 270 deg):
+Psychometrics coat (+X, 90 deg):
+entity
+Origin (0,0,0):_ AP
+Target Demand <4
+Centroid |
+
+Radial Distance (R)
+= 11.0 - (strength x 7.0)
+
+— South (-Z, 180 deg): References
+
+Lateral planes anchored to cardinal directions with a +/- 12 degree dispersion offset for collision avoidance.
+
+Gemini Notebook
+

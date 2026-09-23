@@ -1,0 +1,22 @@
+STAGE 1: DEMAND DECOMPOSITION
+
+A CRITICAL UI OVERLAY:
+The UI must explicitly flag
+Negative Space constraints.
+These directly trigger silent
+
+NON_BIND suppressions
+
+later in the pipeline.
+
+Constraints
+
+Extracted No outside direct
+
+Reaui t sales or commission-
+equirements only compensation
+
+structures.
+
+© Gemini Notebook
+
