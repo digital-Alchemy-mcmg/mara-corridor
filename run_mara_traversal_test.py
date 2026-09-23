@@ -9,9 +9,10 @@ NODES = ROOT / "candidate-spatial-dna-kg" / "graph" / "nodes.jsonl"
 EDGES = ROOT / "candidate-spatial-dna-kg" / "graph" / "edges.jsonl"
 PROJECTION = ROOT / "spatial-dna-tests" / "job_002_projection_source.json"
 LAYOUT = ROOT / "spatial-dna-tests" / "job_002_layout_source.json"
+FIXTURE = ROOT / "contracts" / "TEST_FIXTURE_METHOD_HOSPITALITY.json"
+AUTHORITY = ROOT / "contracts" / "AUTHORITY_MAP.json"
+BINDING_MATRIX = ROOT / "contracts" / "JOB_002_BINDING_MATRIX.json"
 
-EXPECTED_NODE_COUNT = 44
-EXPECTED_EDGE_COUNT = 11
 CANONICAL_CONFLICTS = {
     "WH-BOBC-001",
     "WH-APPL-001",
@@ -36,10 +37,10 @@ def read_jsonl(path):
             }, indent=2))
     return out
 
-def fail(errors, facts):
+def emit_error(errors, facts):
     print(json.dumps({
         "status": "ERROR",
-        "error_code": "LINEAGE_ERROR",
+        "error_code": "HARNESS_VALIDATION_ERROR",
         "stage": "SPATIAL_DNA_LINEAGE_GATE",
         "facts": facts,
         "errors": errors,
@@ -51,17 +52,20 @@ def main():
     edges = read_jsonl(EDGES)
     projection = json.loads(PROJECTION.read_text(encoding="utf-8"))
     layout = json.loads(LAYOUT.read_text(encoding="utf-8"))
+    fixture = json.loads(FIXTURE.read_text(encoding="utf-8"))
+    authority = json.loads(AUTHORITY.read_text(encoding="utf-8"))
 
     errors = []
     ids = [n["atom_id"] for n in nodes]
     id_set = set(ids)
+    acceptance = fixture["acceptance"]
 
-    if len(nodes) != EXPECTED_NODE_COUNT:
-        errors.append(f"Expected {EXPECTED_NODE_COUNT} atoms, found {len(nodes)}.")
+    if len(nodes) != acceptance["total_atoms"]:
+        errors.append(f"Expected {acceptance['total_atoms']} atoms, found {len(nodes)}.")
     if len(id_set) != len(ids):
         errors.append("Duplicate atom_id values exist.")
-    if len(edges) != EXPECTED_EDGE_COUNT:
-        errors.append(f"Expected {EXPECTED_EDGE_COUNT} edges, found {len(edges)}.")
+    if len(edges) != 11:
+        errors.append(f"Expected 11 edges, found {len(edges)}.")
 
     graph_conflicts = {n["atom_id"] for n in nodes if n.get("evidence_state") == "CONFLICTED"}
     missing_conflicts = sorted(CANONICAL_CONFLICTS - graph_conflicts)
@@ -77,8 +81,9 @@ def main():
     orphan_projection_ids = sorted(set(projection_ids) - id_set)
     if orphan_projection_ids:
         errors.append(
-            "JOB-002 projection references atom IDs absent from the 44-atom graph: "
+            "Historical JOB-002 projection references IDs absent from current 44-atom substrate: "
             + ", ".join(orphan_projection_ids)
+            + ". Historical evidence cannot silently mutate the substrate."
         )
 
     for row in projection:
@@ -97,25 +102,57 @@ def main():
         traces = [x for x in str(row.get("Bound_Atom_Trace","")).split(";") if x]
         conflicted = [t for t in traces if t in graph_conflicts]
         if conflicted and row.get("Element_Type") == "role_header":
-            content = str(row.get("Content_Payload",""))
-            if year_range.search(content) and not re.search(r"unresolved|conflict|2023/2024|2023\s*or\s*2024", content, re.I):
+            text = str(row.get("Content_Payload",""))
+            if year_range.search(text) and not re.search(r"unresolved|conflict|2023/2024|2023\s*or\s*2024", text, re.I):
                 errors.append(
-                    "Chronology smoothing detected: role_header bound to conflicted atom(s) "
+                    "LINEAGE_ERROR: role header bound to conflicted atom(s) "
                     + ", ".join(conflicted)
-                    + f" collapses unresolved chronology: {content}"
+                    + f" collapses unresolved chronology: {text}"
                 )
 
+    binding_counts = None
+    missing_binding_matrix = not BINDING_MATRIX.exists()
+    if missing_binding_matrix:
+        errors.append(
+            "CURRENT_AUTHORITY_GAP: acceptance requires 12 DIRECT_BIND / 16 TRANSFERABLE_BIND / "
+            "16 NON_BIND across all 44 atoms, but current authority does not enumerate the complete "
+            "44-row membership map. Null-by-default governance forbids manufacturing it."
+        )
+    else:
+        matrix = json.loads(BINDING_MATRIX.read_text(encoding="utf-8"))
+        rows = matrix.get("bindings", [])
+        matrix_ids = [r.get("atom_id") for r in rows]
+        if len(rows) != len(nodes) or set(matrix_ids) != id_set:
+            errors.append("JOB_002_BINDING_MATRIX.json must contain exactly one classification for each current atom_id.")
+        classes = [r.get("binding_class") for r in rows]
+        binding_counts = {
+            "DIRECT_BIND": classes.count("DIRECT_BIND"),
+            "TRANSFERABLE_BIND": classes.count("TRANSFERABLE_BIND"),
+            "NON_BIND": classes.count("NON_BIND"),
+        }
+        expected = {
+            "DIRECT_BIND": acceptance["direct_bind_count"],
+            "TRANSFERABLE_BIND": acceptance["transferable_bind_count"],
+            "NON_BIND": acceptance["non_bind_count"],
+        }
+        if binding_counts != expected:
+            errors.append(f"Binding counts {binding_counts} do not match current acceptance {expected}.")
+
     facts = {
+        "authority_version": authority["authority_map_version"],
         "node_count": len(nodes),
         "edge_count": len(edges),
         "conflicted_atom_ids": sorted(graph_conflicts),
         "job_002_projection_rows": len(projection),
         "job_002_layout_rows": len(layout),
         "orphan_projection_ids": orphan_projection_ids,
+        "binding_matrix_present": not missing_binding_matrix,
+        "binding_counts": binding_counts,
+        "acceptance": acceptance,
     }
 
     if errors:
-        return fail(errors, facts)
+        return emit_error(errors, facts)
 
     print(json.dumps({
         "status": "PASS",
