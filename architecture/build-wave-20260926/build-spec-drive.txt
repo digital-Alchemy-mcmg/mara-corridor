@@ -1,0 +1,1064 @@
+﻿REVISION PRESERVATION SNAPSHOT
+Source Revise document: https://revise.io/docs/lknd4i796emjqwyk
+Snapshot date: 2026-09-26
+Contents: Pass 1 component diagrams + Pass 2 prose and pseudocode. Preserved from Revise projected/final view so pending Pass 2 suggestions are included.
+
+
+# Spatial DNA Build Wave — Pass 1 Component Diagrams
+
+
+## Scout
+
+
+```text
+[100-Job Test Corpus]
+        |
+        v
+[Scout Intake]
+        |
+        v
+[Normalize / Filter / Deduplicate]
+        |
+        v
+[Generate IDs + Hashes]
+        |
+        v
+[Preserve Job Identity + Routing]
+        |
+        v
+[Initialize Traveling Envelope]
+        |
+        v
+[Append Scout-Owned Payload]
+        |
+        v
+[SCOUT COMPLETE]
+        |
+        v
+[READY FOR B]
+```
+
+
+---
+
+
+## B — Handoff Boundary
+
+
+```text
+[Traveling Envelope from Scout]
+        |
+        v
+[Validate Incoming Envelope]
+        |
+        v
+   +---------+
+   | Valid ? |
+   +---------+
+      |   |
+    No|   |Yes
+      |   |
+      v   v
+ [HOLD] [Accept Handoff]
+             |
+             v
+      [Validate Routing]
+             |
+             v
+      [Initialize B State]
+             |
+             v
+      [Append B Boundary Record]
+             |
+             v
+        [READY FOR B1]
+```
+
+
+---
+
+
+## B1 + B2 — Target-Side Construction
+
+
+```text
+[Accepted Envelope]
+        |
+        v
++-----------------------------+
+| B1 — DECOUPLE              |
+| Candidate-Blind            |
++-----------------------------+
+        |
+        v
+[Parse Target Object]
+        |
+        v
+[Separate Responsibilities /
+ Requirements / Signals]
+        |
+        v
+[Preserve Source Authority]
+        |
+        v
+[Detect Malform Conditions]
+        |
+        v
++-----------------------------+
+| B2 — CREATE TREE           |
++-----------------------------+
+        |
+        v
+[Build Target-Derived Branches]
+        |
+        v
+[Assign Deterministic Addresses]
+        |
+        v
+[Attach Source-Span Provenance]
+        |
+        v
+[Mark Semantic Force]
+        |
+        v
+[Freeze Target Tree]
+        |
+        v
+[Append B1/B2 Payload]
+        |
+        v
+[B2 COMPLETE — READY FOR B3]
+```
+
+
+---
+
+
+## B3 — Bind
+
+
+```text
+[Frozen B2 Target Tree]
+        |
+        v
+[For Each Target Node]
+        |
+        v
+[Generate Satisfaction Question]
+        |
+        v
+[Select Eligible Spatial DNA Planes]
+        |
+        v
+[Search Candidate Evidence]
+        |
+        v
+[Record Atoms Considered]
+        |
+        v
+[Select Supporting Atoms]
+        |
+        v
+[Attach Atomic Blurbs]
+        |
+        v
+[Construct Proposition]
+        |
+        v
+[Record Binding Rationale]
+        |
+        v
+[Append B3 Binding Payload]
+        |
+        v
+[B3 COMPLETE — READY FOR B4]
+```
+
+
+---
+
+
+## B4 — Truth Gate
+
+
+```text
+[B3 Submitted Bindings]
+        |
+        v
+[Consume Only B3-Selected Evidence]
+        |
+        v
+[Audit Proposition]
+        |
+        v
++----------------------------------+
+| DISPOSITION                      |
+| PASS                             |
+| QUALIFIED / BOUNDED              |
+| UNRESOLVED                       |
+| CONTRADICTED                     |
++----------------------------------+
+        |
+        v
+[Enforce Hard-Gate Rules]
+        |
+        v
+[Set Admitted Proposition]
+        |
+        v
+[Set Evidence Ceiling]
+        |
+        v
+[Record Reason / Audit Trace]
+        |
+        v
+[Append B4 Audited Ledger]
+        |
+        v
+[B4 COMPLETE — READY FOR B5]
+```
+
+
+---
+
+
+## B5 — Semantic Core
+
+
+```text
+[B4 Audited Ledger]
+        |
+        v
+[Read Only B4-Admitted /
+ Bounded Candidate Evidence]
+        |
+        v
+[Evaluate Five Projection Prisms]
+        |
+        v
+[Rank Prism Distribution]
+        |
+        v
+[Select Owner Prism]
+        |
+        v
+[Set Foreground /
+ Reinforcement /
+ Background /
+ Suppression]
+        |
+        v
+[Set Writing Boundaries]
+        |
+        v
+[Set Prohibited Implications]
+        |
+        v
+[Derive Presentation Geometry]
+        |
+        v
+[Append B5 Semantic Payload]
+        |
+        v
+[B5 COMPLETE]
+        |
+        v
+[STOP — Resume Factory Boundary]
+```
+
+
+# Pass 2 — Component Prose and Pseudocode
+
+
+## Shared Traveling-Envelope Contract
+
+
+### Prose
+
+
+The traveling envelope is the shared stage-boundary object for the first implementation wave. Scout initializes it. B validates it. B1/B2, B3, B4, and B5 append their owned outputs without destroying earlier material. Persistent identity and application-routing information may travel through the entire envelope even when a particular stage is not authorized to reason over it.
+
+
+Carriage is not the same as semantic access. Each component receives the whole envelope as the transport object but reads only the sections permitted by its stage contract. Each component has a start condition, an owned mutation surface, and a stop condition. A completed stage advances the envelope's stage state and appends a stage event to the append log. Upstream stage-owned content is treated as immutable unless the architecture explicitly authorizes a repair at that boundary.
+
+
+The first build wave terminates after B5. Resume Factory C1–C5, Debug Nav, DNA Cube decoupling, Weave v2, Liaison, and post-build documentation are outside this implementation pass.
+
+
+### Pseudocode
+
+
+```text
+TRAVELING_ENVELOPE:
+    persistent:
+        target_identity
+        application_routing
+        source_identity
+
+
+    stage_state:
+        current_stage
+        completed_stages
+        status
+
+
+    append_log:
+        ordered stage events
+
+
+    payload:
+        scout
+        b
+        b1
+        b2
+        b3
+        b4
+        b5
+
+
+FOR EACH STAGE:
+    REQUIRE valid start condition
+    READ only stage-authorized inputs
+    PRESERVE all upstream immutable content
+    APPEND only stage-owned output
+    RECORD append-log event
+    ADVANCE stage_state
+    REQUIRE stage stop condition before handoff
+```
+
+
+---
+
+
+## Scout
+
+
+### Prose
+
+
+Scout is the upstream acquisition and admission component for this build wave. The implementation basis is the uploaded Disk Query Mechanism, treated as Scout despite its legacy DIPLOMAT naming. For the first integrated build, Scout does not need to perform live job acquisition. The existing 100-job MARA test corpus is the fixed fixture set used to exercise Scout deterministically.
+
+
+Scout applies its existing collection-side machinery to those job observations: source and observation admission rules, active-state filtering where configured, territory constraints where applicable, authorized taxonomy checks, exclusion precedence, role-scope inclusion, URL/employer normalization, deduplication, canonical observation identifiers, and the defined output contract. Its cryptographic cartridge behavior remains part of Scout's own execution control.
+
+
+Scout then establishes the traveling envelope. Persistent job identity, source identity, and application-routing material are placed in the durable pass-through portion of the envelope. Scout-owned normalized observation material is appended under the Scout payload. Scout does not perform B1 target decomposition, B2 tree construction, B3 evidence binding, B4 truth adjudication, or B5 projection reasoning.
+
+
+Scout is complete for a job when the accepted observation has been represented in a valid traveling envelope, the Scout-owned payload has been written, the append event has been recorded, and the stage state declares the envelope ready for B.
+
+
+### Pseudocode
+
+
+```text
+FUNCTION SCOUT_PROCESS(job_fixture, scout_configuration):
+
+
+    REQUIRE job_fixture exists
+    REQUIRE scout_configuration is valid for the Scout runner
+
+
+    candidate = INGEST(job_fixture)
+
+
+    IF observation_type is not authorized:
+        REJECT candidate
+
+
+    IF source rule fails:
+        REJECT candidate
+
+
+    IF active-only is enabled AND candidate is inactive:
+        REJECT candidate
+
+
+    IF territory rule applies AND candidate is outside territory:
+        REJECT candidate
+
+
+    IF candidate taxonomy is outside authorized NAICS/SOC scope:
+        REJECT candidate
+
+
+    search_text = COMPILE_AUTHORIZED_SEARCH_FIELDS(candidate)
+
+
+    IF any global exclusion matches search_text:
+        REJECT candidate
+
+
+    IF no authorized role-scope inclusion matches:
+        REJECT candidate
+
+
+    dedup_key = NORMALIZE_AND_HASH(
+        posting_url,
+        employer_name
+    )
+
+
+    observation_id = DERIVE_CANONICAL_OBSERVATION_ID(dedup_key)
+
+
+    observation = BUILD_SCOUT_OUTPUT_RECORD(
+        observation_id,
+        candidate,
+        dedup_key
+    )
+
+
+    envelope = INITIALIZE_TRAVELING_ENVELOPE()
+
+
+    envelope.persistent = PRESERVE_END_TO_END_FIELDS(
+        target_identity,
+        application_routing,
+        source_identity
+    )
+
+
+    envelope.payload.scout = observation
+
+
+    APPEND_EVENT(
+        envelope,
+        stage = "scout",
+        operation = "initialize_and_append"
+    )
+
+
+    ADVANCE_STAGE(
+        envelope,
+        completed = "scout",
+        current = "b",
+        status = "ready"
+    )
+
+
+    RETURN envelope
+```
+
+
+---
+
+
+## B — Handoff Boundary
+
+
+### Prose
+
+
+B is the admission boundary between Scout and the Spatial DNA target-processing sequence. B is deliberately narrow. It validates whether the incoming traveling envelope has the shape and required material needed to enter B1/B2. It does not decompose the target, infer requirements, inspect candidate evidence, select Spatial DNA planes, or make fit judgments.
+
+
+B checks the Scout handoff structure, confirms that required persistent identity/routing fields and Scout payload fields are present, and verifies that the envelope is at the correct stage. If the handoff is malformed, B stops the job at the boundary rather than attempting to repair semantic content by inference.
+
+
+A successful B handoff appends only its boundary/admission record, advances the stage state, and releases the unchanged target material to B1. The candidate side remains quarantined.
+
+
+### Pseudocode
+
+
+```text
+FUNCTION B_HANDOFF(envelope):
+
+
+    REQUIRE envelope.stage_state.current_stage == "b"
+
+
+    IF envelope schema is invalid:
+        HOLD envelope
+        RECORD boundary failure
+        RETURN envelope
+
+
+    IF required Scout payload is missing:
+        HOLD envelope
+        RECORD boundary failure
+        RETURN envelope
+
+
+    IF required persistent target identity is missing:
+        HOLD envelope
+        RECORD boundary failure
+        RETURN envelope
+
+
+    IF required routing/origin-destination structure is malformed:
+        HOLD envelope
+        RECORD boundary failure
+        RETURN envelope
+
+
+    DO NOT inspect candidate evidence
+    DO NOT decompose target requirements
+    DO NOT select planes
+    DO NOT infer missing semantics
+
+
+    envelope.payload.b = RECORD_HANDOFF_ACCEPTANCE()
+
+
+    APPEND_EVENT(
+        envelope,
+        stage = "b",
+        operation = "validate_handoff"
+    )
+
+
+    ADVANCE_STAGE(
+        envelope,
+        completed = "b",
+        current = "b1",
+        status = "ready"
+    )
+
+
+    RETURN envelope
+```
+
+
+---
+
+
+## B1 + B2 — Decouple and Create Tree
+
+
+### Prose
+
+
+B1 and B2 form the candidate-blind target-construction unit.
+
+
+B1 asks one question: what does the target object actually contain? It decomposes the source posting without importing candidate capability into the interpretation. It preserves target identification, application routing, source spans, semantic force, qualifiers, and actionable requirements. It does not manufacture requirements from occupational convention, job title, presumed necessity, or candidate history.
+
+
+Malform logic remains narrow. Missing ordinary posting details do not automatically make a target malformed. The critical routing failure is the absence of an identifiable origin or actionable destination where those are required for the handoff.
+
+
+B2 converts the B1 decomposition into a deterministic, addressable target tree. Its branches are derived from the target itself rather than from a fixed occupational template. Every meaningful target node receives a deterministic lowercase alphanumeric hierarchical address and bidirectional provenance to the exact supporting source span. Relationships may be many-to-many and must not be flattened merely to simplify implementation.
+
+
+B2 addresses are identifiers, not scores, confidence values, weights, ownership values, or magnitudes. The tree is frozen before candidate evidence is allowed to bind against it.
+
+
+B1/B2 complete when the envelope contains the preserved B1 decomposition and a frozen B2 target tree that can be queried node-by-node by B3.
+
+
+### Pseudocode
+
+
+```text
+FUNCTION B1_DECOUPLE(envelope):
+
+
+    REQUIRE envelope.stage_state.current_stage == "b1"
+    REQUIRE B handoff is accepted
+
+
+    target_source = READ_SCOUT_TARGET_SOURCE(envelope)
+
+
+    QUARANTINE candidate evidence
+
+
+    decomposition = EMPTY_TARGET_DECOMPOSITION()
+
+
+    decomposition.target_identity =
+        EXTRACT_ONLY_EXPLICIT_TARGET_IDENTITY(target_source)
+
+
+    decomposition.application_routing =
+        EXTRACT_ONLY_EXPLICIT_ROUTING(target_source)
+
+
+    decomposition.requirements =
+        DECOMPOSE_EXPLICIT_TARGET_CONTENT(target_source)
+
+
+    FOR each extracted unit:
+        PRESERVE exact source span
+        PRESERVE qualifiers
+        CLASSIFY semantic force as:
+            hard gate
+            soft/contextual
+            unmarked role responsibility
+
+
+        DO NOT infer from title alone
+        DO NOT infer from convention
+        DO NOT infer from presumed necessity
+        DO NOT compare against candidate
+
+
+    decomposition.malform =
+        EVALUATE_ORIGIN_DESTINATION_MALFORM_ONLY()
+
+
+    envelope.payload.b1 = decomposition
+
+
+    APPEND_EVENT(envelope, stage = "b1", operation = "decouple")
+
+
+    ADVANCE_STAGE(
+        envelope,
+        completed = "b1",
+        current = "b2",
+        status = "ready"
+    )
+
+
+    RETURN envelope
+
+
+
+
+FUNCTION B2_CREATE_TREE(envelope):
+
+
+    REQUIRE envelope.stage_state.current_stage == "b2"
+    REQUIRE B1 decomposition exists
+    REQUIRE candidate evidence remains unread
+
+
+    tree = INITIALIZE_TARGET_TREE()
+
+
+    BUILD branches from B1 target-derived structure
+
+
+    FOR each target node:
+        address = ASSIGN_DETERMINISTIC_LOWERCASE_ALPHANUMERIC_ADDRESS()
+        provenance = LINK_NODE_TO_EXACT_SOURCE_SPAN()
+        semantic_class = PRESERVE_B1_SEMANTIC_FORCE()
+        relationships = PRESERVE_MEANINGFUL_RELATIONSHIPS()
+
+
+        ASSERT address is identifier only
+        ASSERT no score/confidence/weight encoded in address
+
+
+        ADD node to tree
+
+
+    VALIDATE tree structure
+    FREEZE tree
+
+
+    envelope.payload.b2 = tree
+
+
+    APPEND_EVENT(envelope, stage = "b2", operation = "create_and_freeze_tree")
+
+
+    ADVANCE_STAGE(
+        envelope,
+        completed = "b2",
+        current = "b3",
+        status = "ready"
+    )
+
+
+    RETURN envelope
+```
+
+
+---
+
+
+## B3 — Bind
+
+
+### Prose
+
+
+B3 is the first stage allowed to bring the frozen target tree into contact with candidate Spatial DNA evidence. The direction of inquiry is inverted from conventional resume matching: the target node generates the question; the candidate corpus does not generate the target requirement.
+
+
+For each B2 target node, B3 forms a satisfaction question and determines which Spatial DNA evidence planes are eligible to answer that specific question. B3 may search permissively across direct, proximate, plausible, and transferable evidence where the architecture allows it. Discovery is intentionally broader than B4 truth admission.
+
+
+B3 must preserve the distinction between evidence considered and evidence selected. It does not treat every atom in an eligible plane as bound evidence. Only the atoms deliberately selected for the proposition are submitted downstream. Atomic blurbs may travel with those selected atoms as bounded evidence descriptions, but they do not elevate the underlying evidence.
+
+
+B3 constructs a proposition and rationale for each attempted binding. B3 does not certify that proposition as true. Job title, occupational convention, or the apparent necessity of a capability may help discovery but cannot serve as proof.
+
+
+B3 completes when its binding records have been appended to the envelope and are ready for proposition-specific B4 audit.
+
+
+### Pseudocode
+
+
+```text
+FUNCTION B3_BIND(envelope, candidate_spatial_dna):
+
+
+    REQUIRE envelope.stage_state.current_stage == "b3"
+    REQUIRE frozen B2 target tree exists
+
+
+    bindings = []
+
+
+    FOR each target_node in frozen_target_tree:
+
+
+        question =
+            FORM_SATISFACTION_QUESTION_FROM_TARGET_NODE(target_node)
+
+
+        eligible_planes =
+            SELECT_PLANES_FROM_TARGET_NODE(question, target_node)
+
+
+        atoms_considered =
+            SEARCH_CANDIDATE_EVIDENCE(
+                candidate_spatial_dna,
+                eligible_planes,
+                permissive_discovery = true
+            )
+
+
+        atoms_selected =
+            SELECT_ATOMS_RELEVANT_TO_QUESTION(atoms_considered)
+
+
+        atomic_blurbs =
+            DESCRIBE_SELECTED_ATOMS_WITHOUT_INFLATION(atoms_selected)
+
+
+        proposition =
+            BUILD_BOUNDED_PROPOSITION(
+                target_node,
+                atoms_selected
+            )
+
+
+        rationale =
+            RECORD_WHY_SELECTED_ATOMS_SUPPORT_SUBMISSION(
+                target_node,
+                proposition,
+                atoms_selected
+            )
+
+
+        ASSERT no title-only proof
+        ASSERT no convention-only proof
+        ASSERT no necessity-only proof
+        ASSERT considered_atoms != automatically_selected_atoms
+
+
+        bindings.ADD({
+            target_address,
+            satisfaction_question,
+            eligible_planes,
+            atoms_considered,
+            atoms_selected,
+            atomic_blurbs,
+            proposition,
+            rationale
+        })
+
+
+    envelope.payload.b3 = bindings
+
+
+    APPEND_EVENT(envelope, stage = "b3", operation = "bind")
+
+
+    ADVANCE_STAGE(
+        envelope,
+        completed = "b3",
+        current = "b4",
+        status = "ready"
+    )
+
+
+    RETURN envelope
+```
+
+
+---
+
+
+## B4 — The Gate
+
+
+### Prose
+
+
+B4 is the truth-admission gate. It audits each B3 proposition against only the evidence B3 actually selected. B4 cannot reach backward into the candidate corpus to rescue a weak proposition with evidence that B3 did not submit.
+
+
+B4 owns truth status, scope, and the evidence ceiling. Its disposition states are: PASS / FULLY SUPPORTED; QUALIFIED / BOUND AT RESTRICTED SCOPE; UNRESOLVED AT ATOMIC LEVEL; and CONTRADICTED. Every non-PASS result carries the reason required to understand the limitation.
+
+
+The distinction between qualified evidence and hard-gate satisfaction is strict. A hard target gate cannot be transformed into satisfaction merely by narrowing the proposition, substituting adjacent experience, or relabeling a restricted scope as equivalent. If the required fact is not established, the gate remains unresolved or contradicted as the evidence requires.
+
+
+B4 also prevents semantic inflation: no invented credentials, no title-derived proof, no convention-derived proof, no necessity-derived proof, and no assertion beyond the strongest proposition the submitted evidence actually supports.
+
+
+The B4 output is an audited, addressable ledger keyed to the B2 target addresses. That ledger carries admitted propositions, bounded scope, evidence ceilings, unresolved gaps, and contradictions into B5.
+
+
+### Pseudocode
+
+
+```text
+FUNCTION B4_AUDIT(envelope):
+
+
+    REQUIRE envelope.stage_state.current_stage == "b4"
+    REQUIRE B3 binding records exist
+
+
+    audit_ledger = {}
+
+
+    FOR each binding in envelope.payload.b3:
+
+
+        selected_evidence = binding.atoms_selected
+        proposition = binding.proposition
+        target_node = LOOKUP_B2_NODE(binding.target_address)
+
+
+        ASSERT B4 does not add unselected evidence
+
+
+        audit =
+            TEST_PROPOSITION_AGAINST_SELECTED_EVIDENCE(
+                proposition,
+                selected_evidence
+            )
+
+
+        IF proposition is fully established:
+            disposition = PASS_FULLY_SUPPORTED
+            admitted_proposition = proposition
+
+
+        ELSE IF proposition can truthfully be stated at narrower scope
+                AND target_node is not a hard gate requiring the broader fact:
+            disposition = QUALIFIED_BOUND_RESTRICTED_SCOPE
+            admitted_proposition =
+                NARROW_TO_MAXIMUM_SUPPORTED_SCOPE(proposition)
+
+
+        ELSE IF evidence does not establish or refute proposition:
+            disposition = UNRESOLVED_AT_ATOMIC_LEVEL
+            admitted_proposition = NONE
+
+
+        ELSE:
+            disposition = CONTRADICTED
+            admitted_proposition = NONE
+
+
+        IF target_node is hard gate:
+            ASSERT qualified scope never converts missing gate into satisfaction
+
+
+        evidence_ceiling =
+            COMPUTE_STRONGEST_ALLOWED_ASSERTION(
+                selected_evidence,
+                admitted_proposition
+            )
+
+
+        audit_ledger[target_address] = {
+            disposition,
+            admitted_proposition,
+            bounded_scope,
+            evidence_ceiling,
+            reason,
+            selected_evidence_references
+        }
+
+
+    envelope.payload.b4 = audit_ledger
+
+
+    APPEND_EVENT(envelope, stage = "b4", operation = "truth_audit")
+
+
+    ADVANCE_STAGE(
+        envelope,
+        completed = "b4",
+        current = "b5",
+        status = "ready"
+    )
+
+
+    RETURN envelope
+```
+
+
+---
+
+
+## B5 — Semantic Core Reasoning
+
+
+### Prose
+
+
+B5 is the substantive reasoning stage immediately after the B4 truth gate and immediately before Resume Factory. B4 determines what is true and at what scope. B5 determines how the admitted candidate evidence should be projected. Resume Factory later owns actual expression and physical layout.
+
+
+B5 reasons only within the B4 evidence ceiling. The traveling envelope may continue to carry persistent identity and routing information, but that carriage does not authorize B5 to use non-audited candidate material as semantic evidence.
+
+
+All five projection prisms must remain present:
+
+
+1. Sales Headhunter — foregrounds undeniable production.
+2. Sports Agent — foregrounds established value.
+3. Discovery Scout — foregrounds transferable signal.
+4. Independent Staffing-Firm Owner — foregrounds industry legibility up to demonstrated fluency.
+5. Casting Director — forms the strongest defensible whole-candidate interpretation using the admitted corpus, chronology, and patterns without converting projection into fact.
+
+
+B5 ranks the five prisms and assigns normalized projection-emphasis percentages totaling 100 percent. Those percentages express semantic priority only. They are not truth scores, confidence scores, fit scores, or success probabilities.
+
+
+B5 selects an owner prism while retaining the secondary prisms, anchors meaningful allocations back to B4-audited evidence, and sets foreground, reinforcement, background, and suppression priorities. It also defines the permitted writing assertiveness, prohibited implications, evidence ceilings, and derived presentation geometry.
+
+
+Presentation geometry may describe a single dominant posture, dual dominant posture, dominant-plus-secondary posture, or distributed posture. It does not prescribe exact sentences, coordinates, columns, boxes, typography, or a named resume template.
+
+
+B5 completes when the envelope contains a traceable semantic posture package and the stage state reaches the B5 stop condition. The first implementation wave stops there.
+
+
+### Pseudocode
+
+
+```text
+FUNCTION B5_REASON(envelope):
+
+
+    REQUIRE envelope.stage_state.current_stage == "b5"
+    REQUIRE B4 audited ledger exists
+
+
+    admitted_evidence =
+        READ_ONLY_B4_ADMITTED_AND_BOUNDED_EVIDENCE()
+
+
+    ASSERT no candidate proposition exceeds B4 evidence ceiling
+
+
+    prisms = [
+        SALES_HEADHUNTER,
+        SPORTS_AGENT,
+        DISCOVERY_SCOUT,
+        INDEPENDENT_STAFFING_FIRM_OWNER,
+        CASTING_DIRECTOR
+    ]
+
+
+    prism_assessments = []
+
+
+    FOR each prism in prisms:
+
+
+        supported_projection =
+            EVALUATE_PRISM_AGAINST_B4_ADMITTED_EVIDENCE(
+                prism,
+                admitted_evidence
+            )
+
+
+        evidence_anchors =
+            TRACE_PROJECTION_TO_B4_RECORDS(supported_projection)
+
+
+        prism_assessments.ADD({
+            prism,
+            supported_projection,
+            evidence_anchors
+        })
+
+
+    ranked_prisms =
+        RANK_RELATIVE_PROJECTION_PRIORITY(prism_assessments)
+
+
+    percentages =
+        NORMALIZE_PROJECTION_EMPHASIS_TO_100_PERCENT(ranked_prisms)
+
+
+    ASSERT percentages are not:
+        truth scores
+        confidence scores
+        fit scores
+        success probabilities
+
+
+    owner_prism = SELECT_HIGHEST_PRIORITY_PRISM(ranked_prisms)
+
+
+    semantic_priorities =
+        DERIVE_FOREGROUND_REINFORCEMENT_BACKGROUND_SUPPRESSION(
+            ranked_prisms,
+            admitted_evidence
+        )
+
+
+    writing_boundaries =
+        DERIVE_ALLOWED_ASSERTIVENESS_FROM_B4_EVIDENCE_CEILINGS()
+
+
+    prohibited_implications =
+        DERIVE_PROHIBITIONS_FROM_GAPS_CONTRADICTIONS_AND_LIMITS()
+
+
+    geometry =
+        DERIVE_PRESENTATION_GEOMETRY(
+            one_of = [
+                single_dominant,
+                dual_dominant,
+                dominant_plus_secondary,
+                distributed
+            ],
+            from = percentages
+        )
+
+
+    b5_payload = {
+        ranked_five_prisms,
+        projection_emphasis_percentages,
+        owner_prism,
+        evidence_anchors,
+        semantic_priorities,
+        writing_boundaries,
+        prohibited_implications,
+        presentation_geometry
+    }
+
+
+    envelope.payload.b5 = b5_payload
+
+
+    APPEND_EVENT(envelope, stage = "b5", operation = "semantic_reasoning")
+
+
+    ADVANCE_STAGE(
+        envelope,
+        completed = "b5",
+        current = "stop_before_resume_factory",
+        status = "complete"
+    )
+
+
+    RETURN envelope
+```

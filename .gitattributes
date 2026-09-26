@@ -1,0 +1,2 @@
+# Authority snapshots retain exact recorded bytes on every checkout.
+architecture/build-wave-20260926/** -text

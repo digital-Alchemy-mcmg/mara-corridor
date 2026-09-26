@@ -1,0 +1,53 @@
+{
+  "retrieved_utc": "2026-09-26T13:41:40.623228+00:00",
+  "files": [
+    {
+      "path": "architecture/build-wave-20260926/ARCHITECTURE_LOCK.md",
+      "sha256": "80a06a21e9ffaa3ba54b50a889d297b45830a2b97ba93c7e269e3414f7a73aa2",
+      "source": "C:\\Users\\HomePC\\Downloads\\Download Portal\\ARCHITECTURE_LOCK.md",
+      "capture": "unchanged original file copy"
+    },
+    {
+      "path": "architecture/build-wave-20260926/B5_Semantic_Core_Lock (1).docx",
+      "sha256": "b6c3cc1d43258a636f858649c3b17dbbae627d70d6ebf0d2d4e142ef589e698c",
+      "source": "C:\\Users\\HomePC\\Downloads\\Download Portal\\B5_Semantic_Core_Lock (1).docx",
+      "capture": "unchanged original file copy"
+    },
+    {
+      "path": "architecture/build-wave-20260926/build-spec-drive.txt",
+      "sha256": "175926c9a1655eec762c6178dc4cd5328b922583abb07c90e9d73cebec0bc12d",
+      "source": "https://docs.google.com/document/d/1BGbLmnGrIbDBqXwTGUubEmEQGxm9d-dPG0bUe0mdtFI/edit",
+      "capture": "Drive connector readable text snapshot; not native document bytes"
+    },
+    {
+      "path": "architecture/build-wave-20260926/CODEX_HANDOFF.md",
+      "sha256": "8c6a0c93b29b13496d69284644b0089f0aa618be6596658ffa7176e089b162e4",
+      "source": "C:\\Users\\HomePC\\Downloads\\Download Portal\\CODEX_HANDOFF.md",
+      "capture": "unchanged original file copy"
+    },
+    {
+      "path": "architecture/build-wave-20260926/operations-plan-drive.txt",
+      "sha256": "2bb37dd17520c3f1409d564cd3a2a1a4b0136848ddaa3ce48e8dbcd8fb0ec506",
+      "source": "https://docs.google.com/document/d/1Qj7faAfr8Mj6o-IEX7qBgUOXS-nG09lrbwRxHqpXyr4/edit",
+      "capture": "Drive connector readable text snapshot; not native document bytes"
+    },
+    {
+      "path": "architecture/build-wave-20260926/scout-basis-drive.txt",
+      "sha256": "0ee3a1bd316e2d0b3c75d3b2a0d45fd2f2811615c72fe622ebda84dcce1c47a5",
+      "source": "https://docs.google.com/document/d/1701b3Nc9WCy-WrBofMJ6pGYw8F3Q0Xim_2SxvYwVmuI/edit",
+      "capture": "Drive connector readable text snapshot; not native document bytes"
+    },
+    {
+      "path": "architecture/build-wave-20260926/Spatial_DNA_B_to_B4_Architecture_FINAL.docx",
+      "sha256": "2843ef25739c3a83d3ae9f4af1daffc360c9fdd1909b9cd3f85a2da9f13af8a1",
+      "source": "C:\\Users\\HomePC\\Downloads\\Download Portal\\Spatial_DNA_B_to_B4_Architecture_FINAL.docx",
+      "capture": "unchanged original file copy"
+    },
+    {
+      "path": "architecture/build-wave-20260926/spatial_dna_codex_handoff.zip",
+      "sha256": "2463043b6ab5382bb0abbea4fd9002b3dd847b2463111910b9ef0591b89f2540",
+      "source": "C:\\Users\\HomePC\\Downloads\\Download Portal\\spatial_dna_codex_handoff.zip",
+      "capture": "unchanged original file copy"
+    }
+  ]
+}

@@ -1,0 +1,842 @@
+﻿"""
+DIPLOMAT DISK QUERY MECHANISM — REFERENCE IMPLEMENTATION v2.2.0
+==============================================================
+Deterministic Machine-Readable Search Cartridge Architecture
+
+
+Components:
+  1. Data Contracts & Enums (Metadata, Certification, Report, Definition, MachinePayload)
+  2. Execution Profile Registry
+  3. Canonical Serialization & Cryptographic Integrity (SHA-256)
+  4. Disk Builder (Human Intent -> Validated Disk Definition)
+  5. Compiler (Disk Definition -> Compiled Machine Payload & Cartridge)
+  6. Cartridge Integrity Validator (25-Point Compliance, Minimal Repair, Certification)
+  7. Collection Runner (Autonomous 12-Gate Candidate Evaluation & Output Rows)
+"""
+
+
+import math
+import re
+import json
+import hashlib
+import unicodedata
+from datetime import datetime, timezone
+from typing import Dict, List, Any, Optional, Tuple, Set
+from urllib.parse import urlparse, urlunparse
+
+
+# ==============================================================================
+# PART 1: CONSTANTS, SCHEMAS & EXECUTION PROFILES
+# ==============================================================================
+
+
+SCHEMA_VERSION = "2.2.0"
+COMPILER_VERSION = "2.2.0"
+VALIDATOR_NAME = "DIPLOMAT Cartridge Integrity Validator"
+BUILDER_NAME = "DIPLOMAT Disk Builder"
+
+
+APPROVED_OBSERVATION_TYPES = {
+    "job_posting", "employer", "professional_profile", 
+    "provider", "business_location", "market_listing"
+}
+
+
+APPROVED_STATUSES = {"draft", "active", "inactive", "retired"}
+APPROVED_EXEC_PROFILES = {"standard", "discovery", "research", "forensics", "strict"}
+
+
+EXECUTION_PROFILE_REGISTRY = {
+    "standard": {
+        "limit": 10,
+        "deduplicate": True,
+        "rank_results": False,
+        "strict_post_filter": True,
+        "deep_scrape": 1,
+        "active_only": True
+    },
+    "discovery": {
+        "limit": 50,
+        "deduplicate": True,
+        "rank_results": False,
+        "strict_post_filter": False,
+        "deep_scrape": 0,
+        "active_only": False
+    },
+    "research": {
+        "limit": 100,
+        "deduplicate": True,
+        "rank_results": True,
+        "strict_post_filter": True,
+        "deep_scrape": 2,
+        "active_only": True
+    },
+    "forensics": {
+        "limit": 250,
+        "deduplicate": False,
+        "rank_results": False,
+        "strict_post_filter": False,
+        "deep_scrape": 3,
+        "active_only": False
+    },
+    "strict": {
+        "limit": 25,
+        "deduplicate": True,
+        "rank_results": False,
+        "strict_post_filter": True,
+        "deep_scrape": 2,
+        "active_only": True
+    }
+}
+
+
+OUTPUT_FIELDS_CONTRACT = [
+    "Observation_ID",
+    "Collection_Date",
+    "Vendor",
+    "Employer",
+    "Job_Title",
+    "City",
+    "State",
+    "ZIP",
+    "Industry",
+    "Employment_Type",
+    "Compensation",
+    "Source_URL",
+    "Duplicate_Count"
+]
+
+
+# ==============================================================================
+# PART 2: CANONICAL SERIALIZATION & DEDUPLICATION ALGORITHMS
+# ==============================================================================
+
+
+def canonicalize_json(obj: Any) -> bytes:
+    """
+    Serializes JSON with lexicographically sorted object keys,
+    UTF-8 encoding, and no insignificant whitespace.
+    """
+    return json.dumps(obj, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode('utf-8')
+
+
+
+
+def compute_cartridge_hash(cartridge: Dict[str, Any]) -> str:
+    """
+    Computes SHA-256 content hash across metadata, report, definition, and machine_payload.
+    Explicitly excludes certification block.
+    """
+    scope = cartridge.get("certification", {}).get("hash_scope", [
+        "metadata", "report", "definition", "machine_payload"
+    ])
+    scoped_data = {k: cartridge[k] for k in scope if k in cartridge}
+    canon_bytes = canonicalize_json(scoped_data)
+    digest = hashlib.sha256(canon_bytes).hexdigest()
+    return f"sha256:{digest}"
+
+
+
+
+def normalize_posting_url(url: str) -> str:
+    """
+    Rule: trim; lowercase_scheme_and_host; remove_fragment; remove_trailing_slash
+    """
+    if not url:
+        return ""
+    url = url.strip()
+    if url.endswith("/") and len(url) > 1:
+        url = url.rstrip("/")
+    parsed = urlparse(url)
+    scheme = parsed.scheme.lower()
+    netloc = parsed.netloc.lower()
+    path = parsed.path
+    if path.endswith("/") and len(path) > 1:
+        path = path.rstrip("/")
+    return urlunparse((scheme, netloc, path, parsed.params, parsed.query, ""))
+
+
+
+
+def normalize_employer_name(name: str) -> str:
+    """
+    Rule: unicode_nfkc; trim; collapse_whitespace; lowercase
+    """
+    if not name:
+        return ""
+    norm = unicodedata.normalize('NFKC', name).strip()
+    norm = re.sub(r'\s+', ' ', norm).lower()
+    return norm
+
+
+
+
+def compute_deduplication_key(posting_url: str, employer_name: str, delimiter: str = "\u001f") -> str:
+    """
+    Expression: sha256(normalize(posting_url) + U+001F + normalize(employer_name))
+    """
+    n_url = normalize_posting_url(posting_url)
+    n_emp = normalize_employer_name(employer_name)
+    raw = f"{n_url}{delimiter}{n_emp}"
+    return hashlib.sha256(raw.encode('utf-8')).hexdigest()
+
+
+
+
+def compute_observation_id(dedup_key: str) -> str:
+    """
+    Rule: OBS-{first_12_uppercase_hex_of_sha256(deduplication_key)}
+    """
+    h = hashlib.sha256(dedup_key.encode('utf-8')).hexdigest()
+    return f"OBS-{h[:12].upper()}"
+
+
+
+
+def haversine_miles(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    """Calculates great-circle distance between two points in miles."""
+    r_miles = 3958.8
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlambda = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2.0) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2.0) ** 2
+    c = 2.0 * math.atan2(math.sqrt(a), math.sqrt(1.0 - a))
+    return r_miles * c
+
+
+
+
+# ==============================================================================
+# PART 3: ROLE 1 — DISK BUILDER
+# ==============================================================================
+
+
+class DiskBuilder:
+    """
+    The Disk Builder creates the human-readable Disk Definition.
+    It encapsulates mission identity, territory, industry, roles, keywords, and execution profile.
+    """
+    def __init__(self, disk_id: str, label: str, description: str, observation_type: str = "job_posting", version: str = "1.0.0"):
+        self.definition = {
+            "id": disk_id,
+            "label": label,
+            "description": description,
+            "observation_type": observation_type,
+            "version": version,
+            "status": "active",
+            "territory": {
+                "zipCode": "",
+                "radiusMiles": 0,
+                "coordinates": {"lat": 0.0, "lon": 0.0}
+            },
+            "industry": [],
+            "roles": [],
+            "keywords": {
+                "logic": "match_any_role_scope_and_exclude_global",
+                "scopes": [],
+                "optional_specialty_flags": [],
+                "global_exclude": []
+            },
+            "execution_profile": "standard"
+        }
+
+
+    def set_territory(self, zip_code: str, radius_miles: int, lat: float, lon: float) -> "DiskBuilder":
+        self.definition["territory"] = {
+            "zipCode": str(zip_code).strip(),
+            "radiusMiles": int(radius_miles),
+            "coordinates": {"lat": float(lat), "lon": float(lon)}
+        }
+        return self
+
+
+    def add_industry(self, code: str, title: str) -> "DiskBuilder":
+        self.definition["industry"].append({
+            "code": str(code).strip(),
+            "title": str(title).strip()
+        })
+        return self
+
+
+    def add_role(self, soc_code: str, title: str) -> "DiskBuilder":
+        self.definition["roles"].append({
+            "code": str(soc_code).strip(),
+            "title": str(title).strip()
+        })
+        return self
+
+
+    def add_keyword_scope(self, target_soc: str, include: List[str]) -> "DiskBuilder":
+        self.definition["keywords"]["scopes"].append({
+            "target_soc": str(target_soc).strip(),
+            "include": [p.strip() for p in include if p.strip()]
+        })
+        return self
+
+
+    def set_global_exclusions(self, exclusions: List[str]) -> "DiskBuilder":
+        self.definition["keywords"]["global_exclude"] = [e.strip() for e in exclusions if e.strip()]
+        return self
+
+
+    def set_specialty_flags(self, flags: List[str]) -> "DiskBuilder":
+        self.definition["keywords"]["optional_specialty_flags"] = [f.strip() for f in flags if f.strip()]
+        return self
+
+
+    def set_execution_profile(self, profile: str) -> "DiskBuilder":
+        if profile not in APPROVED_EXEC_PROFILES:
+            raise ValueError(f"Unknown execution profile: {profile}. Must be one of {APPROVED_EXEC_PROFILES}")
+        self.definition["execution_profile"] = profile
+        return self
+
+
+    def build(self) -> Dict[str, Any]:
+        return json.loads(json.dumps(self.definition))
+
+
+
+
+# ==============================================================================
+# PART 4: ROLE 2 — COMPILER
+# ==============================================================================
+
+
+class DiskCompiler:
+    """
+    The Compiler transforms the human-authored Disk Definition into the
+    Compiled Machine Payload and assembles the uncertified Disk Cartridge.
+    """
+    def __init__(self, compiler_version: str = COMPILER_VERSION):
+        self.compiler_version = compiler_version
+
+
+    def compile(self, definition: Dict[str, Any], ring_resolver_basis: Optional[Dict[Tuple[str, str], str]] = None) -> Dict[str, Any]:
+        disk_id = definition.get("id", "DSK-000001")
+        disk_numeric = re.sub(r'^[A-Z]+-', '', disk_id)
+        
+        cartridge_id = f"CRT-{disk_numeric}"
+        compilation_id = f"CMP-{disk_numeric}"
+        payload_id = f"PAY-{disk_numeric}"
+        now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z"
+
+
+        # 1. Expand taxonomies
+        naics_codes = [ind["code"] for ind in definition.get("industry", [])]
+        soc_codes = [role["code"] for role in definition.get("roles", [])]
+
+
+        # 2. Build Ring Provenance
+        assignments = []
+        rings_seen = set()
+        for n in naics_codes:
+            for s in soc_codes:
+                ring_val = "R4"  # Default deterministic standard ring
+                if ring_resolver_basis and (n, s) in ring_resolver_basis:
+                    ring_val = ring_resolver_basis[(n, s)]
+                assignments.append({
+                    "source": [n, s],
+                    "ring": ring_val
+                })
+                rings_seen.add(ring_val)
+
+
+        # 3. Expand keyword rules
+        role_scopes = {}
+        for scope in definition.get("keywords", {}).get("scopes", []):
+            role_scopes[scope["target_soc"]] = scope["include"]
+
+
+        # 4. Expand execution controls from profile
+        profile_name = definition.get("execution_profile", "standard")
+        exec_settings = EXECUTION_PROFILE_REGISTRY.get(profile_name, EXECUTION_PROFILE_REGISTRY["standard"])
+
+
+        # 5. Build Machine Payload
+        machine_payload = {
+            "id": payload_id,
+            "dsk": disk_id,
+            "v": definition.get("version", "1.0.0"),
+            "obs_type": definition.get("observation_type", "job_posting"),
+            "contract": {
+                "output_fields": list(OUTPUT_FIELDS_CONTRACT),
+                "source_rule": "approved_sources_only",
+                "row_format": "one_observation_per_row",
+                "additional_fields_allowed": False,
+                "unknown_rejection": True,
+                "deduplication": {
+                    "algorithm": "sha256",
+                    "fields": ["posting_url", "employer_name"],
+                    "normalization": {
+                        "posting_url": "trim; lowercase_scheme_and_host; remove_fragment; remove_trailing_slash",
+                        "employer_name": "unicode_nfkc; trim; collapse_whitespace; lowercase"
+                    },
+                    "delimiter": "\u001f",
+                    "expression": "sha256(normalize(posting_url) + U+001F + normalize(employer_name))"
+                },
+                "field_rules": {
+                    "Observation_ID": "OBS-{first_12_uppercase_hex_of_sha256(deduplication_key)}",
+                    "Collection_Date": "UTC date in YYYY-MM-DD",
+                    "Vendor": "source platform or direct-employer host",
+                    "Employer": "exact employer name from source",
+                    "Job_Title": "exact displayed job title",
+                    "City": "source city",
+                    "State": "two-letter state code",
+                    "ZIP": "source ZIP when available; null otherwise",
+                    "Industry": "matched NAICS code and canonical title",
+                    "Employment_Type": "source value when available; null otherwise",
+                    "Compensation": "source value when available; null otherwise",
+                    "Source_URL": "direct individual observation URL",
+                    "Duplicate_Count": "count of records sharing the deduplication key, minimum 1"
+                }
+            },
+            "loc": {
+                "z": definition.get("territory", {}).get("zipCode", ""),
+                "r": definition.get("territory", {}).get("radiusMiles", 0),
+                "ll": [
+                    definition.get("territory", {}).get("coordinates", {}).get("lat", 0.0),
+                    definition.get("territory", {}).get("coordinates", {}).get("lon", 0.0)
+                ]
+            },
+            "tax": {
+                "n": naics_codes,
+                "s": soc_codes
+            },
+            "rng_provenance": {
+                "resolver_version": self.compiler_version,
+                "resolution_basis": "deterministic_naics_soc_cartesian",
+                "assignments": assignments
+            },
+            "kw_rules": {
+                "combination_rule": "candidate_must_match_at_least_one_phrase_in_the_role_scope_for_its_target_soc; global_exclusion_match_rejects_candidate; optional_flags_do_not_affect_acceptance",
+                "operator": "phrase_case_insensitive",
+                "fields": ["title", "description"],
+                "precedence": "exclude_overrides_include",
+                "role_scopes": role_scopes,
+                "flags": definition.get("keywords", {}).get("optional_specialty_flags", []),
+                "exclude": definition.get("keywords", {}).get("global_exclude", [])
+            },
+            "exec": dict(exec_settings)
+        }
+
+
+        # 6. Count keywords
+        keywords_count = sum(len(terms) for terms in role_scopes.values()) + len(definition.get("keywords", {}).get("global_exclude", []))
+
+
+        # 7. Assemble Complete Uncertified Cartridge
+        cartridge = {
+            "metadata": {
+                "cartridge_id": cartridge_id,
+                "compilation_id": compilation_id,
+                "disk_id": disk_id,
+                "payload_id": payload_id,
+                "schema_version": SCHEMA_VERSION,
+                "generated_at": now_iso,
+                "builder": BUILDER_NAME,
+                "compiler_version": self.compiler_version
+            },
+            "certification": {
+                "status": "UNCERTIFIED",
+                "decision": "NOT_READY",
+                "validator": VALIDATOR_NAME,
+                "timestamp": now_iso,
+                "content_hash": "sha256:pending",
+                "hash_algorithm": "SHA-256",
+                "hash_scope": ["metadata", "report", "definition", "machine_payload"],
+                "canonicalization": "UTF-8 JSON with lexicographically sorted object keys, no insignificant whitespace, and certification excluded"
+            },
+            "report": {
+                "status": "SUCCESS",
+                "warnings": 0,
+                "errors": 0,
+                "metrics": {
+                    "naics_count": len(naics_codes),
+                    "soc_count": len(soc_codes),
+                    "ring_count": len(rings_seen),
+                    "ring_assignment_count": len(assignments),
+                    "keywords_count": keywords_count
+                }
+            },
+            "definition": definition,
+            "machine_payload": machine_payload
+        }
+        return cartridge
+
+
+
+
+# ==============================================================================
+# PART 5: ROLE 3 — CARTRIDGE INTEGRITY VALIDATOR
+# ==============================================================================
+
+
+class CartridgeIntegrityValidator:
+    """
+    Certifies interface compliance through the 25-Point Checklist.
+    Performs minimal deterministic repair of correctable interface defects.
+    Computes cryptographic content hash and signs cartridge.
+    """
+    def __init__(self, supported_version: str = SCHEMA_VERSION):
+        self.supported_version = supported_version
+
+
+    def validate_and_certify(self, cartridge: Dict[str, Any], auto_repair: bool = True) -> Tuple[bool, Dict[str, Any], List[str]]:
+        c = json.loads(json.dumps(cartridge))
+        defects = []
+        repairs = []
+
+
+        # 1. Required top-level sections
+        top_sections = ["metadata", "certification", "report", "definition", "machine_payload"]
+        for sec in top_sections:
+            if sec not in c:
+                defects.append(f"Missing top-level section: {sec}")
+        if defects:
+            return False, c, defects
+
+
+        # 2. Schema version check
+        m = c["metadata"]
+        if m.get("schema_version") != self.supported_version:
+            defects.append(f"Unsupported schema version: {m.get('schema_version')}")
+
+
+        # 3. ID Cross-References
+        defn = c["definition"]
+        mp = c["machine_payload"]
+        if m.get("disk_id") != defn.get("id"):
+            if auto_repair:
+                defn["id"] = m.get("disk_id")
+                repairs.append("Synchronized definition.id to metadata.disk_id")
+            else:
+                defects.append("metadata.disk_id != definition.id")
+        
+        if m.get("disk_id") != mp.get("dsk"):
+            if auto_repair:
+                mp["dsk"] = m.get("disk_id")
+                repairs.append("Synchronized machine_payload.dsk to metadata.disk_id")
+            else:
+                defects.append("metadata.disk_id != machine_payload.dsk")
+
+
+        if m.get("payload_id") != mp.get("id"):
+            if auto_repair:
+                mp["id"] = m.get("payload_id")
+                repairs.append("Synchronized machine_payload.id to metadata.payload_id")
+            else:
+                defects.append("metadata.payload_id != machine_payload.id")
+
+
+        if defn.get("version") != mp.get("v"):
+            if auto_repair:
+                mp["v"] = defn.get("version")
+                repairs.append("Synchronized machine_payload.v to definition.version")
+            else:
+                defects.append("definition.version != machine_payload.v")
+
+
+        if defn.get("observation_type") != mp.get("obs_type"):
+            if auto_repair:
+                mp["obs_type"] = defn.get("observation_type")
+                repairs.append("Synchronized machine_payload.obs_type to definition.observation_type")
+            else:
+                defects.append("definition.observation_type != machine_payload.obs_type")
+
+
+        # 4. Territory Synchronization
+        dt = defn.get("territory", {})
+        ml = mp.get("loc", {})
+        if dt.get("zipCode") != ml.get("z") or dt.get("radiusMiles") != ml.get("r") or \
+           dt.get("coordinates", {}).get("lat") != ml.get("ll", [0, 0])[0] or \
+           dt.get("coordinates", {}).get("lon") != ml.get("ll", [0, 0])[1]:
+            if auto_repair:
+                mp["loc"]["z"] = dt.get("zipCode", "")
+                mp["loc"]["r"] = dt.get("radiusMiles", 0)
+                mp["loc"]["ll"] = [dt.get("coordinates", {}).get("lat", 0.0), dt.get("coordinates", {}).get("lon", 0.0)]
+                repairs.append("Repaired machine_payload.loc to match definition.territory")
+            else:
+                defects.append("Territory values mismatch between definition and machine_payload")
+
+
+        # 5. Taxonomy & Scope Cross-References
+        defn_naics = [ind["code"] for ind in defn.get("industry", [])]
+        defn_soc = [role["code"] for role in defn.get("roles", [])]
+        if defn_naics != mp.get("tax", {}).get("n", []):
+            if auto_repair:
+                mp["tax"]["n"] = list(defn_naics)
+                repairs.append("Synchronized machine_payload.tax.n with definition.industry")
+            else:
+                defects.append("NAICS mismatch between definition and payload")
+
+
+        if defn_soc != mp.get("tax", {}).get("s", []):
+            if auto_repair:
+                mp["tax"]["s"] = list(defn_soc)
+                repairs.append("Synchronized machine_payload.tax.s with definition.roles")
+            else:
+                defects.append("SOC mismatch between definition and payload")
+
+
+        for scope in defn.get("keywords", {}).get("scopes", []):
+            if scope["target_soc"] not in defn_soc:
+                defects.append(f"Keyword scope references unauthorized SOC: {scope['target_soc']}")
+
+
+        # 6. Ring Assignments check
+        rng = mp.get("rng_provenance", {}).get("assignments", [])
+        rings_found = set()
+        for assign in rng:
+            n, s = assign.get("source", [None, None])
+            if n not in defn_naics or s not in defn_soc:
+                defects.append(f"Ring assignment references unauthorized code: {n}, {s}")
+            rings_found.add(assign.get("ring"))
+
+
+        # 7. Metrics Reconciliation
+        rep = c["report"]
+        actual_kw_count = sum(len(terms) for terms in mp.get("kw_rules", {}).get("role_scopes", {}).values()) + \
+                          len(mp.get("kw_rules", {}).get("exclude", []))
+        
+        expected_metrics = {
+            "naics_count": len(defn_naics),
+            "soc_count": len(defn_soc),
+            "ring_count": len(rings_found),
+            "ring_assignment_count": len(rng),
+            "keywords_count": actual_kw_count
+        }
+
+
+        if rep.get("metrics") != expected_metrics:
+            if auto_repair:
+                rep["metrics"] = expected_metrics
+                repairs.append("Reconciled report metrics with actual counts")
+            else:
+                defects.append("Report metrics do not match actual cartridge values")
+
+
+        if defects:
+            c["certification"]["status"] = "UNCERTIFIED"
+            c["certification"]["decision"] = "NOT_READY"
+            c["report"]["status"] = "FAILED"
+            c["report"]["errors"] = len(defects)
+            return False, c, defects
+
+
+        # 8. All checks passed: Certify Cartridge
+        now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z"
+        c["report"]["status"] = "SUCCESS"
+        c["report"]["errors"] = 0
+        c["report"]["warnings"] = len(repairs)
+
+
+        c["certification"]["status"] = "CERTIFIED"
+        c["certification"]["decision"] = "READY"
+        c["certification"]["validator"] = VALIDATOR_NAME
+        c["certification"]["timestamp"] = now_iso
+        c["certification"]["hash_algorithm"] = "SHA-256"
+        c["certification"]["hash_scope"] = ["metadata", "report", "definition", "machine_payload"]
+        c["certification"]["canonicalization"] = "UTF-8 JSON with lexicographically sorted object keys, no insignificant whitespace, and certification excluded"
+
+
+        # Compute & store cryptographic content hash
+        content_hash = compute_cartridge_hash(c)
+        c["certification"]["content_hash"] = content_hash
+
+
+        return True, c, repairs
+
+
+
+
+# ==============================================================================
+# PART 6: ROLE 4 — COLLECTION RUNNER
+# ==============================================================================
+
+
+class CollectionRunner:
+    """
+    Executes the certified Compiled Machine Payload against candidate observations.
+    Enforces all 12 candidate evaluation gates, deterministic deduplication,
+    observation limits, and approved output contract formatting.
+    """
+    def __init__(self, supported_version: str = SCHEMA_VERSION):
+        self.supported_version = supported_version
+
+
+    def execute(self, cartridge: Dict[str, Any], candidates: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        # Verification Preconditions
+        cert = cartridge.get("certification", {})
+        rep = cartridge.get("report", {})
+        meta = cartridge.get("metadata", {})
+        payload = cartridge.get("machine_payload", {})
+
+
+        if cert.get("status") != "CERTIFIED":
+            raise RuntimeError("Runner Rejection: Cartridge certification.status must be CERTIFIED")
+        if cert.get("decision") != "READY":
+            raise RuntimeError("Runner Rejection: Cartridge certification.decision must be READY")
+        if rep.get("status") != "SUCCESS":
+            raise RuntimeError("Runner Rejection: Cartridge report.status must be SUCCESS")
+        if rep.get("errors", 0) != 0:
+            raise RuntimeError("Runner Rejection: Cartridge report.errors must be 0")
+        if meta.get("schema_version") != self.supported_version:
+            raise RuntimeError(f"Runner Rejection: Unsupported schema version: {meta.get('schema_version')}")
+
+
+        # Cryptographic Hash Verification
+        expected_hash = compute_cartridge_hash(cartridge)
+        if cert.get("content_hash") != expected_hash:
+            raise RuntimeError(f"Runner Rejection: Integrity hash mismatch. Declared {cert.get('content_hash')} != Computed {expected_hash}")
+
+
+        # Gate parameters
+        obs_type = payload.get("obs_type")
+        contract = payload.get("contract", {})
+        source_rule = contract.get("source_rule", "approved_sources_only")
+        exec_ctrl = payload.get("exec", {})
+        active_only = exec_ctrl.get("active_only", True)
+        limit = exec_ctrl.get("limit", 10)
+        deduplicate = exec_ctrl.get("deduplicate", True)
+        
+        loc = payload.get("loc", {})
+        target_lat, target_lon = loc.get("ll", [0.0, 0.0])
+        max_radius = loc.get("r", 0)
+
+
+        auth_naics = set(payload.get("tax", {}).get("n", []))
+        auth_soc = set(payload.get("tax", {}).get("s", []))
+
+
+        kw_rules = payload.get("kw_rules", {})
+        role_scopes = kw_rules.get("role_scopes", {})
+        global_exclude = kw_rules.get("exclude", [])
+        kw_fields = kw_rules.get("fields", ["title", "description"])
+
+
+        accepted_observations = []
+        duplicate_groups: Dict[str, List[Dict[str, Any]]] = {}
+
+
+        collection_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+
+        for cand in candidates:
+            if len(accepted_observations) >= limit:
+                break
+
+
+            # Gate 1: Observation Type
+            if cand.get("observation_type") != obs_type:
+                continue
+
+
+            # Gate 2: Source Rule
+            if source_rule == "approved_sources_only":
+                if not cand.get("is_approved_source", True):
+                    continue
+
+
+            # Gate 3: Active Status
+            if active_only and not cand.get("is_active", True):
+                continue
+
+
+            # Gate 4: Territory Boundary
+            cand_coords = cand.get("coordinates")
+            if cand_coords and max_radius > 0 and (target_lat != 0.0 or target_lon != 0.0):
+                dist = haversine_miles(target_lat, target_lon, cand_coords["lat"], cand_coords["lon"])
+                if dist > max_radius:
+                    continue
+            elif loc.get("z") and cand.get("zip"):
+                if str(loc.get("z"))[:3] != str(cand.get("zip"))[:3]:
+                    continue
+
+
+            # Gate 5: Authorized Industry (NAICS)
+            cand_naics = str(cand.get("naics", "")).strip()
+            if cand_naics not in auth_naics:
+                continue
+
+
+            # Gate 6: Authorized Role (SOC)
+            cand_soc = str(cand.get("soc", "")).strip()
+            if cand_soc not in auth_soc:
+                continue
+
+
+            # Gate 7: Keyword Search Text Compilation
+            cand_text_blob = " ".join([str(cand.get(f, "")).lower() for f in kw_fields])
+
+
+            # Gate 8: Global Exclusion Gate (precedence: exclude_overrides_include)
+            excluded = False
+            for excl in global_exclude:
+                if excl.lower() in cand_text_blob:
+                    excluded = True
+                    break
+            if excluded:
+                continue
+
+
+            # Gate 9: Role Inclusion Gate
+            target_terms = role_scopes.get(cand_soc, [])
+            matched_include = False
+            for phrase in target_terms:
+                if phrase.lower() in cand_text_blob:
+                    matched_include = True
+                    break
+            if not matched_include:
+                continue
+
+
+            # Gate 10: Deduplication Key Computation
+            url = cand.get("posting_url") or cand.get("source_url") or ""
+            emp = cand.get("employer_name") or cand.get("employer") or ""
+            dedup_key = compute_deduplication_key(url, emp)
+
+
+            if dedup_key not in duplicate_groups:
+                duplicate_groups[dedup_key] = []
+            duplicate_groups[dedup_key].append(cand)
+
+
+            if deduplicate and len(duplicate_groups[dedup_key]) > 1:
+                # Duplicate candidate already recorded in group count
+                continue
+
+
+            obs_id = compute_observation_id(dedup_key)
+
+
+            # Build Canonical Row
+            row = {
+                "Observation_ID": obs_id,
+                "Collection_Date": collection_date,
+                "Vendor": cand.get("vendor", "Direct"),
+                "Employer": cand.get("employer", emp).strip(),
+                "Job_Title": cand.get("title", cand.get("job_title", "")).strip(),
+                "City": cand.get("city", "").strip(),
+                "State": cand.get("state", "MI").strip(),
+                "ZIP": cand.get("zip"),
+                "Industry": f"{cand_naics} - " + str(cand.get("industry_title", "Industry")),
+                "Employment_Type": cand.get("employment_type", "Full-time"),
+                "Compensation": cand.get("compensation", "Not specified"),
+                "Source_URL": url,
+                "Duplicate_Count": 1,
+                "_dedup_key": dedup_key
+            }
+            accepted_observations.append(row)
+
+
+        # Finalize Duplicate Counts
+        final_rows = []
+        for row in accepted_observations:
+            d_key = row.pop("_dedup_key")
+            row["Duplicate_Count"] = len(duplicate_groups.get(d_key, [1]))
+            # Verify exact output fields
+            clean_row = {k: row.get(k) for k in OUTPUT_FIELDS_CONTRACT}
+            final_rows.append(clean_row)
+
+
+        return final_rows

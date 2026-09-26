@@ -1,0 +1,1969 @@
+﻿SPATIAL DNA — CODEX REMOTE BUILD & RUNNER OPERATIONS PLAN
+Scout → B → B1/B2 → B3 → B4 → B5
+Builder-Oriented Implementation Wave
+
+
+PURPOSE
+
+
+This document is the complete operating instruction for the Codex remote build wave. It is intentionally self-contained so the build runners do not depend on ChatGPT conversation history to know what they are supposed to do.
+
+
+The implementation target is:
+
+
+Scout
+→ B handoff
+→ B1 Decouple
+→ B2 Create Tree
+→ B3 Bind
+→ B4 Truth Gate
+→ B5 Semantic Core
+→ STOP
+
+
+Codex is the builder for this wave.
+
+
+Codex is NOT the independent architecture verifier.
+
+
+The purpose of this wave is to get the system implemented, runnable, portable, committed, pushed, and reproducible. Independent verification happens after the system is operational.
+
+
+Do not stall the build by repeatedly reopening settled architecture. Do not redesign a stage merely because another design is cleaner. If the supplied contract can be implemented, implement it.
+
+
+==================================================
+1. SOURCE AUTHORITY AND WHERE TO READ
+==================================================
+
+
+PRIMARY BUILD SPECIFICATION — GOOGLE DRIVE
+
+
+Title:
+Spatial DNA Build Wave — Revise Preservation Snapshot — 2026-09-26
+
+
+URL:
+https://docs.google.com/document/d/1BGbLmnGrIbDBqXwTGUubEmEQGxm9d-dPG0bUe0mdtFI/edit?usp=drivesdk
+
+
+This is the primary preserved build specification for the current implementation wave. It contains:
+- component diagrams
+- shared traveling-envelope contract
+- Scout prose and pseudocode
+- B prose and pseudocode
+- B1/B2 prose and pseudocode
+- B3 prose and pseudocode
+- B4 prose and pseudocode
+- B5 prose and pseudocode
+
+
+WORKING DIAGRAM / DESIGN DOCUMENT — REVISE
+
+
+Title:
+Spatial DNA Build Wave — Pass 1 Component Diagrams
+
+
+URL:
+https://revise.io/docs/lknd4i796emjqwyk
+
+
+Use this as a secondary working reference. The Google Drive preservation snapshot exists specifically so the build instructions do not depend on Revise remaining available.
+
+
+SCOUT IMPLEMENTATION BASIS — GOOGLE DRIVE
+
+
+Title:
+DIPLOMAT Disk Query Mechanism - Complete Implementation
+
+
+URL:
+https://docs.google.com/document/d/1701b3Nc9WCy-WrBofMJ6pGYw8F3Q0Xim_2SxvYwVmuI/edit
+
+
+IMPORTANT NAME DISAMBIGUATION:
+
+
+The DIPLOMAT name in this Disk Query Mechanism is legacy naming from the earlier monolithic design.
+
+
+FOR THIS BUILD:
+DIPLOMAT DISK QUERY MECHANISM = SCOUT IMPLEMENTATION BASIS.
+
+
+Do not reinterpret the uploaded Disk Query Mechanism as the current Diplomat/MARA component.
+
+
+Historical/current name map:
+- old Scout later became Envoy
+- old MARA later became Diplomat
+- Liaison is the downstream system after Resume Factory that sends/follows up
+- for this specific build wave, the uploaded Disk Query Mechanism is to be treated as Scout
+
+
+ADDITIONAL LOCAL / REPOSITORY AUTHORITY
+
+
+Before modifying code, locate the current SPATIAL DNA COMPLETE repository and confirm the repository root or architecture area contains the applicable transferred artifacts, including:
+
+
+- CODEX_HANDOFF.md
+- ARCHITECTURE_LOCK.md
+- B1_B2_Pre_Gate_Protocol.pdf
+- Spatial_DNA_B_to_B4_Architecture_FINAL.docx
+- B5_Semantic_Core_Lock (1).docx
+- traveling-envelope schema
+- traveling-envelope example
+- 100-job MARA/Scout fixture corpus
+
+
+Do not invent a repository URL or path.
+
+
+If more than one plausible repository is present and the target cannot be unambiguously identified from the existing Codex workspace, declare:
+
+
+BLOCKED: REPO_TARGET_AMBIGUOUS
+
+
+Record the candidate paths/URLs found and hand the blocker to Runner Five.
+
+
+ARCHITECTURE PRECEDENCE
+
+
+When two documents differ:
+1. use the newest stage-specific architecture lock for that stage
+2. preserve explicit architectural invariants
+3. do not silently merge incompatible rules
+4. if the conflict prevents implementation, mark the stage BLOCKED and route it to Runner Five
+5. if the conflict is cosmetic, naming-only, or non-executable documentation drift, follow the current build specification and continue
+
+
+==================================================
+2. BUILD SCOPE
+==================================================
+
+
+IN SCOPE
+
+
+- Scout
+- B boundary
+- B1
+- B2
+- B3
+- B4
+- B5
+- traveling-envelope runtime contract
+- stage start conditions
+- stage stop conditions
+- stage append behavior
+- workbenches / runnable harnesses
+- tests needed to demonstrate runnable behavior
+- repository commits
+- portable module boundaries
+- comments needed to understand non-obvious constraints
+- status receipts
+- blocker handling
+
+
+OUT OF SCOPE FOR THIS WAVE
+
+
+Do not implement:
+- Resume Factory C1–C5
+- Debug Nav
+- DNA Cube decoupling
+- Weave v2
+- Liaison
+- final documentation polish
+- new architecture redesign
+- live production job-search acquisition for the first integrated test
+- broad independent architecture verification
+
+
+Meta UI already exists as a shell and is not a blocker for the backend implementation.
+
+
+==================================================
+3. BUILD ORDER
+==================================================
+
+
+The logical implementation order is:
+
+
+1. Scout
+2. B + B1 + B2
+3. B3
+4. B4
+5. B5
+
+
+The first four are assigned to dedicated build runners.
+
+
+B5 is assigned after one of the upstream build runners reaches DONE and becomes available.
+
+
+This is deliberate. Do not consume the fifth scheduled runner with B5 at the start because Runner Five is reserved as the anti-stall watchdog.
+
+
+==================================================
+4. FIVE-RUNNER TOPOLOGY
+==================================================
+
+
+RUNNER ONE — SCOUT BUILDER
+
+
+Primary responsibility:
+Build Scout into a runnable portable module using the existing Disk Query Mechanism as implementation basis and the 100-job fixture corpus as the first test corpus.
+
+
+RUNNER TWO — B + B1/B2 BUILDER
+
+
+Primary responsibility:
+Build the Scout-to-Spatial-DNA handoff boundary, B1 target decomposition, and B2 target tree construction.
+
+
+RUNNER THREE — B3 BUILDER
+
+
+Primary responsibility:
+Build target-node-driven candidate evidence binding.
+
+
+RUNNER FOUR — B4 BUILDER
+
+
+Primary responsibility:
+Build the proposition-specific truth gate and audited ledger.
+
+
+RUNNER FIVE — ANTI-STALL / BLOCKER RECOVERY RUNNER
+
+
+Primary responsibility:
+Prevent any build runner from going dormant because of a blocker.
+
+
+Runner Five has no normal build stage at startup.
+
+
+Runner Five is not:
+- an architecture verifier
+- a design critic
+- a refactoring agent
+- a replacement for the blocked runner
+- a reason to restart work from scratch
+
+
+Runner Five exists to keep blocked work cycling at the nearest scheduler opportunity until it can resume.
+
+
+==================================================
+5. TRAVELING ENVELOPE — SHARED I/O CONTRACT
+==================================================
+
+
+The traveling envelope is the common stage-boundary object for the entire build wave.
+
+
+The envelope is not a side artifact. It is the I/O spine and the start/stop condition mechanism.
+
+
+Scout initializes it.
+
+
+Each downstream stage:
+- receives the envelope
+- validates its own start condition
+- reads only the inputs it is authorized to read
+- appends only its owned payload
+- preserves earlier stage-owned material
+- writes an append-log event
+- advances stage state
+- satisfies its stop condition
+- hands the envelope forward
+
+
+Conceptual structure:
+
+
+traveling_envelope
+  schema_version
+  envelope_id
+  created_at
+
+
+  persistent
+    target_identity
+    application_routing
+    source_identity
+
+
+  stage_state
+    current_stage
+    completed_stages
+    status
+
+
+  append_log
+    ordered stage events
+
+
+  payload
+    scout
+    b
+    b1
+    b2
+    b3
+    b4
+    b5
+
+
+KEY RULE:
+
+
+CARRIAGE != READ AUTHORITY.
+
+
+A field may persist through the whole envelope because a later destination needs it. That does not mean every stage is allowed to reason over it.
+
+
+Examples:
+- application routing can travel end to end
+- B1/B2 remain candidate-blind even if candidate information is physically carried elsewhere in the envelope
+- B5 may receive the envelope but semantically reason only over B4-admitted/bounded candidate evidence
+
+
+UPSTREAM IMMUTABILITY
+
+
+No stage may silently rewrite a previous stage’s owned payload.
+
+
+If a stage needs a corrected derivative, it creates a new stage-owned field or explicit repair record according to the architecture. It does not mutate history to make the pipeline look cleaner.
+
+
+==================================================
+6. RUNNER ONE — SCOUT IMPLEMENTATION
+==================================================
+
+
+INPUT CORPUS
+
+
+Use the existing 100-job MARA/Scout test corpus.
+
+
+Do not perform live job acquisition for the first integrated build.
+
+
+The purpose of the first run is to establish deterministic system behavior using a fixed corpus.
+
+
+IMPLEMENTATION BASIS
+
+
+Use:
+DIPLOMAT Disk Query Mechanism - Complete Implementation
+
+
+Treat it as Scout.
+
+
+REQUIRED SCOUT BEHAVIOR
+
+
+Preserve or implement the supplied deterministic mechanisms, including as applicable:
+
+
+- supported observation types
+- source admission
+- active-state filtering
+- territory behavior
+- NAICS authorization
+- SOC authorization
+- role-scope keyword inclusion
+- global exclusion precedence
+- exclude_overrides_include
+- URL normalization
+- employer-name normalization
+- deterministic deduplication
+- canonical Observation_ID derivation
+- canonical serialization
+- SHA-256 cartridge integrity behavior
+- exact output contract
+- deterministic runner behavior
+- fixture harness
+
+
+SCOUT OUTPUT
+
+
+Scout must initialize a valid traveling envelope.
+
+
+Persistent pass-through data should preserve the job identity and routing material needed later.
+
+
+Scout-owned output belongs under payload.scout.
+
+
+Scout must not perform:
+- B1 target decomposition
+- B2 target tree construction
+- B3 candidate binding
+- B4 truth adjudication
+- B5 semantic posture reasoning
+
+
+SCOUT STOP CONDITION
+
+
+Scout is done for an individual accepted job when:
+- the observation has been accepted through Scout’s rules
+- identifiers are generated
+- deduplication is resolved
+- the Scout output record is present
+- the traveling envelope is initialized
+- persistent identity/routing data is carried
+- payload.scout is appended
+- append_log contains the Scout event
+- stage_state identifies Scout as completed
+- stage_state identifies B as next/current
+- the output is serializable and reloadable
+- the workbench can run this path without hidden session state
+
+
+SCOUT WORKBENCH
+
+
+Provide at minimum:
+- command or script to run Scout against the fixture set
+- single-record execution mode if practical
+- batch execution mode
+- output location
+- deterministic receipt
+- failure output for malformed/failed records
+- no dependency on a live Codex chat session
+
+
+==================================================
+7. RUNNER TWO — B + B1 + B2 IMPLEMENTATION
+==================================================
+
+
+B — HANDOFF BOUNDARY
+
+
+B validates the Scout envelope shape.
+
+
+B does not:
+- interpret candidate fit
+- inspect candidate evidence
+- perform target decomposition
+- select Spatial DNA planes
+- invent missing semantics
+
+
+B checks:
+- envelope version/shape
+- required Scout payload
+- required persistent target identity
+- required routing/origin-destination structure
+- correct incoming stage state
+
+
+If the handoff is malformed:
+- stop at B
+- preserve the envelope
+- record the failure
+- do not fabricate the missing semantics
+
+
+B1 — DECOUPLE
+
+
+B1 is candidate-blind.
+
+
+B1 answers:
+WHAT DOES THIS TARGET OBJECT ACTUALLY CONTAIN?
+
+
+B1 must preserve:
+- target identification
+- application routing
+- exact source spans
+- explicit requirements
+- responsibilities
+- qualifiers
+- semantic force
+- malform state where applicable
+
+
+Semantic force must preserve the architecture:
+- hard gate
+- soft/contextual/interpretive
+- unmarked role responsibility
+
+
+A numeric requirement does not automatically become a hard gate merely because it contains a number.
+
+
+B1 must not invent requirements from:
+- job title
+- occupational convention
+- candidate background
+- presumed business necessity
+
+
+MALFORM RULE
+
+
+Do not treat ordinary missing posting fields as automatic malform.
+
+
+Missing salary, location detail, work arrangement, or requisition number does not automatically make a target malformed.
+
+
+Use the established origin/destination logic.
+
+
+B2 — CREATE TREE
+
+
+B2 converts the B1 target decomposition into a deterministic addressable target tree.
+
+
+Requirements:
+- branches derive from the target itself
+- no fixed occupational template
+- deterministic lowercase alphanumeric hierarchical addresses
+- bidirectional provenance between node and exact source span
+- semantic class preserved
+- meaningful relationships preserved
+- many-to-many relationships allowed
+- tree frozen before B3
+
+
+ADDRESS RULE
+
+
+Addresses are identifiers only.
+
+
+They are not:
+- scores
+- weights
+- confidence values
+- ownership values
+- magnitudes
+- rankings
+
+
+B1/B2 CANDIDATE QUARANTINE
+
+
+Candidate evidence must not influence B1 or B2.
+
+
+If an implementation shortcut allows candidate material to alter the target tree, that is a build defect.
+
+
+B1/B2 STOP CONDITION
+
+
+Runner Two reaches stage completion when:
+- B accepts a valid Scout envelope
+- B1 decomposition exists
+- source spans/provenance are preserved
+- semantic force is preserved
+- B2 tree is built
+- addresses are deterministic
+- tree validates
+- tree is frozen
+- candidate data did not influence tree construction
+- payload.b / payload.b1 / payload.b2 are appended appropriately
+- stage state advances to B3
+- runnable workbench demonstrates Scout-envelope → frozen-target-tree
+
+
+==================================================
+8. RUNNER THREE — B3 IMPLEMENTATION
+==================================================
+
+
+B3 is the first stage that allows the frozen target tree to query candidate Spatial DNA evidence.
+
+
+INVERSION RULE
+
+
+The target node generates the question.
+
+
+Candidate history does not generate the requirement.
+
+
+For each target node:
+
+
+1. form the satisfaction question
+2. determine eligible Spatial DNA evidence planes from the target node/question
+3. search candidate evidence
+4. preserve atoms considered
+5. select atoms actually submitted
+6. produce bounded atomic blurbs if used
+7. construct proposition
+8. record rationale
+9. append B3 binding record
+
+
+DISCOVERY POSTURE
+
+
+B3 may be permissive in discovery.
+
+
+It may consider:
+- direct evidence
+- proximate evidence
+- plausible evidence
+- transferable evidence
+
+
+But permissive discovery does not equal truth admission.
+
+
+CONSIDERED VS SELECTED
+
+
+This distinction must exist in the data model.
+
+
+Do not bind every atom from an eligible plane merely because it was available.
+
+
+B4 may later audit only what B3 actually selected.
+
+
+PROOF PROHIBITIONS
+
+
+B3 must not treat the following as proof:
+- title alone
+- occupational convention alone
+- presumed necessity alone
+
+
+B3 STOP CONDITION
+
+
+B3 is complete when:
+- every attempted target-node binding has an address reference
+- satisfaction question exists
+- eligible planes are recorded
+- considered evidence is distinguishable from selected evidence
+- selected evidence is traceable
+- proposition exists where a proposition is submitted
+- rationale exists
+- B3 payload is appended
+- stage state advances to B4
+- workbench can run frozen-target-tree + candidate Spatial DNA → B3 submission payload
+
+
+==================================================
+9. RUNNER FOUR — B4 IMPLEMENTATION
+==================================================
+
+
+B4 is the proposition-specific truth gate.
+
+
+B4 owns:
+- truth disposition
+- scope
+- admitted proposition
+- evidence ceiling
+- reason
+- audit trace
+
+
+B4 may consume only B3-selected evidence for the proposition being audited.
+
+
+B4 must not search backward through the entire candidate corpus to rescue a proposition.
+
+
+DISPOSITIONS
+
+
+Use the locked truth states:
+
+
+PASS / FULLY SUPPORTED
+
+
+QUALIFIED / BOUND AT RESTRICTED SCOPE
+
+
+UNRESOLVED AT ATOMIC LEVEL
+
+
+CONTRADICTED
+
+
+Every non-PASS disposition must preserve a reason.
+
+
+HARD-GATE RULE
+
+
+A hard gate cannot be converted into satisfaction by:
+- narrowing the claim
+- substituting adjacent experience
+- calling a restricted scope equivalent
+- relying on job title
+- relying on convention
+- relying on presumed necessity
+
+
+If the required fact is not established, the gate is not satisfied.
+
+
+EVIDENCE CEILING
+
+
+B4 must emit the strongest allowed assertion boundary supported by the selected evidence.
+
+
+Downstream stages may not silently expand beyond it.
+
+
+B4 STOP CONDITION
+
+
+B4 is complete when:
+- every submitted B3 proposition has an auditable outcome
+- only B3-selected evidence was used
+- disposition is recorded
+- admitted proposition is recorded where applicable
+- bounded scope is recorded where applicable
+- evidence ceiling is recorded
+- reason is recorded for non-PASS
+- hard-gate behavior is enforced
+- ledger keys trace to B2 target addresses
+- payload.b4 is appended
+- stage state advances to B5
+- workbench can run B3 submission → audited B4 ledger
+
+
+==================================================
+10. B5 IMPLEMENTATION
+==================================================
+
+
+B5 begins only after an upstream build-runner slot becomes available.
+
+
+B5 is the semantic-core reasoning stage immediately after B4 and immediately before Resume Factory.
+
+
+B4 owns truth.
+
+
+B5 owns projection posture.
+
+
+Resume Factory later owns expression and physical layout.
+
+
+B5 does not write resume language in this wave.
+
+
+B5 SEMANTIC INPUT
+
+
+B5 may semantically reason only from B4-admitted and B4-bounded candidate evidence.
+
+
+The envelope may physically carry other data, but that does not authorize B5 to treat unaudited candidate material as evidence.
+
+
+FIVE PRISMS
+
+
+All five must remain present:
+
+
+1. Sales Headhunter
+   Emphasis: undeniable production.
+
+
+2. Sports Agent
+   Emphasis: established value.
+
+
+3. Discovery Scout
+   Emphasis: transferable signal.
+
+
+4. Independent Staffing-Firm Owner
+   Emphasis: industry legibility up to demonstrated fluency.
+
+
+5. Casting Director
+   Emphasis: strongest defensible whole-candidate interpretation using admitted evidence, chronology, and patterns without converting projection into fact.
+
+
+PRISM DISTRIBUTION
+
+
+B5:
+- ranks the five prisms
+- assigns normalized projection-emphasis percentages
+- percentages total 100%
+- selects owner prism
+- preserves secondary prisms
+
+
+PERCENTAGES ARE NOT:
+- truth
+- confidence
+- fit
+- probability of success
+- certainty
+
+
+B5 OUTPUT
+
+
+B5 payload must include:
+- ranked five-prism distribution
+- normalized percentage distribution
+- owner prism
+- B4 evidence anchors for meaningful allocations
+- foreground priorities
+- reinforcement priorities
+- background priorities
+- suppression priorities
+- permitted writing assertiveness
+- prohibited implications
+- evidence ceilings
+- presentation geometry
+
+
+PRESENTATION GEOMETRY
+
+
+Allowed semantic geometry:
+- single dominant
+- dual dominant
+- dominant + secondary
+- distributed
+
+
+This geometry is semantic priority, not literal page allocation.
+
+
+B5 MAY NOT SPECIFY:
+- exact sentences
+- exact coordinates
+- specific columns
+- boxes
+- typography
+- named physical resume template
+
+
+B5 STOP CONDITION
+
+
+B5 is complete when:
+- all five prisms are represented
+- ranking exists
+- percentages total 100%
+- owner prism exists
+- allocations are traceable to B4 anchors
+- semantic priority bands exist
+- writing boundaries exist
+- prohibited implications exist
+- geometry exists
+- payload.b5 is appended
+- stage state identifies B5 complete
+- next state is stop_before_resume_factory
+- no C1–C5 implementation is performed
+
+
+==================================================
+11. GLOBAL DONE CONDITION FOR EVERY BUILD RUNNER
+==================================================
+
+
+A runner is NOT DONE merely because code exists.
+
+
+DONE means:
+
+
+IMPLEMENTED + RUNNABLE + NON-BLOCKED + PORTABLE + PUSHED + UNDERSTANDABLE
+
+
+Every runner must satisfy all of the following.
+
+
+A. IMPLEMENTED
+
+
+The actual stage logic exists.
+
+
+No stage may declare DONE with:
+- pseudocode only
+- placeholders
+- TODO-only methods
+- architectural stubs
+- fake return objects pretending to be implemented behavior
+
+
+B. RUNNABLE
+
+
+The component has a small workbench/test harness.
+
+
+The workbench demonstrates:
+
+
+input
+→ module
+→ output
+
+
+A human must be able to run it without recreating the original Codex conversation.
+
+
+C. NON-BLOCKED
+
+
+There are no unresolved blockers required for the component’s declared behavior.
+
+
+If a blocker remains, state is BLOCKED, not DONE.
+
+
+D. PORTABLE
+
+
+The module does not depend on:
+- the original development computer
+- an uncommitted local file
+- hidden chat state
+- undocumented environment assumptions
+- a manually alive runner
+- unavailable secrets silently embedded in local state
+- non-repository dependencies that are not documented
+
+
+Dependencies are acceptable.
+
+
+Invisible dependencies are not.
+
+
+E. BOUNDARY COMPLETE
+
+
+The component consumes the traveling-envelope state defined for its start boundary and emits the state defined for its stop boundary.
+
+
+F. WORKBENCH INCLUDED
+
+
+Repository must contain:
+- executable example/harness
+- fixture input
+- expected or inspectable output
+- command to run it
+- failure behavior
+
+
+G. REPOSITORY PRESERVED
+
+
+Required implementation material is committed and pushed to GitHub.
+
+
+Do not leave necessary files only in:
+- Codex scratch space
+- temporary directories
+- a remote session filesystem
+- an uncommitted worktree
+
+
+H. COMMENTED CORRECTLY
+
+
+Comments should explain:
+- architectural boundaries
+- non-obvious invariants
+- why a restriction exists
+- input/output expectations
+- intentional stop conditions
+- portability requirements
+
+
+Do not clutter code with comments that simply narrate obvious syntax.
+
+
+I. RUN RECEIPT
+
+
+Before a runner declares DONE, write a receipt containing:
+
+
+- runner ID
+- component
+- timestamp
+- repository
+- branch
+- commit SHA
+- command used
+- fixture/input used
+- pass/fail
+- output location
+- workbench location
+- unresolved blockers: NONE
+- next eligible stage
+
+
+==================================================
+12. RUNNER STATE MACHINE
+==================================================
+
+
+Use these operational states:
+
+
+QUEUED
+BUILDING
+RUNNABLE
+PORTABLE
+PUSHED
+DONE
+
+
+And the interrupt state:
+
+
+BLOCKED
+
+
+Normal progression:
+
+
+QUEUED
+→ BUILDING
+→ RUNNABLE
+→ PORTABLE
+→ PUSHED
+→ DONE
+
+
+Any hard dependency or execution-stopping condition:
+
+
+ANY ACTIVE STATE
+→ BLOCKED
+
+
+A BLOCKED runner does not simply wait for the next ordinary hourly cycle.
+
+
+It hands responsibility for wake/retry cadence to Runner Five.
+
+
+==================================================
+13. RUNNER FIVE — ANTI-STALL WATCHDOG
+==================================================
+
+
+PURPOSE
+
+
+Runner Five makes sure nobody “falls asleep on the clock.”
+
+
+Runner Five owns no ordinary implementation stage at startup.
+
+
+Its entire purpose is to keep blocked work returning to execution at the nearest available scheduling opportunity.
+
+
+BLOCKER RECORD
+
+
+When a build runner becomes blocked, it must persist:
+
+
+- runner ID
+- component/stage
+- timestamp
+- blocker code
+- blocker description
+- exact file/module/function where work stopped
+- last valid commit SHA
+- last valid traveling-envelope checkpoint if applicable
+- command that failed
+- relevant error
+- condition required to clear blocker
+- safe resume instruction
+
+
+The blocked runner must then stop destructive work.
+
+
+RUNNER FIVE WAKE LOOP
+
+
+On every Runner Five wake:
+
+
+1. inspect persisted blocker records
+2. identify any active BLOCKED runner
+3. determine whether the blocking condition still exists
+4. do not perform broad architecture verification
+5. do not redesign the blocked component merely to escape the blocker
+
+
+IF NO BLOCKERS EXIST
+
+
+Runner Five:
+- records NO_ACTIVE_BLOCKERS
+- sleeps until next scheduled wake
+
+
+IF BLOCKER STILL EXISTS
+
+
+Runner Five:
+- leaves the stage checkpoint intact
+- does not restart the stage
+- does not erase the blocker
+- reschedules itself at the nearest available scheduler slot
+- sleeps
+
+
+Do not default to waiting an hour if the scheduler offers an earlier slot.
+
+
+IF BLOCKER IS CLEARED
+
+
+Runner Five:
+- resumes the blocked stage from the last valid checkpoint
+- does not restart from zero unless the checkpoint is corrupted
+- confirms work can proceed
+- continues the blocked implementation
+- establishes its next cadence relative to the time work resumed
+
+
+IF A NEW BLOCKER OCCURS
+
+
+Runner Five:
+- persists the new blocker
+- preserves the latest valid checkpoint
+- schedules the nearest available retry
+- sleeps again
+
+
+IF THE ORIGINAL BUILD RUNNER IS AVAILABLE TO TAKE BACK OWNERSHIP
+
+
+Runner Five may hand back the now-unblocked stage after preserving:
+- the cleared blocker status
+- current commit/checkpoint
+- exact next action
+
+
+The goal is continuity, not ownership competition.
+
+
+==================================================
+14. B5 SLOT REASSIGNMENT
+==================================================
+
+
+B5 does not occupy one of the initial four build slots.
+
+
+When Runner One, Two, Three, or Four reaches DONE and its scheduled build slot is available:
+
+
+Reassign the first suitable completed runner to B5.
+
+
+Do not disable Runner Five to make room for B5 unless the user explicitly changes the five-runner topology.
+
+
+Runner Five remains the anti-stall watchdog through the B5 implementation.
+
+
+==================================================
+15. GITHUB / REPOSITORY RULES
+==================================================
+
+
+The implementation must be repository-first.
+
+
+Before writing:
+- identify the active Spatial DNA repository
+- confirm authority files
+- inspect existing structure
+- avoid duplicating modules that already exist
+
+
+During implementation:
+- use isolated, comprehensible module boundaries
+- preserve existing working code unless change is necessary
+- avoid unrelated refactors
+- keep fixture data separate from runtime logic
+- never hard-code candidate-specific calibration into generic runtime modules
+
+
+Before DONE:
+- commit
+- push
+- record SHA
+- prove clean/reproducible checkout where practical
+
+
+PORTABILITY TARGET
+
+
+A component should be pullable and runnable in another supported environment without the original Codex session.
+
+
+Examples of acceptable destinations include:
+- local Python environment
+- Replit or equivalent Python environment
+- a suitable Vercel/serverless wrapper where the component’s runtime model fits
+- another workstation
+
+
+This does not mean every module must natively deploy to every platform.
+
+
+It means no component may secretly depend on the machine/session where it was authored.
+
+
+==================================================
+16. TESTING PHILOSOPHY FOR CODEX
+==================================================
+
+
+Codex is the builder.
+
+
+Tests are required.
+
+
+Perfectionist architecture prosecution is not.
+
+
+The runner should test:
+- module imports
+- expected input acceptance
+- expected output production
+- stage boundary conditions
+- traveling-envelope transition
+- invariants explicitly named in the architecture
+- obvious malformed input
+- fixture execution
+- reproducibility
+
+
+Do not turn each stage into an endless adversarial review campaign before allowing implementation to proceed.
+
+
+When the component satisfies its declared contract and done condition, commit it and advance.
+
+
+Independent post-operational verification will be performed later by Spark or another verifier.
+
+
+==================================================
+17. 100-JOB INTEGRATION CORPUS
+==================================================
+
+
+The existing 100-job MARA test corpus is the fixed integration corpus for the first build wave.
+
+
+Use it to reduce moving variables.
+
+
+Do not substitute newly scraped jobs for the initial proof.
+
+
+The integrated path should eventually demonstrate:
+
+
+100 stored jobs
+→ Scout
+→ traveling envelope
+→ B
+→ B1
+→ B2
+→ B3
+→ B4
+→ B5
+→ stop
+
+
+Not every job must necessarily pass every semantic gate.
+
+
+The purpose is to demonstrate that:
+- jobs are processed deterministically
+- stage failures are observable
+- stage outputs are preserved
+- stage boundaries behave correctly
+- the pipeline does not lose or silently rewrite history
+
+
+==================================================
+18. HASHING / INTEGRITY
+==================================================
+
+
+Scout already contains a deterministic SHA-256 cartridge model.
+
+
+Preserve that behavior for Scout.
+
+
+The existing pattern is:
+- UTF-8 JSON
+- lexicographically sorted object keys
+- no insignificant whitespace
+- declared hash scope
+- certification block excluded from its own content hash
+- SHA-256 digest
+
+
+Do not automatically apply Scout’s exact hash scope to every Spatial DNA envelope stage unless the architecture explicitly authorizes that scope.
+
+
+For the first build:
+- preserve Scout cartridge integrity
+- provide stable serialization boundaries for envelope payloads
+- do not invent a new cross-stage cryptographic governance regime unless required for execution
+
+
+If envelope-level stage hashing already exists in the transferred repository/schema, implement that existing contract.
+
+
+If it does not exist, do not block the build solely to design a new cryptographic system.
+
+
+Record it as a later hardening item unless the user explicitly promotes it into the build scope.
+
+
+==================================================
+19. EMAIL STATUS REPORTING
+==================================================
+
+
+STATUS REPORTS SHOULD NOT USE CHATGPT THREADS AS THE PRIMARY OPERATIONS LOG.
+
+
+Use email as the operator notification channel once the remote Codex environment has an authorized email integration.
+
+
+Required deployment variable:
+
+
+STATUS_EMAIL_TO
+
+
+Set this to the operator email address before enabling email delivery.
+
+
+Do not guess the address.
+
+
+If an authenticated email account/integration is available, each runner sends status messages from that authorized account.
+
+
+If email integration is temporarily unavailable:
+- do not discard the status
+- persist the status receipt in the repository under the operations/status area
+- mark EMAIL_DELIVERY_PENDING
+- let Runner Five retry the email at the nearest available wake
+- do not use ChatGPT thread messages as the substitute operational log unless the user explicitly requests it
+
+
+EMAIL EVENTS
+
+
+Send email only for meaningful operational events:
+
+
+1. RUNNER STARTED
+2. COMPONENT RUNNABLE
+3. BLOCKED
+4. BLOCKER CLEARED / WORK RESUMED
+5. COMPONENT DONE
+6. INTEGRATION FAILURE
+7. INTEGRATION PASS
+8. B5 STOP CONDITION REACHED
+
+
+Do not send an email every minor test cycle.
+
+
+EMAIL SUBJECT FORMAT
+
+
+[SPATIAL DNA][R<runner>][<stage>][<state>]
+
+
+Examples:
+
+
+[SPATIAL DNA][R1][SCOUT][RUNNABLE]
+
+
+[SPATIAL DNA][R3][B3][BLOCKED]
+
+
+[SPATIAL DNA][R5][B3][BLOCKER CLEARED]
+
+
+[SPATIAL DNA][R2][B1-B2][DONE]
+
+
+EMAIL BODY CONTRACT
+
+
+Each status email must contain:
+
+
+RUNNER:
+STAGE:
+STATE:
+TIMESTAMP:
+REPOSITORY:
+BRANCH:
+COMMIT SHA:
+WORK DONE:
+RUN COMMAND:
+FIXTURE / INPUT:
+OUTPUT LOCATION:
+BLOCKER:
+BLOCKER CODE:
+LAST VALID CHECKPOINT:
+NEXT ACTION:
+NEXT WAKE / RETRY:
+ACKNOWLEDGMENT REQUIRED: YES/NO
+
+
+For DONE email:
+
+
+BLOCKER: NONE
+UNRESOLVED BLOCKERS: NONE
+
+
+For BLOCKED email:
+- describe exactly what failed
+- describe what was realized
+- describe why it blocks execution
+- include executable suggestion for clearing it
+- preserve checkpoint
+- identify next retry
+
+
+EMAIL IS A NOTIFICATION CHANNEL, NOT THE SOURCE OF TRUTH
+
+
+The durable source of operational truth remains:
+- Git history
+- committed receipts/status files
+- traveling-envelope stage state
+- workbench outputs
+
+
+Email tells the operator what happened.
+
+
+It does not replace repository evidence.
+
+
+==================================================
+20. STATUS RECEIPT FORMAT
+==================================================
+
+
+Persist one machine-readable status receipt per meaningful event.
+
+
+Suggested minimum fields:
+
+
+{
+  "runner_id": "R1",
+  "stage": "scout",
+  "state": "RUNNABLE",
+  "timestamp": "...",
+  "repository": "...",
+  "branch": "...",
+  "commit_sha": "...",
+  "work_done": "...",
+  "run_command": "...",
+  "fixture": "...",
+  "output_location": "...",
+  "blocker_code": null,
+  "blocker": null,
+  "last_valid_checkpoint": "...",
+  "next_action": "...",
+  "next_retry": null,
+  "email_delivery": "SENT|PENDING|NOT_CONFIGURED"
+}
+
+
+Do not overwrite history.
+
+
+Receipts are append-only or uniquely timestamped.
+
+
+==================================================
+21. FAILURE / BLOCKER REPORT CONTRACT
+==================================================
+
+
+Every failure report must state:
+
+
+WHAT FAILED
+
+
+WHAT THE RUNNER REALIZED
+
+
+WHY IT FAILED OR WHY IT IS BLOCKED
+
+
+WHAT WAS PRESERVED
+
+
+LAST VALID COMMIT / CHECKPOINT
+
+
+EXECUTABLE SUGGESTION TO CLEAR IT
+
+
+TIMESTAMP
+
+
+NEXT RETRY
+
+
+WHETHER OPERATOR ACKNOWLEDGMENT IS ACTUALLY REQUIRED
+
+
+Do not write vague reports such as:
+- “something went wrong”
+- “needs review”
+- “architecture unclear”
+
+
+Name the concrete blocking condition.
+
+
+==================================================
+22. STARTUP PROCEDURE FOR EACH BUILD RUNNER
+==================================================
+
+
+On first wake:
+
+
+1. identify repository
+2. read this operations plan
+3. read the primary Google Drive build specification
+4. read the stage-specific authority files
+5. inspect existing code before creating new files
+6. identify the exact module boundary to implement
+7. identify the stage’s traveling-envelope start condition
+8. identify the stage’s traveling-envelope stop condition
+9. identify fixture/workbench input
+10. write a short implementation plan into the repository operations area
+11. start implementation
+12. do not wait for a human confirmation unless a true blocker exists
+
+
+A runner should not ask the operator to reconfirm settled instructions.
+
+
+==================================================
+23. RESTART / WAKE PROCEDURE
+==================================================
+
+
+On every later wake:
+
+
+1. read latest repository state
+2. read own latest receipt
+3. check whether prior work is already committed
+4. detect whether another runner changed a shared contract
+5. if no conflict, continue from latest checkpoint
+6. if a conflict is real and blocking, persist blocker and hand to Runner Five
+7. never assume chat memory is the current source of truth
+8. never repeat completed work merely because the process restarted
+
+
+==================================================
+24. SHARED FILE / CONTRACT MODIFICATION RULE
+==================================================
+
+
+The traveling-envelope contract and any shared schema are cross-runner interfaces.
+
+
+A runner may implement against them.
+
+
+A runner may not casually redefine them.
+
+
+If an implementation discovers that the shared contract is mechanically impossible:
+- preserve evidence
+- mark BLOCKED_SHARED_CONTRACT
+- identify exact field/path causing impossibility
+- do not silently fork the schema
+- route blocker to Runner Five
+
+
+If the change is merely an internal code representation that preserves the external contract, proceed.
+
+
+==================================================
+25. NO MOCK CALIBRATION IN GENERIC RUNTIME
+==================================================
+
+
+Do not introduce candidate-specific or employer-specific calibration into generic runtime code.
+
+
+Test fixtures may contain real or synthetic examples.
+
+
+Runtime behavior must remain generic.
+
+
+The old Andrea calibration material is not runtime authority.
+
+
+If a fixture contains an Andrea-named job or other recognizable example, treat it as fixture data only.
+
+
+Do not derive generic business rules from it.
+
+
+==================================================
+26. WHAT COUNTS AS A TRUE BLOCKER
+==================================================
+
+
+Examples of true blockers:
+
+
+- repository target cannot be identified
+- required fixture corpus cannot be located
+- required stage input contract is missing and no valid interpretation exists
+- schema conflict prevents serialization/deserialization
+- required dependency cannot be installed or accessed
+- candidate Spatial DNA evidence source is unavailable for B3
+- build cannot run because a required secret/service is unavailable
+- upstream stage output is structurally incompatible with downstream start condition
+- source documents contain a direct executable contradiction that cannot be resolved by precedence rules
+
+
+Examples of things that are NOT automatically blockers:
+
+
+- code could be prettier
+- naming could be cleaner
+- another architecture might be better
+- more tests could theoretically be added
+- documentation is not yet polished
+- a non-critical refactor is desirable
+- a future C-stage concern exists
+- a future Weave concern exists
+- a theoretical edge case outside current contract exists
+
+
+Build the declared system.
+
+
+==================================================
+27. INTEGRATION PASS
+==================================================
+
+
+After Scout, B/B1/B2, B3, B4, and B5 are individually runnable:
+
+
+Create an integration workbench that executes the declared chain.
+
+
+Required sequence:
+
+
+fixture job
+→ Scout
+→ B
+→ B1
+→ B2
+→ B3
+→ B4
+→ B5
+→ STOP
+
+
+Then run the available 100-job corpus.
+
+
+Integration receipts should identify:
+- jobs accepted by Scout
+- jobs rejected by Scout
+- jobs halted at B
+- B1/B2 failures
+- B3 binding failures
+- B4 disposition outcomes
+- B5 packages produced
+- unexpected exceptions
+- deterministic rerun mismatches, if any
+
+
+Do not interpret expected semantic rejection as a system failure.
+
+
+Differentiate:
+- expected business/semantic disposition
+from
+- runtime failure
+
+
+==================================================
+28. POST-IMPLEMENTATION HANDOFF
+==================================================
+
+
+When B5 is operational and the integrated chain is runnable:
+
+
+STOP BUILD WAVE.
+
+
+Do not automatically begin:
+- C1
+- C2
+- C3
+- C4
+- C5
+- Liaison
+- Weave v2
+- Debug Nav
+- DNA Cube decoupling
+
+
+Produce the implementation handoff receipt.
+
+
+The handoff should include:
+- repository
+- branch
+- commit SHAs by stage
+- workbench commands
+- fixture locations
+- stage output locations
+- known non-blocking limitations
+- unresolved blockers, which should be NONE for declared DONE stages
+- exact integrated run command
+- integration receipt location
+- B5 stop confirmation
+
+
+At that point the system is ready for independent verification by Spark or another verifier.
+
+
+==================================================
+29. BUILDER / VERIFIER SEPARATION
+==================================================
+
+
+This division is intentional:
+
+
+CODEX
+= builder
+
+
+GPT
+= implementation review / integration sanity check when requested
+
+
+SPARK OR OTHER INDEPENDENT SYSTEM
+= later verifier after operationalization
+
+
+Codex must not hold the build hostage by acting as an endlessly recursive independent verifier of its own implementation.
+
+
+That does not mean ignore tests.
+
+
+It means:
+- implement
+- test against declared contracts
+- prove runnable
+- push
+- advance
+
+
+==================================================
+30. REQUIRED OPERATOR CONFIGURATION BEFORE LAUNCH
+==================================================
+
+
+Before scheduled operation begins, resolve these deployment values:
+
+
+A. ACTIVE_REPOSITORY
+RESOLVED: digital-Alchemy-mcmg/mara-corridor
+Repository URL: https://github.com/digital-Alchemy-mcmg/mara-corridor
+Clone URL: https://github.com/digital-Alchemy-mcmg/mara-corridor.git
+Default branch: main
+This is the repository Codex should modify for this build wave.
+
+
+Repository identity has been resolved; do not substitute another MARA/Spatial DNA repository without explicit operator instruction.
+
+
+B. STATUS EMAIL ROUTE
+RESOLVED: STATUS_EMAIL_FROM = Codenada.mdcr@gmail.com
+STATUS_EMAIL_TO = reddingtonxzeta@gmail.com
+
+
+Use this sender/recipient route for all runner status notifications when the authorized Gmail integration is available.
+
+
+C. EMAIL INTEGRATION
+Use the authorized Gmail/mail integration associated with Codenada.mdcr@gmail.com when available. The required route is Codenada.mdcr@gmail.com → reddingtonxzeta@gmail.com.
+
+
+If yes:
+use the email protocol above.
+
+
+If no:
+persist receipts and mark EMAIL_DELIVERY_PENDING until the mail integration is available.
+
+
+D. SCHEDULE
+Create five scheduled runners under the scheduler’s supported cadence:
+- R1 Scout
+- R2 B+B1+B2
+- R3 B3
+- R4 B4
+- R5 Anti-Stall
+
+
+Exact clock times should be selected from the scheduler’s actual available slots.
+
+
+Do not invent unsupported sub-hour cadence.
+
+
+Runner Five always selects the nearest available retry slot supported by the scheduler when handling a blocker.
+
+
+==================================================
+31. ONE-LINE MISSION FOR EACH RUNNER
+==================================================
+
+
+R1:
+Make Scout independently runnable and make it emit a valid traveling envelope from the fixed 100-job corpus.
+
+
+R2:
+Make B/B1/B2 independently runnable and turn a valid Scout envelope into a frozen, candidate-blind, provenance-preserving target tree.
+
+
+R3:
+Make B3 independently runnable and turn a frozen target tree plus candidate Spatial DNA evidence into traceable selected-evidence propositions without deciding truth.
+
+
+R4:
+Make B4 independently runnable and turn B3 propositions into an auditable truth ledger with bounded scope and evidence ceilings.
+
+
+R5:
+Make sure no blocked runner sleeps through available execution time; preserve checkpoints, retry at the nearest scheduler slot, and resume the blocked stage as soon as its blocker clears.
+
+
+B5 after slot reassignment:
+Make B5 independently runnable and turn the B4 ledger into the five-prism semantic posture package, then stop before Resume Factory.
+
+
+==================================================
+32. OPERATING PRINCIPLE
+==================================================
+
+
+Build the real thing.
+
+
+Make every stage:
+- explicit
+- runnable
+- portable
+- repository-preserved
+- boundary-correct
+- traceable
+- restartable
+
+
+Use the traveling envelope as the spine.
+
+
+Use the fixed 100-job corpus to stabilize the first integrated run.
+
+
+Use Runner Five to prevent blocked work from going dormant.
+
+
+Use email for operator notifications once STATUS_EMAIL_TO and the authorized email integration are configured.
+
+
+Stop at B5.
