@@ -1,0 +1,16 @@
+{
+  "corpus_id": "MARA_SCOUT_FIXED_100_V1",
+  "repository": "digital-Alchemy-mcmg/mara-corridor",
+  "branch": "main",
+  "source_workbook": "spatial dna training (1).xlsx",
+  "source_authority": "Existing MARA/Spatial DNA target test frame in repository root",
+  "expected_count": 100,
+  "selection_rule": "Use the first 100 non-header posting records in stable workbook order from the worksheet containing the posting-level target test frame. Skip fully blank rows only. Do not re-rank, re-sort, live-refresh, or substitute newly acquired jobs.",
+  "order_rule": "Preserve workbook order exactly.",
+  "live_acquisition": false,
+  "purpose": "Fixed Scout through B5 integration corpus",
+  "notes": [
+    "The source test frame is documented as a Michigan labor-market corpus containing 127 postings.",
+    "This manifest fixes the integration run to 100 records so repeated runs use the same corpus."
+  ]
+}
