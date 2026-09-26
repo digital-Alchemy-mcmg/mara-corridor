@@ -1,0 +1,1000 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://spatial-dna.local/schema/traveling-envelope/v0.2",
+  "title": "Spatial DNA Traveling Envelope v0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "envelope_id",
+    "created_at",
+    "persistent",
+    "stage_state",
+    "append_log",
+    "verification",
+    "egress_verification",
+    "payload"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.2"
+    },
+    "envelope_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "persistent": {
+      "type": "object",
+      "description": "End-to-end fields that travel with the envelope and are not consumed by an intermediate stage.",
+      "additionalProperties": true,
+      "required": [
+        "target_identity",
+        "application_routing",
+        "source"
+      ],
+      "properties": {
+        "target_identity": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": [
+            "organization_name",
+            "position_title"
+          ],
+          "properties": {
+            "organization_name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "position_title": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "posting_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "employment_type": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "location": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "work_arrangement": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "compensation": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "schedule": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "application_routing": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "method": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "destination": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "url": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "contact": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "required_materials": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "subject_line": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "special_instructions": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": [
+            "source_object_id"
+          ],
+          "properties": {
+            "source_object_id": {
+              "type": "string"
+            },
+            "source_type": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source_uri": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "captured_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "raw_source_ref": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "stage_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "current_stage",
+        "completed_stages"
+      ],
+      "properties": {
+        "current_stage": {
+          "type": "string",
+          "enum": [
+            "SCOUT",
+            "B",
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "C1",
+            "C2",
+            "C3",
+            "C4",
+            "C5"
+          ]
+        },
+        "completed_stages": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "SCOUT",
+              "B",
+              "B1",
+              "B2",
+              "B3",
+              "B4",
+              "B5",
+              "C1",
+              "C2",
+              "C3",
+              "C4",
+              "C5"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "append_log": {
+      "type": "array",
+      "description": "Ordered record of stage-owned additions. Existing entries are not rewritten.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "append_id",
+          "stage",
+          "timestamp",
+          "path"
+        ],
+        "properties": {
+          "append_id": {
+            "type": "string"
+          },
+          "stage": {
+            "type": "string",
+            "enum": [
+              "SCOUT",
+              "B",
+              "B1",
+              "B2",
+              "B3",
+              "B4",
+              "B5",
+              "C1",
+              "C2",
+              "C3",
+              "C4",
+              "C5"
+            ]
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "path": {
+            "type": "string"
+          },
+          "operation": {
+            "type": "string",
+            "enum": [
+              "initialize",
+              "append",
+              "status_update"
+            ]
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "description": "Integrity verification for the traveling envelope and any stage-produced artifacts. Hash scope excludes the hash field itself to avoid self-reference.",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "algorithm",
+        "canonicalization",
+        "scope",
+        "envelope_content_sha256",
+        "artifact_hashes"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "PENDING",
+            "VERIFIED",
+            "FAILED"
+          ]
+        },
+        "algorithm": {
+          "const": "SHA-256"
+        },
+        "canonicalization": {
+          "const": "RFC8785"
+        },
+        "scope": {
+          "const": "persistent+stage_state+append_log+payload",
+          "description": "Canonicalized content included in envelope_content_sha256. verification and egress_verification are excluded from the digest scope."
+        },
+        "envelope_content_sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-f0-9]{64}$",
+          "description": "SHA-256 digest of the canonicalized scope. May be null while status is PENDING."
+        },
+        "previous_envelope_sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-f0-9]{64}$",
+          "description": "Optional digest of the immediately preceding envelope state for revision-chain verification."
+        },
+        "verified_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "verified_by": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "artifact_hashes": {
+          "type": "array",
+          "description": "Hashes for discrete artifacts carried by or referenced from the envelope, including generated resume/package artifacts when present.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "path",
+              "sha256"
+            ],
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "media_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "created_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "note": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "egress_verification": {
+      "type": "object",
+      "description": "Backup placement-verification layer. Confirms that stage output is present at the intended envelope paths before the envelope advances; this is not external application routing.",
+      "additionalProperties": false,
+      "required": [
+        "overall_status",
+        "checks"
+      ],
+      "properties": {
+        "overall_status": {
+          "type": "string",
+          "enum": [
+            "PENDING",
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "stage",
+              "checked_at",
+              "status",
+              "expected_paths",
+              "observed_paths",
+              "missing_paths",
+              "misplaced_paths"
+            ],
+            "properties": {
+              "stage": {
+                "type": "string",
+                "enum": [
+                  "SCOUT",
+                  "B",
+                  "B1",
+                  "B2",
+                  "B3",
+                  "B4",
+                  "B5",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "C4",
+                  "C5"
+                ]
+              },
+              "checked_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "PENDING",
+                  "PASS",
+                  "FAIL"
+                ]
+              },
+              "expected_paths": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              },
+              "observed_paths": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              },
+              "missing_paths": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              },
+              "misplaced_paths": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              },
+              "next_stage": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "enum": [
+                  null,
+                  "B",
+                  "B1",
+                  "B2",
+                  "B3",
+                  "B4",
+                  "B5",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "C4",
+                  "C5"
+                ]
+              },
+              "note": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scout",
+        "b",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "resume_factory"
+      ],
+      "properties": {
+        "scout": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Scout-owned observation/package data. Preserve material needed downstream; exact A1-A5 internal schema remains external to this prototype.",
+          "additionalProperties": true
+        },
+        "b": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Scout→MARA handoff validation only.",
+          "additionalProperties": true,
+          "properties": {
+            "schema_valid": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "routable_to_b1": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "validation_errors": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "b1": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Candidate-blind target decomposition and malform diagnostics.",
+          "additionalProperties": true,
+          "properties": {
+            "decomposition": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": true
+            },
+            "malform_state": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                null,
+                "CLEAR",
+                "MALFORMED_ORIGIN_MISSING",
+                "MALFORMED_DESTINATION_MISSING",
+                "MALFORMED_UNROUTABLE_JOB_OBJECT"
+              ]
+            }
+          }
+        },
+        "b2": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Frozen deterministic target tree with lowercase alphanumeric addresses and provenance.",
+          "additionalProperties": true,
+          "properties": {
+            "tree_frozen": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "nodes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": true,
+                "required": [
+                  "address",
+                  "source_spans",
+                  "semantic_force"
+                ],
+                "properties": {
+                  "address": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9]+(?:\\.[a-z0-9]+)*$"
+                  },
+                  "label": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "source_spans": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "semantic_force": {
+                    "type": "string",
+                    "enum": [
+                      "hard",
+                      "soft_contextual",
+                      "responsibility"
+                    ]
+                  },
+                  "qualifiers": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "b3": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Target-node-driven candidate evidence discovery and proposition construction.",
+          "additionalProperties": true,
+          "properties": {
+            "bindings": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": true,
+                "required": [
+                  "target_address",
+                  "satisfaction_question",
+                  "eligible_planes",
+                  "atoms_considered",
+                  "atoms_selected",
+                  "proposition"
+                ],
+                "properties": {
+                  "target_address": {
+                    "type": "string"
+                  },
+                  "satisfaction_question": {
+                    "type": "string"
+                  },
+                  "eligible_planes": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "atoms_considered": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "atoms_selected": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "atomic_blurbs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": true,
+                      "required": [
+                        "atom_id",
+                        "blurb"
+                      ],
+                      "properties": {
+                        "atom_id": {
+                          "type": "string"
+                        },
+                        "blurb": {
+                          "type": "string"
+                        },
+                        "evidence_ref": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "proposition": {
+                    "type": "string"
+                  },
+                  "binding_rationale": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "b4": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Audited ledger. B4 owns exact truth, scope, evidence ceiling, and disposition.",
+          "additionalProperties": true,
+          "properties": {
+            "ledger": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": true,
+                "required": [
+                  "target_address",
+                  "proposition",
+                  "selected_atom_ids",
+                  "disposition",
+                  "evidence_ceiling"
+                ],
+                "properties": {
+                  "target_address": {
+                    "type": "string"
+                  },
+                  "proposition": {
+                    "type": "string"
+                  },
+                  "selected_atom_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "disposition": {
+                    "type": "string",
+                    "enum": [
+                      "PASS",
+                      "QUALIFIED_BOUNDED",
+                      "UNRESOLVED",
+                      "CONTRADICTED"
+                    ]
+                  },
+                  "admitted_proposition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "evidence_ceiling": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            },
+            "coverage": {
+              "type": "object",
+              "description": "Pre-B5 coverage measurement across the frozen B2 target tree. possible_nodes is the number of frozen B2 target nodes eligible for candidate evidence; filled_nodes is the number of those nodes with a non-null admitted_proposition in the B4 ledger.",
+              "additionalProperties": false,
+              "required": [
+                "possible_nodes",
+                "filled_nodes",
+                "unfilled_nodes",
+                "filled_percentage",
+                "calculation_status"
+              ],
+              "properties": {
+                "possible_nodes": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "filled_nodes": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "unfilled_nodes": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "filled_percentage": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0,
+                  "maximum": 100,
+                  "description": "100 * filled_nodes / possible_nodes. Null when possible_nodes is zero or calculation_status is PENDING."
+                },
+                "calculation_status": {
+                  "type": "string",
+                  "enum": [
+                    "PENDING",
+                    "CALCULATED",
+                    "NOT_APPLICABLE_ZERO_NODES"
+                  ]
+                },
+                "basis": {
+                  "const": "B2 frozen eligible target nodes compared with B4 non-null admitted propositions"
+                }
+              }
+            }
+          },
+          "required": [
+            "ledger",
+            "coverage"
+          ]
+        },
+        "b5": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Semantic projection posture consumed by the Resume Factory.",
+          "additionalProperties": true,
+          "properties": {
+            "owner_prism": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "prism_distribution": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": true,
+                "required": [
+                  "prism",
+                  "rank",
+                  "percentage",
+                  "evidence_anchors"
+                ],
+                "properties": {
+                  "prism": {
+                    "type": "string",
+                    "enum": [
+                      "sales_headhunter",
+                      "sports_agent",
+                      "discovery_scout",
+                      "independent_staffing_firm_owner",
+                      "casting_director"
+                    ]
+                  },
+                  "rank": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 5
+                  },
+                  "percentage": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  "evidence_anchors": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "priorities": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "foreground": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reinforcement": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "background": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "suppression": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "writing_boundaries": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": true,
+              "properties": {
+                "assertiveness": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "language_intensity_guidance": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "prohibited_implications": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "presentation_geometry": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                null,
+                "single_dominant",
+                "dual_dominant",
+                "dominant_plus_secondary",
+                "distributed"
+              ]
+            }
+          }
+        },
+        "resume_factory": {
+          "type": "object",
+          "description": "C1-C5 reserved namespace. Internals intentionally left open until the Resume Factory stage contracts are locked.",
+          "additionalProperties": true,
+          "required": [
+            "c1",
+            "c2",
+            "c3",
+            "c4",
+            "c5"
+          ],
+          "properties": {
+            "c1": {
+              "type": [
+                "object",
