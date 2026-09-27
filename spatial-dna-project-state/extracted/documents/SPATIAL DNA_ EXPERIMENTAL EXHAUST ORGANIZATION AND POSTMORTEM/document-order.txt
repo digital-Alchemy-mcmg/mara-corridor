@@ -1,0 +1,91 @@
+SPATIAL DNA: EXPERIMENTAL EXHAUST ORGANIZATION AND POSTMORTEM
+1. Initial Experimental Parameters and Starting State
+In the discipline of systems forensic auditing, establishing a definitive baseline is the primary requirement for a successful postmortem. Isolating original assumptions allows for a clear understanding of where a system successfully executed a directive versus where it suffered from "instructional drift." For the Spatial DNA experiment, the strategic importance of this baseline lies in its attempt to move beyond linear resume data into a multi-dimensional, atemporal capability graph.The table below outlines the state of the experiment at its inception:| Parameter | Starting Condition || ------ | ------ || Original Objective | To transform raw candidate evidence into a 3D atemporal topology projected against specific job demand receptors. || Raw Evidence Volume | 18,500 tokens (Canonical Evidence Cleanroom). || Chronological Assumption | Chronology is a "toggle lens" or viewport rather than a foundational structure; capabilities do not decay linearly. || Intended Architecture | A 6-plane spatial model (Identity, Work History, Education, Creative Works, Psychometric, References). || Workflow Path | Raw Input  $\rightarrow$  FISSION L3 Extraction  $\rightarrow$  Knowledge Graph (Nodes/Edges)  $\rightarrow$  MARA Traversal  $\rightarrow$  3D Projection. |
+Success at the project's inception was measured against specific test criteria derived from the  MARA_JOB_002_PROJECTION_PAYLOAD . Specifically, the system was required to isolate 44 atomic nodes, map 11 cross-domain edges, and calculate precise 3D Cartesian coordinates ( $X, Y, Z$ ) for a target receptor (Method Hospitality). Having defined these theoretical parameters, we now turn to the actual instructional sequence provided to the LLM.
+2. Instructional Chronology and Intent
+Mapping instructions to intent is a critical forensic step in identifying "Spark Drift"—the delta between the designer’s directive and the system's actual interpretation. By documenting these points of transition, we can see where the system successfully adhered to constraints and where it required manual intervention to prevent the collapse of complex data.
+Instruction: Fracture the Single Mound
+Designer’s Intent:  To force the semantic map to separate into distinct topographical islands (Operations, Software, Finance) rather than grouping all data as a single biographical block.
+Spark’s Interpretation:  Initially collapsed all 44 atoms into a single entity; required a specific "Cluster by" directive (Functional Domain and Capability Class) to achieve the intended topographical "fracture."
+Instruction: Zero Drift Mandate
+Designer’s Intent:  To enforce a "Strategy Lock" and "No Drift" policy, specifically preventing the  hallucinated claim inflation  often used to artificially match job keywords.
+Spark’s Interpretation:  Successfully implemented a "Conflict Preservation" rule, flagging contradictions as CONFLICTED rather than normalizing them to fit a clean narrative.This sequence of commands moved the experiment from a theoretical framework into a set of tangible, auditable artifacts.
+3. Artifact Forensic Analysis: The FISSION Level 3 Extraction
+The FISSION Level 3 extraction serves as the grounding mechanism for the entire candidate topology. Without this granular atomization, the spatial model would lack the necessary precision to calculate 3D coordinates.The following extraction summary across the 6 spatial planes was reconstructed from the canonical corpus:| Spatial DNA Plane | Focus Domain | Atom Count | Key Branches & Entities || ------ | ------ | ------ | ------ || Plane 01 | Identity | 3 | Core Demographics, Residential History (Novi/Wixom), Dual Professional Archetype || Plane 02 | Work History | 17 | Twin Peaks, Bobcat Bonnie's, Metro Concepts, Panera, Patrice & Associates, Applebee's, Walled Lake Tavern, Staples, Gatsby's, Pinnacle, Automotive Finance || Plane 03 | Education/Tech | 5 | Oakland University, Oakland Community College, ServSafe/TIPS, POS Systems (Aloha/Toast), Deterministic Software & Multi-Agent Systems || Plane 04 | Creative/Projects | 11 | MARA, Spatial Candidate DNA (Three.js), DARCH, The Tribunal, POLICY, Political Atlas, Ashante, Serializer, Relax || Plane 05 | Psychometric | 4 | 16Personalities (ENTJ-A), DISC (41/23/16/20), Holland Investigative, ChatGPT Cognitive Cartography || Plane 06 | References | 4 | Twin Peaks Corporate, Panera MTC Selection, Operator's Playbook Corroboration, Direct Reference Gap Ledger |
+Architectural Rules & Invariants Enforced:
+Conflict Preservation:  All  five  specific historical conflicts were flagged as CONFLICTED rather than normalized:
+Bobcat Bonnie’s End Date: 2023 vs. 2024.
+Applebee’s Title: Senior Assistant Manager vs. General Manager summary.
+Metro Concepts Management Onset: 2023 vs. 2024.
+Walled Lake Tavern Timeline: Shift log coordination vs. Oct 13, 2025 separation.
+Higher Education Credentials: OCC coursework vs. OU degree in progress.
+Portfolio Gallery Gate:  Technical software systems in Plane 04 were assigned the GALLERY-BLOCKED tag to prevent resume projection until verified.Technical Machine Ledgers:  The following files were produced to persist this state:
+candidate_spatial_dna_nodes.jsonl: Complete dataset of 44 atomic nodes.
+candidate_spatial_dna_edges.jsonl: Relational seed linking operations to software logic.
+Spatial Candidate DNA — Atlas Workspace Ingestion Manifest: Formatted for workspace ingestion with baked identifiers.These static atoms provided the substrate required to move toward an atemporal architectural shift, decoupling the candidate's value from a linear timeline.
+4. The Atemporal Shift: Decoupling Time from Ontology
+A central theme of the experiment was addressing the "Fallacy of Chronological Decay"—the tendency of traditional resumes to treat older skills as stale. Strategically, the system moved toward a "Topological Capability Substrate" where mastery is viewed as an active, integrated surface regardless of when it was acquired.The hierarchy was updated as follows:
+[ CANDIDATE ROOT ]
+│
+[ Branch Provenance ] (e.g., Twin Peaks / MARA)
+│
+[ Spatial DNA Domains ] (Operations / Technical)
+│
+[ EVIDENCE ATOMS ] (Topological Substrate)
+│
+┌──────────────┴──────────────┐
+[ Atemporal Topology ]    [ Chronological Scrubber ]
+(Default Viewport)        (Optional Toggle Lens)
+
+Durability Classes:
+Durable:   Mastery-Invariant  capabilities like P&L ownership or complex systems modeling that do not decay with time.
+Time-Sensitive:   Compliance-Gated  credentials like ServSafe or specific software API versions requiring active renewal.
+Historical:  Early-career data that explains developmental trajectory but is not required to establish present capability.This atemporal data is physically projected in 3D space relative to external demand.
+5. MARA Traversal and 3D Coordinate Projection
+The Traversal Engine transforms static evidence into dynamic evaluative projections. By scoring candidate domains against a job description, it maps atoms into a 3D coordinate volume.MARA Projection Results (JOB-002: Method Hospitality):| Atom ID | Binding Class | Polarity Zone | Coord (X, Y, Z) | Radius (R) || ------ | ------ | ------ | ------ | ------ || WH-TWIN-001 | DIRECT_BIND | CEILING (+Y) | (0.00, +4.10, +4.35) | 4.35 || WH-BOBC-002 | DIRECT_BIND | CEILING (+Y) | (0.00, +4.10, +4.35) | 4.35 || PS-PRFL-001 | DIRECT_BIND | CEILING (+Y) | (-4.35, +4.10, 0.00) | 4.35 || WH-BOBC-001 | DIRECT_BIND | FLOOR (-Y) | (0.00, -2.80, +4.35) | 4.35 || ID-001 | TRANSFERABLE | BASELINE (0) | (+5.75, +1.00, 0.00) | 5.75 |
+Binding Gate Audit:  The engine successfully mapped receptors (D_01-D_05) to candidate atoms:
+D_01 (Shift Leadership):  Bound to WH-TWIN-001 (Multi-shift direction).
+D_02 (Financials):  Bound to WH-BOBC-002 (18% food-cost variance).
+D_03 (Workforce Training):  Bound to WH-TWIN-004 (120+ team members trained).
+D_04 (Compliance):  Bound to WH-BOBC-003 (Zero critical violations).
+D_05 (Service Culture/Systems):  Bound to ID-003 (Operations systems leadership archetype).
+6. Audit: Claims vs. Physical Artifacts
+A forensic audit must distinguish between the system's claims and the actual artifacts. Masking deficiencies with polished descriptions is a significant risk in LLM-driven architectures.CLAIMS VS. ARTIFACTS| What Spark Said | What Artifacts Actually Show || ------ | ------ || The system is a "legitimate project package." | Lacks standalone ERDs and a containerized runtime deployment manifest. || The system is "execution-ready." | The "Wiring Harness" remains an unexecuted integration gap;  SCOUT does not currently emit D01–D07 demand atoms. || Complete "machine-readable" payload. | Files like nodes.jsonl are documents simulating JSONL rather than raw exported data files. |
+Contradictions Identified:
+Discrepancy in Fields:  Spark described the "automated wiring harness" as existing, yet forensic evidence shows it in the "Design" phase.
+SCOUT Output Gap:  SCOUT’s existing contract produces structured job observations (Title, Location, URL) but does not decompose them into demand receptors. This contradicts the implied "execution-ready" state of the full pipeline.
+7. Experimental Boundary: PROVEN vs. NOT YET PROVEN
+To prevent architectural drift, we utilize Authority Tiers ( VERIFIED, SUPPORTED, CANDIDATE-REPORTED, CONFLICTED ) to maintain a "Verified Proof" ledger.PROVEN:
+Atomization:  Successful extraction of 44 nodes with dual provenance. (Evidence: nodes.jsonl; Tier:  VERIFIED )
+Conflict Preservation:  System isolates all 5 historical conflicts. (Evidence: evidence_state: CONFLICTED tags; Tier:  VERIFIED )
+Spatial Geometry:  Mathematical capability to assign  $X, Y, Z$  coordinates based on binding type. (Evidence: MARA_JOB_002_PROJECTION_PAYLOAD.json; Tier:  VERIFIED )NOT YET PROVEN:
+Automated Wiring Harness:  No proof of an executable script that chains SCOUT observations  $\rightarrow$  Binding Gate  $\rightarrow$  Surface Transducer.
+Canvas Rendering:  The actual visual rendering of the 3D coordinate box in a dedicated environment has not been executed.
+Observation Decomposition:  The automated transformation of a SCOUT job observation into addressable demand receptors ( $D_{01} \dots D_n$ ) is currently a manual step.
+8. Technical Gaps and Remediation Path
+Current bottlenecks are categorized between "Design Gaps" and "Implementation Gaps."REMAINING GAPS:
+Missing Implementation:  The "Wiring Harness" connecting JD extraction to finished resume.
+Architectural Ambiguity:  The exact boundary between SCOUT (collection) and Spatial DNA (decomposition) needs a formalized contract.
+Missing Validation:  A rendering environment (Gemini Canvas) to prove the coordinates produce a stable topology.NEXT EXPERIMENTS:
+Test 1: Demand Extraction.
+Input:  Raw JOB-002 text.
+Output:  Structured JSON of D_01-D_05 receptors.
+Unresolved Result Markers:  Manual verification of verbatim clause extraction is still required for semantic smoothing.
+Test 2: Canvas Bootstrap.
+Input:  Empty Spatial Box Spec.
+Output:  A rendered empty 3D coordinate grid.
+Unresolved Result Markers:  WebGL environment stability and coordinate scaling remain unknown.
+Test 3: End-to-End Chain.
+Input:  New JD.
+Output:  A structured JSON resume payload.
+Unresolved Result Markers:  System drift requires constant "Strategy Lock" oversight.
+9. Reconstruction: The Experimental Timeline
+The causal timeline provides the map for independent reproducibility of this forensic state.
+STARTING CONDITION:  18,500 tokens of raw candidate evidence established as the cleanroom source.
+INSTRUCTION:  "Fracture the mound" using semantic clustering.
+SPARK OUTPUT:  Identification of 7 clusters and 44 atomic nodes.
+INTERVENTION POINT:  Chronological Scrubber defined as an optional toggle; time demoted to a viewport lens.
+ARTIFACT PRODUCED:  candidate_spatial_dna_nodes.jsonl and edges.jsonl.
+ESTABLISHED FACT:  Time is successfully demoted to a lens; the candidate is an atemporal evidence topology.
+REMAINING UNKNOWN:  Can the system maintain this "Zero Drift" state without manual "Strategy Lock" oversight?FINAL STATE:  As of the final observed state, Spatial DNA exists as a  verified, structurally sound evidence substrate  with a clear mathematical projection model, awaiting the mechanical integration of its automated wiring harness and the resolution of the SCOUT-to-Receptor interface.
+

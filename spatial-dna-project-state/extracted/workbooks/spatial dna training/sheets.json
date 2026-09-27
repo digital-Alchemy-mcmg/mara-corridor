@@ -1,0 +1,20 @@
+[
+  {
+    "sheet_number": 1,
+    "name": "Job Opportunities",
+    "formula_csv": "sheet-01.csv",
+    "cached_values_csv": "sheet-01-cached-values.csv"
+  },
+  {
+    "sheet_number": 2,
+    "name": "Sheet3",
+    "formula_csv": "sheet-02.csv",
+    "cached_values_csv": "sheet-02-cached-values.csv"
+  },
+  {
+    "sheet_number": 3,
+    "name": "Sheet4",
+    "formula_csv": "sheet-03.csv",
+    "cached_values_csv": "sheet-03-cached-values.csv"
+  }
+]

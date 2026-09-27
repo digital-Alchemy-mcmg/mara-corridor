@@ -1,0 +1,29 @@
+{
+  "artifact_class": "HISTORICAL_EXECUTION_EVIDENCE_NOT_CURRENT_AUTHORITY",
+  "job_id": "JOB-002",
+  "observed_legacy_direct_ids": [
+    "WH-TWIN-001",
+    "WH-TWIN-002",
+    "WH-TWIN-003",
+    "WH-TWIN-004",
+    "WH-BOBC-001",
+    "WH-BOBC-002",
+    "WH-BOBC-003",
+    "ID-003",
+    "PS-PRFL-001"
+  ],
+  "observed_legacy_transferable_ids": [
+    "ID-001",
+    "ID-002",
+    "RF-REF-001"
+  ],
+  "explicitly_named_legacy_non_bind_examples": [
+    "PR-SDNA-001",
+    "TC-DEV-001"
+  ],
+  "legacy_projection_only_ids_absent_from_current_substrate": [
+    "PS-PRFL-001",
+    "RF-REF-001"
+  ],
+  "note": "This file preserves what historical artifacts said. It does not silently migrate legacy IDs into the current 44-atom graph."
+}

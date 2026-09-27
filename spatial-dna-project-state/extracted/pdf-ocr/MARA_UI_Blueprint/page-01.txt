@@ -1,0 +1,15 @@
+DOCUMENT_ID: MARA-UI-EXEC-01
+STATUS: MASTER_SCHEMATIC
+
+—
+
+Spatial Candidate DNA:
+UI Implementation Blueprint
+
+Observability, Telemetry, and Canvas
+Rendering for the MARA Traversal Engine
+
+SYSTEM INVARIANT: The UI is a passive lens. It observes,
+visualizes, and validates. It does not calculate.
+
+

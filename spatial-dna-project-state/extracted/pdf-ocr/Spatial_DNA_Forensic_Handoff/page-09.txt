@@ -1,0 +1,31 @@
+STAGE 3: Exact Calibration Sample Validation |
+
+Status: 100% Proven by Execution. Coordinates are deterministic, fixed, and
+
+unrounded from source generation (Seed 42).
+
+ID:
+
+Key Plotted Artifacts
+
+WH-TWIN-003
+
+Polarity:
+
+10
+
+ID:
+
+Polarity:
+Ceiling (+Y)
+
+Baseline (0)
+
+Polarity:
+
+WH-BOBC-001
+
+Floor (-Y)
+
+@& Gemini Notebook
+

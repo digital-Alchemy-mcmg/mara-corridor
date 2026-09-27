@@ -1,0 +1,11 @@
+Action,Owned by FISSION?,Owned by Knowledge Graph / Atlas?,Owned by MARA Engine?
+Extract single fact + predicate hinge,YES,No,No
+Assign atom_id and Entity tag,YES,No,No
+Tag Domain & Branch Provenance,YES,No,No
+Tag Documentary Source Pointer,YES,No,No
+Flag CONFLICTED or GALLERY-BLOCKED,YES,No,No
+Draw Cross-Domain Edges (edges.jsonl),NO,YES,No
+Cluster into Semantic Islands (Atlas),NO,YES,No
+Proposition Discrimination (Duplication vs Corroboration),NO,YES,No
+Select 4 Lateral Planes vs Job Demand,NO,No,YES
+"Calculate 3D Coordinates (+Y, 0, -Y)",NO,No,YES

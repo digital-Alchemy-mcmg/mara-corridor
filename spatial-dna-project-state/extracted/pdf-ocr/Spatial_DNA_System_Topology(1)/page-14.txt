@@ -1,0 +1,42 @@
+System Contract:
+
+r
+
+1. DO NOT REDESIGN:
+
+The 44 atoms, plane assignments,
+and [-10..10] coordinate bounds
+are permanently frozen by contract.
+
+Non-Negotiable Invariants
+
+=
+2. DO NOT RECONCILE CONFLICTS:
+
+The 5 historical ledger conflicts
+must remain quarantined in the Floor
+zone (Y <= -2.0). No narrative
+
+smoothing allowed.
+L
+
+3. PRESERVE ZERO PHYSICS: The WebGL
+Canvas remains a passive observer.
+
+rir
+
+=
+4. PRESERVE JOIN KEYS:
+atom_id is the immutable primary
+key across all stages mapping
+geometry to layout text.
+
+e
+
+| [Execution Directive] Commit the 5-stage directory to
+| branch spatial-dna-context-handoff. Wire the
+
+met onaced script connecting Stages 1, 2, and 3. JJ |
+
+(™® Gemini Notebook
+

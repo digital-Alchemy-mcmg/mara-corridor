@@ -1,0 +1,50 @@
+{
+  "fixture_id": "TEST_FIXTURE_METHOD_HOSPITALITY",
+  "job_id": "JOB-002",
+  "employer": "Method Hospitality",
+  "title": "Restaurant Assistant General Manager",
+  "acceptance": {
+    "receptor_count": 5,
+    "active_lateral_planes": [
+      {
+        "plane_id": "plane_02",
+        "direction": "North",
+        "domain": "Work History",
+        "score": 98
+      },
+      {
+        "plane_id": "plane_01",
+        "direction": "East",
+        "domain": "Identity",
+        "score": 92
+      },
+      {
+        "plane_id": "plane_06",
+        "direction": "South",
+        "domain": "References",
+        "score": 85
+      },
+      {
+        "plane_id": "plane_05",
+        "direction": "West",
+        "domain": "Psychometrics",
+        "score": 80
+      }
+    ],
+    "total_atoms": 44,
+    "direct_bind_count": 12,
+    "transferable_bind_count": 16,
+    "non_bind_count": 16,
+    "ceiling_count": 11,
+    "floor_count": 1,
+    "floor_atoms": [
+      {
+        "atom_id": "WH-BOBC-001",
+        "y": -2.8
+      }
+    ],
+    "active_connection_rays": 6
+  },
+  "executable_membership_state": "MISSING_FROM_CURRENT_AUTHORITY",
+  "rule": "Counts are acceptance constraints, not permission to manufacture atom membership."
+}

@@ -1,0 +1,28 @@
+[
+  {"sequence": 1, "atom_id": "ID-001", "x": 9.69, "y": -0.8, "z": 2.24, "r": 9.95, "plane_id": "plane_01", "plane": "Identity", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 2, "atom_id": "ID-002", "x": 9.9, "y": -0.8, "z": -1.04, "r": 9.95, "plane_id": "plane_01", "plane": "Identity", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 3, "atom_id": "ID-003", "x": 4.35, "y": 4.1, "z": -0.08, "r": 4.35, "plane_id": "plane_01", "plane": "Identity", "polarity": "CEILING (+Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 4, "atom_id": "WH-TWIN-003", "x": 0.83, "y": 4.1, "z": 4.27, "r": 4.35, "plane_id": "plane_02", "plane": "Work History", "polarity": "CEILING (+Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 5, "atom_id": "WH-TWIN-004", "x": -0.75, "y": 0.84, "z": 7.11, "r": 7.15, "plane_id": "plane_02", "plane": "Work History", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 6, "atom_id": "WH-BOBC-001", "x": -1.12, "y": -2.8, "z": 7.06, "r": 7.15, "plane_id": "plane_02", "plane": "Work History", "polarity": "FLOOR (-Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 7, "atom_id": "WH-BOBC-002", "x": 0.0, "y": 0.84, "z": 7.15, "r": 7.15, "plane_id": "plane_02", "plane": "Work History", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 8, "atom_id": "WH-PAT-001", "x": 0.3, "y": -2.8, "z": 5.74, "r": 5.75, "plane_id": "plane_02", "plane": "Work History", "polarity": "FLOOR (-Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 9, "atom_id": "WH-APPL-001", "x": -1.0, "y": -2.8, "z": 7.08, "r": 7.15, "plane_id": "plane_02", "plane": "Work History", "polarity": "FLOOR (-Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 10, "atom_id": "WH-WLT-001", "x": 0.25, "y": -2.8, "z": 7.15, "r": 7.15, "plane_id": "plane_02", "plane": "Work History", "polarity": "FLOOR (-Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 11, "atom_id": "WH-STAP-001", "x": 0.98, "y": 4.1, "z": 4.24, "r": 4.35, "plane_id": "plane_02", "plane": "Work History", "polarity": "CEILING (+Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 12, "atom_id": "WH-GATS-001", "x": -0.76, "y": 4.1, "z": 4.28, "r": 4.35, "plane_id": "plane_02", "plane": "Work History", "polarity": "CEILING (+Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 13, "atom_id": "WH-FIN-001", "x": 0.37, "y": -2.8, "z": 7.14, "r": 7.15, "plane_id": "plane_02", "plane": "Work History", "polarity": "FLOOR (-Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 14, "atom_id": "ED-OU-001", "x": 0.0, "y": -2.8, "z": 0.0, "r": 9.95, "plane_id": "plane_03", "plane": "Education and Technical Competency", "polarity": "FLOOR (-Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 15, "atom_id": "TC-CERT-001", "x": 0.0, "y": 1.0, "z": 0.0, "r": 5.75, "plane_id": "plane_03", "plane": "Education and Technical Competency", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 16, "atom_id": "TC-DEV-001", "x": 0.0, "y": 4.1, "z": 0.0, "r": 4.35, "plane_id": "plane_03", "plane": "Education and Technical Competency", "polarity": "CEILING (+Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 17, "atom_id": "PR-PLCY-001", "x": 0.0, "y": -0.8, "z": 0.0, "r": 9.95, "plane_id": "plane_04", "plane": "Creative Works and Projects", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 18, "atom_id": "PR-DRCH-001", "x": 0.0, "y": -0.8, "z": 0.0, "r": 9.95, "plane_id": "plane_04", "plane": "Creative Works and Projects", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 19, "atom_id": "PR-SERL-001", "x": 0.0, "y": -0.8, "z": 0.0, "r": 9.95, "plane_id": "plane_04", "plane": "Creative Works and Projects", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 20, "atom_id": "PR-BOBC-001", "x": 0.0, "y": 4.1, "z": 0.0, "r": 4.35, "plane_id": "plane_04", "plane": "Creative Works and Projects", "polarity": "CEILING (+Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 21, "atom_id": "PS-MBTI-001", "x": -5.71, "y": 1.0, "z": -0.7, "r": 5.75, "plane_id": "plane_05", "plane": "Psychometric and Cognitive Profile", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 22, "atom_id": "RF-TWIN-001", "x": -0.4, "y": 1.0, "z": -5.74, "r": 5.75, "plane_id": "plane_06", "plane": "References, Publications, Testimony, and Observed Behavior", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 23, "atom_id": "RF-PAN-001", "x": -0.6, "y": 1.0, "z": -5.72, "r": 5.75, "plane_id": "plane_06", "plane": "References, Publications, Testimony, and Observed Behavior", "polarity": "BASELINE (Y=0)", "coordinate_status": "VERIFIED"},
+  {"sequence": 24, "atom_id": "RF-PLAY-001", "x": 0.68, "y": 4.1, "z": -4.3, "r": 4.35, "plane_id": "plane_06", "plane": "References, Publications, Testimony, and Observed Behavior", "polarity": "CEILING (+Y)", "coordinate_status": "VERIFIED"},
+  {"sequence": 25, "atom_id": "RF-UNPOP-001", "x": -1.9, "y": -2.8, "z": -9.77, "r": 9.95, "plane_id": "plane_06", "plane": "References, Publications, Testimony, and Observed Behavior", "polarity": "FLOOR (-Y)", "coordinate_status": "VERIFIED"}
+]
+

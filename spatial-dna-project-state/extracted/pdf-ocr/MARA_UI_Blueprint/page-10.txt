@@ -1,0 +1,40 @@
+_STAGE 5: CANVAS ZERO-PHYSICS OBSERVER
+
+a
+
+® Implement absolute
+coordinate mapping:
+position.set(x,y,z).
+
+@ Render specific raycast
+
+(Solid=Direct,
+Dashed=Transferable).
+
+@ Utilize Empty-Box
+Verification Fixture
+
+dash patterns =>
+
+>
+
+(0 nodes rendered on
+baseline load).
+
+Rn to canvas.
+
+| DONOT
+
+® Apply the Zero
+Physics Rule.
+
+‘| @ No gravity applied
+
+® No collision bodies.
+
+® No spring simulation
+layout algorithms.
+
+cae.
+
+

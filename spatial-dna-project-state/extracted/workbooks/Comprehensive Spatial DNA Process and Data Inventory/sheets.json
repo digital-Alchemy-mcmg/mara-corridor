@@ -1,0 +1,14 @@
+[
+  {
+    "sheet_number": 1,
+    "name": "Table 1",
+    "formula_csv": "sheet-01.csv",
+    "cached_values_csv": "sheet-01-cached-values.csv"
+  },
+  {
+    "sheet_number": 2,
+    "name": "Source References",
+    "formula_csv": "sheet-02.csv",
+    "cached_values_csv": "sheet-02-cached-values.csv"
+  }
+]

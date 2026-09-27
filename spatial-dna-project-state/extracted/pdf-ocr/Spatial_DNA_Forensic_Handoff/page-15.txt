@@ -1,0 +1,19 @@
+Execution Mandate Authorized
+
+Target Repo: digital-Alchemy-mcmg/mara-corridor
+
+> SYSTEM STATUS: Handoff complete. Autonomous execution authorized.
+
+> INITIALIZING GPT WORK SESSION...
+
+DIRECTIVE 01:
+Ingest structured sources from staged directory /spatial-dna/.
+
+DIRECTIVE Q2:
+Commit the 5-stage directory architecture to branch spatial-dna-context-handoff.
+
+DIRECTIVE 3:
+Wire the automated script connecting Stage 1 (Demand Extraction) to Stage 2 (Binding
+Gate) and Stage 3 (Coordinates).
+
+

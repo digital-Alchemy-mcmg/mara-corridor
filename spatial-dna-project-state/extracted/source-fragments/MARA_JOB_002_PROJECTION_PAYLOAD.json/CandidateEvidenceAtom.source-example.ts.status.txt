@@ -1,0 +1,2 @@
+Source: originals/transferred/MARA_JOB_002_PROJECTION_PAYLOAD.json.docx
+Status: DOCUMENTED INTERFACE FRAGMENT; references external types and is not independently compilable.

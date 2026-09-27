@@ -1,0 +1,16 @@
+{
+  "observation_id": "OBS-JOB-002-METHOD-HOSP",
+  "employer": "Method Hospitality",
+  "job_title": "Restaurant Assistant General Manager",
+  "location": "Detroit, MI 48226",
+  "compensation": { 
+    "min_salary": 70000, 
+    "max_salary": 75000, 
+    "avg_salary": 72500,
+    "pay_type": "Salary",
+    "employment_type": "Full-time"
+  },
+  "schedule": "Monday to Friday (+7)",
+  "benefits": ["401(k)", "Health insurance", "Paid time off", "Vision", "Dental", "Life insurance"]
+}
+

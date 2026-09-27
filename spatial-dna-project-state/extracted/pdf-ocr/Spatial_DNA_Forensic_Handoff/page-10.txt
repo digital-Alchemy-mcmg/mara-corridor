@@ -1,0 +1,22 @@
+STAGE 4: Dynamic Layout Translation Payload
+
+Mechanism: Constructs durable, machine-readable packets mapping bound atoms
+to layout containers while applying Surface Transducer rules. Every rendered
+
+statement maintains its trace ID.
+
+MARA_LAYOUT_PAYLOAD_v1 Header
+{
+container_id: EXPERIENCE_BOBCAT_BONNIES,
+bound_atoms: [ Pitch
+WH-BOBC-002
+]
+} Bullets
+
+|________] Rendered Bullet: Achieved 18%
+[Ey Ls reduction in food-cost variance...
+
+| Bound Trace: WH-BOBC-002
+
+Gemini Notebook
+

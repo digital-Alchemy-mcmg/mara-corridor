@@ -1,0 +1,5 @@
+Potential Bottleneck,Status,Reality
+Data Schema Problem?,NO,"The 6-domain ontology, FISSION Level 3 contract, and node schemas are 100% resolved."
+Missing Core Code?,NO,"The algorithms (maraTraversal.ts, FISSION specs, Surface Transducer receipts) exist and are documented."
+Input Dependency?,YES,Needs a literal target job description to initiate demand extraction.
+Integration Problem?,YES,The scripts connecting the candidate graph → JD binding → surface layout must be chained together.

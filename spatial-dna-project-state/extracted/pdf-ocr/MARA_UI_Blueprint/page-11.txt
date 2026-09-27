@@ -1,0 +1,24 @@
+_META UI BUILD WRAP-UP: VIEWS, CONTROLS & OBJECTS
+
+Core Controls & Actions
+
+- Dynamic Layout Viewer ( | |
+| - 3D WebGL Canvas [ Inspect Provenance ]
+
+Core Data ree
+<0 ie
+
+1 | Primary Screens & Views 7
+
+- Job/Demand Ingestion View
+- Payload Inspector
+
+hand LAYOUT_PAYLOAD_v1
+
+ie Candidate a
+Atoms
+
+=n
+eee
+
+

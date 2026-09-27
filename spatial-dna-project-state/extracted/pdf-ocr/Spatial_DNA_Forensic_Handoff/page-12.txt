@@ -1,0 +1,20 @@
+Provenance and Authority Tiers
+
+PROVEN BY ARTIFACT: Physical, inspectable machine
+code, JSON, or workbooks committed/staged.
+
+PROVEN BY EXECUTION: Operations run,
+mathematically verified, producing
+producing reproducible output.
+
+REPORTED / EXPERIMENTAL: Interactive
+prototyping observed but not chained in CI/CD.
+
+CLAIMED BUT NOT VERIFIED: Exists in design
+specs — but not executed autonomously.
+
+SOURCE-REPORTED: Concepts referenced in
+docs without underlying raw exported artifacts.
+
+@& Gemini Notebook
+

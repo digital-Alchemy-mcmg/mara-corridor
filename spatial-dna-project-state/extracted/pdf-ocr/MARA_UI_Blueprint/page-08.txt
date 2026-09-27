@@ -1,0 +1,46 @@
+_ STAGE 4: PAYLOAD GAP INSPECTION |
+
+| MARA_LAYOUT_PAYLOAD_v1
+tee
+
+peer [
+"id": "obj_001",
+"position": "x": 2.5, "y"': 2m0 suelo
+"angular_azimuth_6": null, “*
+
+ie
+
+"binding": {
+"state": "ar": null,
+"bound_receptor": "REC_A", “*
+
+},
+"edge_weights": [],
+
+ae
+
+"atom_entry": {
+“atom_id": "ID-099", "state": "NON_BIND",
+"suppression_signature": null, ...
+
+| Angular Azimuth (6) - Omitted
+from objects. U] must expose back-
+calculated arctan(X/Z) values.
+
+of single scalars.
+|
+
+atom suppression.
+
+| Multi-Binding Vectors - Expose
+bound_receptors: string[] instead
+
+Edge Illumination Weights -
+Reveal dynamic inter-plane
+connection edge weights (E_ij).
+
+Negative Space Suppression
+Signatures - Show exactly WHICH
+constraint triggered a NON_BIND
+
+

@@ -1,0 +1,16 @@
+-
+
+Master Artifact Directory & Provenance |
+
+T |
+Source Contribution Status
+Source 1: Forensic Postmortem 6-plane model, 44 atoms, gap analysis
+Source 2: GPT Work Execution Handoff System boundary, 4 invariants, causal flow
+Source 3: Stage 1 - Normalization Demand Receptors (D_k), JOB-002 payload
+Source 4: Stage 2 - Candidate DNA 44 immutable atoms, 11 relational edges
+Source 5: Stage 3 - Coordinate Engine X,Y,Z,R math, Exact 25-atom sample
+Source 6: Stage 4 - Layout Payload MARA_LAYOUT_PAYLOAD_v1 JSON
+Source 7: Stage 5 - Test Canvas Zero physics rule, Three.js configs CLAIMED (UI rendering)
+Source 8: Transfer Index Macro execution chain, authority tiers
+
+

@@ -1,0 +1,50 @@
+_STAGE 4: DYNAMIC LAYOUT & PROVENANCE TRACE ©
+
+<a
+
+atom_id: WH-BOBC-002
+| source: SQL_DB_A
+timestamp: 2023-10-27T08:15:00Z
+type: metric_variance
+| value: 18.0
+unit: percentage
+
+atom_id: PROV-DOC-09A
+source: CRM_DATA_0Q4
+type: client_engagement
+
+pa
+
+atom_id: WH-BOBC-002
+
+source: SQL_DB_A
+
+| timestamp: 2023-10-27T08:15:00Z
+| type: metric_variance
+
+| value: 18.0
+unit: percentage
+
+Experience Bullets
+
+Achieved an 18% reduction
+a food-cost variance...
+
+source: CRM_DATA_Q4
+type: - client_engagement
+value: ...
+
+atom_id: PROV-DOC-09A
+source: CRM_DATA_Q4
+type: client_engagement
+
+7
+
+Competency Matrix PERSISTENT TRACEABILITY:
+
+The UI must render dynamic text containers while
+keeping the primary key (atom_id) perpetually visible or
+accessible to prove the origin of every claim.
+
+® Gemini Notebook
+
